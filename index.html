@@ -13,6 +13,9 @@
 
 		<Script Src = "/assets/includes/common.js" Defer = "Defer"></Script>
 		<Link Rel = "StyleSheet" Href = "/assets/includes/common.css" />
+
+		<Script Src = "main.js" Defer = "Defer"></Script>
+		<Link Rel = "StyleSheet" Href = "main.css" />
 	</Head>
 
 	<Body Class = "mdc-typography">
@@ -40,18 +43,16 @@
 		</Aside>
 
 		<Div ID = "Content">
-			<Header ID = "Toolbar" Class = "mdc-toolbar mdc-elevation--z4">
+			<Header ID = "Content_Toolbar" Class = "mdc-toolbar mdc-elevation--z4">
 				<Div Class = "mdc-toolbar__row">
 					<Section Class = "mdc-toolbar__section mdc-toolbar__section--align-start">
-						<A ID = "Toolbar_MenuBtn" Href = "#" Class = "mdc-toolbar__menu-icon material-icons">menu</A>
+						<A ID = "Content_Toolbar_MenuBtn" Href = "#" Class = "mdc-toolbar__menu-icon material-icons">menu</A>
 						<Span Class = "mdc-toolbar__title">どっかのプログラなーいのサイト。</Span>
 					</Section>
 				</Div>
 			</Header>
 
-			<Main>
-				
-			</Main>
+			<IFrame ID = "Content_Page" Src = "Top/"></IFrame>
 		</Div>
 	</Body>
 </HTML>

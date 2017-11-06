@@ -1,18 +1,3 @@
-HTML, Body {
-	Height: 100%;
-}
-
-Body {
-	Display: Flex;
-	Flex-Direction: Row;
-
-	Margin: 0;
-}
-
-Body > Div#Content {
-	Flex: 1;
-}
-
 Main {
 	Padding: 1em;
 }
