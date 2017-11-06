@@ -13,9 +13,17 @@
 
 		<Script Src = "/assets/includes/common.js" Defer = "Defer"></Script>
 		<Link Rel = "StyleSheet" Href = "/assets/includes/common.css" />
+
+		<Script Src = "Top.js"></Script>
+		<Link Rel = "StyleSheet" Href = "Top.css" />
+
+		<Script Src = "https://apis.google.com/js/platform.js" Async = "Async" Defer = "Defer">
+			{lang: 'ja', parsetags: 'onload'}
+		</Script>
 	</Head>
 
 	<Main>
-		a
+		<!-- ウィジェット を表示したい位置に次のタグを貼り付けてください。 -->
+		<Div Class = "g-person" Data-Width = "400" Data-Href = "https://plus.google.com/106666684430101995501" Data-Rel = "author"></Div>
 	</Main>
 </HTML>
