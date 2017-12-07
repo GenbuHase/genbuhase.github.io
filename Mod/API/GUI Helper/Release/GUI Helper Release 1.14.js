@@ -1,7 +1,7 @@
 ﻿/*/
  *#######################################################
  *GUI Helper Release 1.14
- *Copyright (C) 2015-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2015 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 var GUIHelper = {

@@ -1,7 +1,7 @@
 /*/
  *#######################################################
  *WorldEdit Release 1.02
- *Copyright (C) 2015-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2015 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 

@@ -1,7 +1,7 @@
 /*/
  *#######################################################
  *Villager's Inventory Beta 1.5 - Build 1
- *Copyright (C) 2016-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2016 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 

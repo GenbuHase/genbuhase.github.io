@@ -1,7 +1,7 @@
 /*/
  *#######################################################
  *Customizable Blocks v1.0
- *Copyright (C) 2017-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2017 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 

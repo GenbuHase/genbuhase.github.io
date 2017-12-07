@@ -1,7 +1,7 @@
 /*/
  *################################################################################
  *Advanced Weapon v1.0
- *Copyright (C) 2017-2020 Genbu Hase & シグマらなーい猫うさぎ All Rights Reserved.
+ *Copyright (C) 2017 Genbu Hase & シグマらなーい猫うさぎ All Rights Reserved.
  *################################################################################
 /*/
 function attackHook (Attacker, Victim) {};

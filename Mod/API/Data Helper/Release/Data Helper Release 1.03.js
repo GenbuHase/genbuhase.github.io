@@ -1,7 +1,7 @@
 /*/
  *#######################################################
  *Data Helper Release 1.03
- *Copyright (C) 2016-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2016 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 var DataHelper = function () {

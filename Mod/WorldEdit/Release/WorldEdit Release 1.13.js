@@ -1,7 +1,7 @@
 /*/
  *#######################################################
  *WorldEdit Release 1.13
- *Copyright (C) 2015-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2015 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 
@@ -839,7 +839,7 @@ function Paste() {
 /*/
  *#######################################################
  *GUI Helper Release 1.10
- *Copyright (C) 2015-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2015 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 

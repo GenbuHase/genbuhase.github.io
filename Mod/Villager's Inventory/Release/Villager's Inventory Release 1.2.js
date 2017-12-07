@@ -1,7 +1,7 @@
 ﻿/*/
  *#######################################################
  *Villager's Inventory Release 1.2
- *Copyright (C) 2016-2020 Genbu Hase All Rights Reserved.
+ *Copyright (C) 2016 Genbu Hase All Rights Reserved.
  *#######################################################
 /*/
 
