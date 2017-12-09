@@ -1,7 +1,7 @@
-const cvs = DOM("#World");
+const cvs = new DOM("#World");
 const ctx = cvs.getContext("2d");
 
-const FRAMESIZE = Math.min(DOM.width, DOM.height);
+let FRAMESIZE = Math.min(DOM.width, DOM.height);
 const PERFRAME = 50;
 
 let substances = [];
@@ -54,8 +54,8 @@ class Ball extends Substance {
 	throw (v0 = 0, deg = 0) {
 		let looper = setInterval(() => {
 			let sec = this.tick / PERFRAME;
-			let dx = v0 * Math.cos(DOM.util.degToRad(deg)),
-				dy = Formula.Gravity[0](v0 * Math.sin(DOM.util.degToRad(deg)), sec);
+			let dx = v0 * Math.cos(DOM.Util.degToRad(deg)),
+				dy = Formula.Gravity[0](v0 * Math.sin(DOM.Util.degToRad(deg)), sec);
 
 			this.draw(dx, dy);
 
@@ -93,6 +93,17 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 });
+
+window.addEventListener("resize", () => {
+	FRAMESIZE = Math.min(DOM.width, DOM.height);
+
+	cvs.applyProperties({
+		attributes: {
+			width: FRAMESIZE,
+			height: FRAMESIZE
+		}
+	});
+})
 
 setInterval(function looper () {
 	ctx.fillStyle = new Util.Color().toString();
