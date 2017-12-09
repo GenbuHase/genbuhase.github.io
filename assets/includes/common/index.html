@@ -1,9 +1,9 @@
-<Aside Data-Component = "Drawer" Class = "mdc-persistent-drawer">
+<Aside Data-Component = "Frame-Drawer" Class = "mdc-persistent-drawer">
 	<Nav Class = "mdc-persistent-drawer__drawer">
 		<Div Class = "mdc-persistent-drawer__toolbar-spacer">Menu</Div>
 
-		<Nav Data-Component = "Drawer_Menu" Class = "mdc-persistent-drawer__content mdc-list">
-			<A Class = "mdc-list-item" Href = "/Top/">
+		<Nav Class = "mdc-persistent-drawer__content mdc-list">
+			<A Class = "mdc-list-item" Href = "/">
 				<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">home</I>
 				Top
 			</A>
@@ -21,11 +21,11 @@
 	</Nav>
 </Aside>
 
-<Div Data-Component = "Content">
-	<Header Data-Component = "Content_Toolbar" Class = "mdc-toolbar mdc-elevation--z4">
+<Div Data-Component = "Frame-Content">
+	<Header Data-Component = "Frame-Content_Toolbar" Class = "mdc-toolbar mdc-elevation--z4">
 		<Div Class = "mdc-toolbar__row">
 			<Section Class = "mdc-toolbar__section mdc-toolbar__section--align-start">
-				<A Data-Component = "Content_Toolbar_DrawerBtn" Href = "#" Class = "mdc-toolbar__menu-icon material-icons">menu</A>
+				<A Data-Component = "Frame-Content_Toolbar_DrawerBtn" Href = "javascript:void(0)" Class = "mdc-toolbar__menu-icon material-icons">menu</A>
 				<Span Class = "mdc-toolbar__title">どっかのプログラなーいのサイト。</Span>
 			</Section>
 		</Div>

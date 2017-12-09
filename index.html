@@ -16,9 +16,14 @@
 
 		<Script Src = "main.js" Defer = "Defer"></Script>
 		<Link Rel = "StyleSheet" Href = "main.css" />
+
+		<Script Src = "https://apis.google.com/js/platform.js" Async = "Async" Defer = "Defer">{ lang: 'ja', parsetags: 'onload' }</Script>
 	</Head>
 
 	<Body>
-		<Main></Main>
+		<Main>
+			<H1 Class = "mdc-typography--title">トップページ</H1>
+			<Div Class = "g-person" Data-Href = "https://plus.google.com/106666684430101995501" Data-Rel = "author"></Div>
+		</Main>
 	</Body>
 </HTML>
