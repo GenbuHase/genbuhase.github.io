@@ -6,22 +6,24 @@
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1" />
 		<Title>どっかのプログラなーいのサイト。《トップページ》</Title>
 
-		<Script Src = "https://genbuproject.github.io/Programs/DOM Extender/DOM Extender v3.1.js"></Script>
+		<Script Src = "https://genbuproject.github.io/Programs/DOM Extender/DOM Extender v3.4.js"></Script>
 		<Script Src = "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></Script>
 		<Link Rel = "StyleSheet" Href = "https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
 		<Link Rel = "Stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 		<Script Src = "https://apis.google.com/js/platform.js" Async = "Async" Defer = "Defer">{ lang: 'ja', parsetags: 'onload' }</Script>
 
-		<Script Src = "/assets/includes/common.js" Defer = "Defer"></Script>
-		<Link Rel = "StyleSheet" Href = "/assets/includes/common.css" />
+		<Script Src = "/assets/includes/common/common.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/common/common.css" />
 
 		<Script Src = "Top.js" Defer = "Defer"></Script>
 		<Link Rel = "StyleSheet" Href = "Top.css" />
 	</Head>
 
-	<Main>
-		<H1 Class = "mdc-typography--title">トップページ</H1>
-		<Div Class = "g-person" Data-Href = "https://plus.google.com/106666684430101995501" Data-Rel = "author"></Div>
-	</Main>
+	<Body Class = "mdc-typography">
+		<Main>
+			<H1 Class = "mdc-typography--title">トップページ</H1>
+			<Div Class = "g-person" Data-Href = "https://plus.google.com/106666684430101995501" Data-Rel = "author"></Div>
+		</Main>
+	</Body>
 </HTML>

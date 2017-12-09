@@ -1,0 +1,26 @@
+HTML, Body {
+	Height: 100%;
+}
+
+Body {
+	Display: Flex;
+	Flex-Direction: Row;
+
+	Margin: 0;
+}
+
+
+
+Div[Data-Component="Content"] {
+	Display: Flex;
+	Flex-Direction: Column;
+
+	Flex: 1;
+}
+
+Main {
+	Flex: 1;
+	Padding: 1em;
+
+	Border: None;
+}
