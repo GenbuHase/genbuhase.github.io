@@ -1,0 +1,13 @@
+Modlist {
+	Display: Block;
+}
+
+Mod {
+	Width: 256px !Important;
+}
+
+Mod A.mdc-grid-tile__icon {
+	Color: var(--mdc-theme-text-primary-on-primary, White);
+
+	Text-Decoration: None;
+}
