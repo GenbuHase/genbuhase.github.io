@@ -3,24 +3,42 @@ HTML, Body {
 }
 
 Body {
-	Display: Flex;
-	Flex-Direction: Row;
-
 	Margin: 0;
 }
-
-
 
 Div[Data-Component="Frame-Content"] {
 	Display: Flex;
 	Flex-Direction: Column;
+}
 
-	Flex: 1;
+UL[Data-Component="Frame-Drawer_SNSList"] {
+	Margin: 0 Auto;
+}
+
+UL[Data-Component="Frame-Drawer_SNSList"] > A > Span {
+	Vertical-Align: Middle;
 }
 
 Main {
 	Flex: 1;
-	Padding: 1em;
 
-	Border: None;
+	Padding: 1rem;
+}
+
+
+
+.mdc-typography--headline {
+	Border-Bottom: Thin Solid LightSeagreen;
+}
+
+.mdc-typography--headline::Before {
+	Content: "";
+
+	Display: Inline-Block;
+
+	Margin-Right: 0.5em;
+	Border: 0.75em Solid Transparent;
+	Border-Color: Transparent LightSeagreen LightSeagreen Transparent;
+	
+	Vertical-Align: Bottom;
 }

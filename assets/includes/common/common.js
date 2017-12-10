@@ -4,14 +4,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		new DOM('$*[Data-Component="Frame-Content"]').appendChild(new DOM("$Main"));
 
+		new mdc.toolbar.MDCToolbar(new DOM('$Header[Data-Component="Frame-Content_Toolbar"]'));
+
 		new DOM('$*[Data-Component="Frame-Content_Toolbar_DrawerBtn"]').addEventListener("click", () => {
-			let drawer = new mdc.drawer.MDCPersistentDrawer(new DOM('$*[Data-Component="Frame-Drawer"]'));
+			let drawer = new mdc.drawer.MDCTemporaryDrawer(new DOM('$*[Data-Component="Frame-Drawer"]'));
 				drawer.open = !drawer.open;
 		});
 		
 	window.mdc.autoInit();
 
 	new DOM("@Main").forEach(elem => {
-		elem.classList.add("mdc-typography");
+		["mdc-typography", "mdc-toolbar-fixed-adjust"].forEach(className => elem.classList.add(className));
 	});
 });
