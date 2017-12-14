@@ -21,7 +21,7 @@ UL[Data-Component="Frame-Drawer_SNSList"] > A > Span {
 
 Main {
 	Flex: 1;
-
+	
 	Padding: 1rem;
 }
 
@@ -33,9 +33,9 @@ Main {
 
 .mdc-typography--headline::Before {
 	Content: "";
-
+	
 	Display: Inline-Block;
-
+	
 	Margin-Right: 0.5em;
 	Border: 0.75em Solid Transparent;
 	Border-Color: Transparent LightSeagreen LightSeagreen Transparent;
