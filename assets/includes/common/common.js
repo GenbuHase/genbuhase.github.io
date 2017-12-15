@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		menuContainer.childNodes.forEach(component => document.body.appendChild(component));
 
 		new DOM('$*[Data-Component="Frame-Content"]').appendChild(new DOM("$Main"));
-
 		new mdc.toolbar.MDCToolbar(new DOM('$Header[Data-Component="Frame-Content_Toolbar"]'));
 
 		new DOM('$*[Data-Component="Frame-Content_Toolbar_DrawerBtn"]').addEventListener("click", () => {

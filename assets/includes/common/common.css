@@ -37,7 +37,7 @@ Main {
 	Display: Inline-Block;
 	
 	Margin-Right: 0.5em;
-	Border: 0.75em Solid Transparent;
+	Border: 1rem Solid Transparent;
 	Border-Color: Transparent LightSeagreen LightSeagreen Transparent;
 	
 	Vertical-Align: Bottom;

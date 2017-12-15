@@ -1,14 +1,17 @@
 <Modlist Class = "mdc-grid-list mdc-grid-list--with-icon-align-end">
 	<UL Class = "mdc-grid-list__tiles">
-		<Mod Class = "mdc-grid-tile">
-			<Div Class = "mdc-grid-tile__primary">
-				<Img Class = "mdc-grid-tile__primary-content" Src = "assets/images/noImage.png" />
+		<Mod Class = "mdc-card mdc-elevation--z5">
+			<Div Class = "mdc-card__horizontal-block">
+				<Section Class = "mdc-card__primary">
+					<H1 Data-Component = "ModName" Class = "mdc-card__title">Mod Name</H1>
+				</Section>
+
+				<Img Data-Component = "Picture" Class = "mdc-card__media-item mdc-card__media-item--1x" Src = "assets/images/noImage.png" />
 			</Div>
 
-			<Span Class = "mdc-grid-tile__secondary">
-				<Span Class = "mdc-grid-tile__title">Mod Name</Span>
-				<A Class = "mdc-grid-tile__icon material-icons" Href = "#">launch</A>
-			</Span>
+			<Section Class = "mdc-card__actions">
+				<A Data-Component = "Link" Class = "mdc-card__action mdc-button mdc-button--compact" Href = "#">Get Started</A>
+			</Section>
 		</Mod>
 	</UL>
 </Div>

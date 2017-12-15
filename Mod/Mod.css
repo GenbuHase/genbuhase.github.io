@@ -3,11 +3,26 @@ Modlist {
 }
 
 Mod {
-	Width: 256px !Important;
+	Width: 300px !Important;
+	Margin: 0.5em;
 }
 
-Mod A.mdc-grid-tile__icon {
-	Color: var(--mdc-theme-text-primary-on-primary, White);
+Mod *[Data-Component="ModName"] {
+	Width: 10em;
 
-	Text-Decoration: None;
+	Overflow: Hidden;
+	Text-Overflow: Ellipsis;
+	White-Space: NoWrap;
+}
+
+
+
+.ModName.mdc-typography--headline::Before {
+	Width: 2rem;
+	Height: 2rem;
+	
+	Background-Position: Center;
+	Background-Size: Cover;
+
+	Border: None;
 }
