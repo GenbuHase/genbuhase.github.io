@@ -33,14 +33,14 @@ Section > Content {
 	White-Space: Pre-Line;
 }
 
-BlockCard {
+ItemCard {
 	Display: Block;
 	Width: 256px;
 
 	White-Space: Initial;
 }
 
-BlockCard > Block {
+ItemCard > Item {
 	Display: Block;
 	Height: 256px;
 
@@ -48,6 +48,6 @@ BlockCard > Block {
 	Background-Repeat: No-Repeat;
 }
 
-BlockCard BlockName, BlockCard BlockID {
+ItemCard ItemName, ItemCard ItemID {
 	Display: Block;
 }

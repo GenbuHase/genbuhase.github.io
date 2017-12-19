@@ -1,0 +1,15 @@
+ModName::Before {
+	Background-Image: URL("favicon.ico");
+}
+
+ItemCard {
+	Margin: 0 1em 1em 0;
+}
+
+ItemCard Item {
+	Background-Color: RGBA(0, 0, 0, 0.25);
+}
+
+Section#Changelogs > Content > Section, Section#Downloads > Content {
+	White-Space: Initial;
+}
