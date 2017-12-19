@@ -81,24 +81,58 @@
 			<Section ID = "Movies">
 				<SectionName Class = "mdc-typography--title">4. Movies</SectionName>
 				<Content Class = "mdc-typography--body1">
-					<IFrame
-						Src = "https://www.youtube.com/embed/i7bJC_IiTCg?rel=0"
-						Width = "560"
-						Height = "315"
-						FrameBorder = "0"
-						Gesture = "media"
-						Allow = "encrypted-media"
-						AllowFullScreen>
-					</IFrame>
+					<YouTube>
+						<IFrame
+							Src = "https://www.youtube.com/embed/i7bJC_IiTCg?rel=0"
+							Width = "560"
+							Height = "315"
+							FrameBorder = "0"
+							Gesture = "media"
+							Allow = "encrypted-media"
+							AllowFullScreen = "AllowFullScreen">
+						</IFrame>
+					</YouTube>
 				</Content>
 			</Section>
 
 			<Section ID = "Changelogs">
 				<SectionName Class = "mdc-typography--title">5. Changelogs</SectionName>
 				<Content Class = "mdc-typography--body1">
-					<Article>
-						<H3 Class = "mdc-typography--subheading1">2016/03/29</H3>
-					</Article>
+					<Section>
+						<SectionName Class = "mdc-typography--subheading1">2016/03/29</SectionName>
+						<UL>
+							<Li>コードの抜け落ちを修正</Li>
+						</UL>
+					</Section>
+
+					<Section>
+						<SectionName Class = "mdc-typography--subheading1">2016/03/28</SectionName>
+						<UL>
+							<Li>複数設置に対応</Li>
+							<Li>著作権名義を変更</Li>
+						</UL>
+					</Section>
+
+					<Section>
+						<SectionName Class = "mdc-typography--subheading1">2016/03/22</SectionName>
+						<UL>
+							<Li>ドロップを実装</Li>
+						</UL>
+					</Section>
+
+					<Section>
+						<SectionName Class = "mdc-typography--subheading1">2016/03/22</SectionName>
+						<UL>
+							<Li>ファイル生成に関するバグを修正</Li>
+						</UL>
+					</Section>
+
+					<Section>
+						<SectionName Class = "mdc-typography--subheading1">2016/03/22</SectionName>
+						<UL>
+							<Li>More Recordsを初リリース</Li>
+						</UL>
+					</Section>
 				</Content>
 			</Section>
 		</Main>

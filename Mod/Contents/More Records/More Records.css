@@ -2,8 +2,36 @@ ModName::Before {
 	Background-Image: URL("favicon.ico");
 }
 
+Section#Changelogs > Content {
+	White-Space: Initial;
+}
+
+
+
 Pre.prettyprint {
-	Font-Family: "Meiryo UI";
-	
+	Width: Auto;
 	Margin: 0;
+
+	Font-Family: "Meiryo UI";
+
+	White-Space: Pre;
+	Overflow-X: Auto;
+}
+
+YouTube {
+	Position: Relative;
+
+	Display: Block;
+	Width: 100%;
+
+	Padding-Top: 56.25%;
+}
+
+YouTube > IFrame {
+	Position: Absolute;
+	Top: 0;
+	Right: 0;
+
+	Width: 100%;
+	Height: 100%;
 }

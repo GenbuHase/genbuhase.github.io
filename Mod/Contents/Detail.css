@@ -14,11 +14,11 @@ ModName::Before {
 	Border: None !Important;
 }
 
-Section {
+Main > Section {
 	Margin-Bottom: 2rem;
 }
 
-Section:Last-Child {
+Main > Section:Last-Child {
 	Margin-Bottom: Auto;
 }
 
