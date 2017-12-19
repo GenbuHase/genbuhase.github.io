@@ -7,7 +7,7 @@ class Mod {
 		this.noImage = noImage;
 
 		let self = this.self = new DOM.ComponentLoader(DOCPATH).load("Mod");
-			self.querySelector('*[Data-Component="ModName"]').textContent = modName;
+			self.querySelector('ModName').textContent = modName;
 			self.querySelector('*[Data-Component="Link"]').href = `Contents/${url}/`;
 
 			if (!noImage) self.querySelector('*[Data-Component="Picture"]').src = `Contents/${url}/favicon.ico`;

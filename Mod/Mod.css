@@ -2,12 +2,17 @@ Modlist {
 	Display: Block;
 }
 
+Modlist > UL {
+	Justify-Content: Center;
+}
+
 Mod {
 	Width: 300px !Important;
 	Margin: 0.5em;
 }
 
-Mod *[Data-Component="ModName"] {
+Mod ModName {
+	Display: Block;
 	Width: 10em;
 
 	Overflow: Hidden;
