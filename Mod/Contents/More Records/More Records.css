@@ -2,7 +2,7 @@ ModName::Before {
 	Background-Image: URL("favicon.ico");
 }
 
-Section#Changelogs > Content {
+Section#Changelogs > Content > Section, Section#Downloads > Content {
 	White-Space: Initial;
 }
 
@@ -25,6 +25,15 @@ YouTube {
 	Width: 100%;
 
 	Padding-Top: 56.25%;
+}
+
+@Media (Min-Width: 800px) {
+	YouTube {
+		Width: 640px;
+		Height: 360px;
+
+		Padding-Top: 0;
+	}
 }
 
 YouTube > IFrame {
