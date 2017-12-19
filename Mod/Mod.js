@@ -1,4 +1,4 @@
-const DOCPATH = "component.html";
+const DOCPATH = "assets/component.html";
 
 class Mod {
 	constructor (modName = "", url = "", noImage = false) {
