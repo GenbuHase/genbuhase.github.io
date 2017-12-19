@@ -1,0 +1,53 @@
+ModName {
+	Display: Block;
+	
+	Margin: 0.5em 0 1em 0;
+}
+
+ModName::Before {
+	Width: 2rem;
+	Height: 2rem;
+	
+	Background-Position: Center;
+	Background-Size: Cover;
+
+	Border: None !Important;
+}
+
+Section {
+	Margin-Bottom: 2rem;
+}
+
+Section:Last-Child {
+	Margin-Bottom: Auto;
+}
+
+SectionName {
+	Display: Block;
+}
+
+Section > Content {
+	Display: Block;
+
+	Margin-Left: 1.25rem;
+	White-Space: Pre-Line;
+}
+
+BlockCard {
+	Display: Block;
+	Width: 256px;
+
+	White-Space: Initial;
+}
+
+BlockCard > Block {
+	Display: Block;
+	Height: 256px;
+
+	Background: Transparent Center / Contain;
+	Background-Repeat: No-Repeat;
+}
+
+BlockCard BlockName, BlockCard BlockID {
+	Display: Block;
+}

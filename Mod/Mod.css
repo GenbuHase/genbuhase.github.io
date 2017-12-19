@@ -14,15 +14,3 @@ Mod *[Data-Component="ModName"] {
 	Text-Overflow: Ellipsis;
 	White-Space: NoWrap;
 }
-
-
-
-.ModName.mdc-typography--headline::Before {
-	Width: 2rem;
-	Height: 2rem;
-	
-	Background-Position: Center;
-	Background-Size: Cover;
-
-	Border: None;
-}

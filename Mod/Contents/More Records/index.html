@@ -9,11 +9,14 @@
 		<Script Src = "/assets/includes/DOM Extender v3.4.js"></Script>
 		<Script Src = "/assets/includes/material-components-web.min.js"></Script>
 		<Link Rel = "StyleSheet" Href = "/assets/includes/material-components-web.min.css" />
+		<Script Src = "/assets/includes/code-prettify_sunburst.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/code-prettify_sunburst.css" />
 
 		<Script Src = "/assets/includes/common/common.js"></Script>
 		<Link Rel = "StyleSheet" Href = "/assets/includes/common/common.css" />
 
-		<Link Rel = "StyleSheet" Href = "../../Mod.css" />
+		<Script Src = "../Detail.js"></Script>
+		<Link Rel = "StyleSheet" Href = "../Detail.css" />
 		<Link Rel = "StyleSheet" Href = "More Records.css" />
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -30,7 +33,74 @@
 
 	<Body>
 		<Main>
-			<H1 Class = "ModName mdc-typography--headline">More Records</H1>
+			<ModName Class = "mdc-typography--headline">More Records</ModName>
+
+			<Section ID = "Overview">
+				<SectionName Class = "mdc-typography--title">1. Overview</SectionName>
+				<Content Class = "mdc-typography--body1">
+					このModはMinecraft PEにレコードを追加します。
+				</Content>
+			</Section>
+
+			<Section ID = "How-to-Use">
+				<SectionName Class = "mdc-typography--title">2. How to Use</SectionName>
+				<Content Class = "mdc-typography--body1">
+					最初にこのModを導入すると、Mojangフォルダー内にMore Records/Records.Jsonが生成されます。
+
+					生成されたRecords.Jsonを、必ず下記の形式に沿って編集して下さい。
+					入力した内容に応じて追加されるレコードの情報が変化します。
+					
+<Pre Class = "prettyprint lang-json">[
+	{
+		"ID": レコードID(int型),
+		"Name": レコードの名前(String型),
+		"Type": レコードの色(1～12),
+		"URL": 音声ファイルの絶対パス(String型)
+	},
+
+	{
+		...
+	}
+]</Pre>
+				</Content>
+			</Section>
+
+			<Section ID = "Blocks">
+				<SectionName Class = "mdc-typography--title">3. Blocks</SectionName>
+				<Content Class = "mdc-typography--body1">
+					<Script>
+						const blockInfo = [
+							new BlockCard("ジュークボックス", "ID250", "assets/images/Jukebox.png")
+						];
+
+						blockInfo.forEach(block => new DOM("$#Blocks > Content").appendChild(block));
+					</Script>
+				</Content>
+			</Section>
+
+			<Section ID = "Movies">
+				<SectionName Class = "mdc-typography--title">4. Movies</SectionName>
+				<Content Class = "mdc-typography--body1">
+					<IFrame
+						Src = "https://www.youtube.com/embed/i7bJC_IiTCg?rel=0"
+						Width = "560"
+						Height = "315"
+						FrameBorder = "0"
+						Gesture = "Media"
+						Allow = "Encrypted-Media"
+						AllowFullScreen>
+					</IFrame>
+				</Content>
+			</Section>
+
+			<Section ID = "Changelogs">
+				<SectionName Class = "mdc-typography--title">5. Changelogs</SectionName>
+				<Content Class = "mdc-typography--body1">
+					<Article>
+						<H3 Class = "mdc-typography--subheading1">2016/03/29</H3>
+					</Article>
+				</Content>
+			</Section>
 		</Main>
 	</Body>
 </HTML>

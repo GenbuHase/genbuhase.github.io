@@ -1,3 +1,9 @@
-.ModName::Before {
+ModName::Before {
 	Background-Image: URL("favicon.ico");
+}
+
+Pre.prettyprint {
+	Font-Family: "Meiryo UI";
+	
+	Margin: 0;
 }
