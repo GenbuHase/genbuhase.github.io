@@ -1,4 +1,4 @@
-const DOCPATH = "/Mod/Contents/Detail.html";
+const DOCPATH = "./../Detail.html";
 
 class Item {
 	constructor (itemName = "", itemId = 0, imageUrl = "") {

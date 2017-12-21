@@ -42,3 +42,40 @@ Main {
 	
 	Vertical-Align: Bottom;
 }
+
+Pre.prettyprint {
+	Width: Auto;
+	Margin: 0;
+
+	Font-Family: "Meiryo UI";
+
+	White-Space: Pre;
+	Overflow-X: Auto;
+}
+
+YouTube {
+	Position: Relative;
+
+	Display: Block;
+	Width: 100%;
+
+	Padding-Top: 56.25%;
+}
+
+@Media (Min-Width: 800px) {
+	YouTube {
+		Width: 640px;
+		Height: 360px;
+
+		Padding-Top: 0;
+	}
+}
+
+YouTube > IFrame {
+	Position: Absolute;
+	Top: 0;
+	Right: 0;
+
+	Width: 100%;
+	Height: 100%;
+}

@@ -1,6 +1,6 @@
 <Aside Data-Component = "Frame-Drawer" Class = "mdc-temporary-drawer">
 	<Nav Class = "mdc-temporary-drawer__drawer">
-		<Div Class = "mdc-temporary-drawer__toolbar-spacer">Menu</Div>
+		<Div Class = "mdc-temporary-drawer__toolbar-spacer"></Div>
 
 		<Nav Class = "mdc-temporary-drawer__content mdc-list">
 			<A Class = "mdc-list-item" Href = "/">
@@ -16,6 +16,11 @@
 			<A Class = "mdc-list-item" Href = "/Mod/">
 				<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">code</I>
 				Mod
+			</A>
+
+			<A Class = "mdc-list-item" Href = "/Drawing/">
+				<Img Class = "mdc-list-item__start-detail" Src = "/Drawing/favicon.ico" Aria-Hidden = "true"></I>
+				Drawing
 			</A>
 		</Nav>
 
@@ -42,15 +47,15 @@
 </Aside>
 
 <Div Data-Component = "Frame-Content">
-	<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
-	<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons+Extended" />
+	<Link Rel = "StyleSheet" Href = "/assets/includes/Material Icons/material-icons.css" />
+	<Link Rel = "StyleSheet" Href = "/assets/includes/Material Icons Extended/material-icons-extended.css" />
 
 
 	<Header Data-Component = "Frame-Content_Toolbar" Class = "mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-elevation--z4">
 		<Div Class = "mdc-toolbar__row">
 			<Section Class = "mdc-toolbar__section mdc-toolbar__section--align-start">
-				<A Data-Component = "Frame-Content_Toolbar_DrawerBtn" Href = "javascript:void(0)" Class = "mdc-toolbar__menu-icon material-icons">menu</A>
-				<Span Class = "mdc-toolbar__title">どっかのプログラなーいのサイト。</Span>
+				<A Data-Component = "Frame-Content_Toolbar_DrawerBtn" Class = "mdc-toolbar__menu-icon material-icons" Href = "javascript:void(0)">menu</A>
+				<Span Data-Component = "Frame-Content_Toolbar_Title" Class = "mdc-toolbar__title">どっかのプログラなーいのサイト。</Span>
 			</Section>
 		</Div>
 	</Header>

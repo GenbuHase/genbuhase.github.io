@@ -3,12 +3,11 @@ Modlist {
 }
 
 Modlist > UL {
-	Justify-Content: Center;
+	Justify-Content: Space-Around;
 }
 
 Mod {
 	Width: 300px !Important;
-	Margin: 0.5em;
 }
 
 Mod ModName {

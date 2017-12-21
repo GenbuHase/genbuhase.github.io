@@ -1,0 +1,72 @@
+<!DocType HTML>
+
+<HTML>
+	<Head>
+		<Meta Charset = "UTF-8" />
+		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1" />
+		<Title>どっかのプログラなーいのサイト。《まさにカオス》</Title>
+
+		<Script Src = "/assets/includes/DOM Extender v3.4.js"></Script>
+		<Script Src = "/assets/includes/material-components-web.min.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/material-components-web.min.css" />
+
+		<Script Src = "/assets/includes/common/common.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/common/common.css" />
+
+		<Script Src = "../Detail.js"></Script>
+		<Link Rel = "StyleSheet" Href = "../Detail.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async = "Async"></Script>
+		<Script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag () { dataLayer.push(arguments) }
+			
+			gtag('js', new Date());
+			gtag('set', {'user_id': 'USER_ID'}); // ログインしている user_id を使用してUser-ID を設定します。
+			gtag('config', 'UA-111257667-1');
+		</Script>
+	</Head>
+
+	<Body>
+		<Main>
+			<ModName Class = "mdc-typography--headline noImage">まさにカオス</ModName>
+
+			<Section ID = "Overview">
+				<SectionName Class = "mdc-typography--title">1. Overview</SectionName>
+				<Content Class = "mdc-typography--body1">
+					このModはMinecraft PEに数多くのカオス要素を追加します。
+				</Content>
+			</Section>
+
+			<Section ID = "Changelogs">
+				<SectionName Class = "mdc-typography--title">2. Changelogs</SectionName>
+				<Content Class = "mdc-typography--body1">
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">まさにカオス Release 1.01(2015/09/16)</ModVersion>
+						
+						<UL Class = "mdc-list mdc-list--dense">
+							<Li Class = "mdc-list-item">クリーパーの強化を実装</Li>
+						</UL>
+					</Changelog>
+
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">まさにカオス Release 1.00(2015/09/16)</ModVersion>
+						
+						<UL Class = "mdc-list mdc-list--dense">
+							<Li Class = "mdc-list-item">まさにカオスを初リリース</Li>
+						</UL>
+					</Changelog>
+				</Content>
+			</Section>
+
+			<Section ID = "Downloads">
+				<SectionName Class = "mdc-typography--title">3. Downloads</SectionName>
+				<Downloads Class = "mdc-list mdc-list--dense">
+					<Li Class = "mdc-list-item"><A Href = "download/Release/まさにカオス Release 1.01.js" Download>Release 1.01</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Release/まさにカオス Release 1.00.js" Download>Release 1.00</A></Li>
+				</Downloads>
+			</Section>
+		</Main>
+	</Body>
+</HTML>

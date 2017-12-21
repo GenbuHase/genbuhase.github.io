@@ -4,7 +4,7 @@ ModName {
 	Margin: 0.5em 0 1em 0;
 }
 
-ModName::Before {
+ModName:Not(.noImage)::Before {
 	Width: 2rem;
 	Height: 2rem;
 	
@@ -29,7 +29,7 @@ SectionName {
 Section > Content {
 	Display: Block;
 
-	Margin-Left: 1.25rem;
+	Margin-Left: 1.25rem !Important;
 	White-Space: Pre-Line;
 }
 
@@ -37,6 +37,7 @@ ItemCard {
 	Display: Block;
 	Width: 256px;
 
+	Margin: 0 1em 1em 0;
 	White-Space: Initial;
 }
 
@@ -45,9 +46,24 @@ ItemCard > Item {
 	Height: 256px;
 
 	Background: Transparent Center / Contain;
+	Background-Color: RGBA(0, 0, 0, 0.25);
 	Background-Repeat: No-Repeat;
 }
 
 ItemCard ItemName, ItemCard ItemID {
+	Display: Block;
+}
+
+Changelog {
+	Display: Block;
+
+	White-Space: Initial;
+}
+
+Changelog > ModVersion {
+	Display: Block;
+}
+
+Downloads {
 	Display: Block;
 }

@@ -5,6 +5,7 @@
 		<Meta Charset = "UTF-8" />
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1" />
 		<Title>どっかのプログラなーいのサイト。《More Records》</Title>
+		<Link Rel = "Shortcut Icon" Href = "favicon.ico" />
 
 		<Script Src = "/assets/includes/DOM Extender v3.4.js"></Script>
 		<Script Src = "/assets/includes/material-components-web.min.js"></Script>
@@ -48,9 +49,9 @@
 					最初にこのModを導入すると、Mojangフォルダー内にMore Records/Records.Jsonが生成されます。
 
 					生成されたRecords.Jsonを、必ず下記の形式に沿って編集して下さい。
-					入力した内容に応じて追加されるレコードの情報が変化します。
+					入力された内容に応じて追加されるレコードの情報が変化します。
 					
-<Pre Class = "prettyprint lang-json">[
+<Pre Class = "prettyprint lang-js">[
 	{
 		"ID": レコードID(int型),
 		"Name": レコードの名前(String型),
@@ -60,21 +61,25 @@
 
 	{
 		...
-	}
+	},
+	
+	...
 ]</Pre>
 				</Content>
 			</Section>
 
 			<Section ID = "Blocks">
 				<SectionName Class = "mdc-typography--title">3. Blocks</SectionName>
-				<Content Class = "mdc-typography--body1">
-					<Script>
-						const blockInfo = [
-							new Item("ジュークボックス", "ID250", "assets/images/Jukebox.png")
-						];
+				<Content Class = "mdc-grid-list mdc-typography--body1">
+					<UL Class = "mdc-grid-list__tiles">
+						<Script>
+							const blockInfo = [
+								new Item("ジュークボックス", "ID250", "assets/images/Jukebox.png")
+							];
 
-						blockInfo.forEach(block => new DOM("$#Blocks > Content").appendChild(block));
-					</Script>
+							blockInfo.forEach(block => new DOM("$#Blocks UL").appendChild(block));
+						</Script>
+					</UL>
 				</Content>
 			</Section>
 
@@ -96,61 +101,60 @@
 			<Section ID = "Changelogs">
 				<SectionName Class = "mdc-typography--title">5. Changelogs</SectionName>
 				<Content Class = "mdc-typography--body1">
-					<Section>
-						<SectionName Class = "mdc-typography--subheading1">More Records Release 1.04(2016/03/29)</SectionName>
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">More Records Release 1.04(2016/03/29)</ModVersion>
+
 						<UL Class = "mdc-list mdc-list--dense">
 							<Li Class = "mdc-list-item">コードの抜け落ちを修正</Li>
 						</UL>
-					</Section>
+					</Changelog>
 
-					<Section>
-						<SectionName Class = "mdc-typography--subheading1">More Records Release 1.03(2016/03/28)</SectionName>
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">More Records Release 1.03(2016/03/28)</ModVersion>
+						
 						<UL Class = "mdc-list mdc-list--dense">
 							<Li Class = "mdc-list-item">複数設置に対応</Li>
 							<Li Class = "mdc-list-item">著作権名義を変更</Li>
 						</UL>
-					</Section>
+					</Changelog>
 
-					<Section>
-						<SectionName Class = "mdc-typography--subheading1">More Records Release 1.02(2016/03/22)</SectionName>
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">More Records Release 1.02(2016/03/22)</ModVersion>
+						
 						<UL Class = "mdc-list mdc-list--dense">
 							<Li Class = "mdc-list-item">ドロップを実装</Li>
 						</UL>
-					</Section>
+					</Changelog>
 
-					<Section>
-						<SectionName Class = "mdc-typography--subheading1">More Records Release 1.01(2016/03/22)</SectionName>
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">More Records Release 1.01(2016/03/22)</ModVersion>
+						
 						<UL Class = "mdc-list mdc-list--dense">
 							<Li Class = "mdc-list-item">ファイル生成に関するバグを修正</Li>
 						</UL>
-					</Section>
+					</Changelog>
 
-					<Section>
-						<SectionName Class = "mdc-typography--subheading1">More Records Release 1.00(2016/03/22)</SectionName>
+					<Changelog>
+						<ModVersion Class = "mdc-typography--subheading1">More Records Release 1.00(2016/03/22)</ModVersion>
+						
 						<UL Class = "mdc-list mdc-list--dense">
 							<Li Class = "mdc-list-item">More Recordsを初リリース</Li>
 						</UL>
-					</Section>
+					</Changelog>
 				</Content>
 			</Section>
 
 			<Section ID = "Downloads">
 				<SectionName Class = "mdc-typography--title">6. Downloads</SectionName>
-				<Content Class = "mdc-typography--body1">
-					<H2 Class = "mdc-typography--subheading2">Mod本体</H2>
-					<UL Class = "mdc-list mdc-list--dense">
-						<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.04.js" Download>Release 1.04</A></Li>
-						<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.03.js" Download>Release 1.03</A></Li>
-						<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.02.js" Download>Release 1.02</A></Li>
-						<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.01.js" Download>Release 1.01</A></Li>
-						<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.00.js" Download>Release 1.00</A></Li>
-					</UL>
+				<Downloads Class = "mdc-list mdc-list--dense">
+					<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.04.js" Download>Release 1.04</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.03.js" Download>Release 1.03</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.02.js" Download>Release 1.02</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.01.js" Download>Release 1.01</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Release/More Records Release 1.00.js" Download>Release 1.00</A></Li>
 
-					<H2 Class = "mdc-typography--subheading2">リソースパック</H2>
-					<UL Class = "mdc-list mdc-list--dense">
-						<Li Class = "mdc-list-item"><A Href = "download/More Records Resources.zip" Download>More Records リソースパック</A></Li>
-					</UL>
-				</Content>
+					<Li Class = "mdc-list-item"><A Href = "download/More Records Resources.zip" Download>More Records リソースパック</A></Li>
+				</Downloads>
 			</Section>
 		</Main>
 	</Body>
