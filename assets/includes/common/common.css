@@ -79,3 +79,21 @@ YouTube > IFrame {
 	Width: 100%;
 	Height: 100%;
 }
+
+Announce {
+	Display: Block;
+	
+	Margin: 1em 0;
+	Padding: 1em;
+	Background: DarkKhaki;
+
+	Border: Medium Ridge LightSeagreen;
+}
+
+Announce > Date {
+	Border-Bottom: Thin Solid;
+}
+
+Announce A {
+	Color: Purple;
+}
