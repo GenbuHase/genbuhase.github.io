@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/genbuhase
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://genbuhase.github.io
+  * I am genbuhase (https://keybase.io/genbuhase) on keybase.
+  * I have a public key with fingerprint 5ACB FE1C 2F27 6DA2 0F1C  6000 38B7 617F 8370 A83E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01019c07b54a0abd2030041c3acc8835a4a8b0408652282fdab8644310476be68c120a",
+      "fingerprint": "5acbfe1c2f276da20f1c600038b7617f8370a83e",
+      "host": "keybase.io",
+      "key_id": "38b7617f8370a83e",
+      "kid": "01019c07b54a0abd2030041c3acc8835a4a8b0408652282fdab8644310476be68c120a",
+      "uid": "e9a5f15a2eed306eb9493e2f7ebbf419",
+      "username": "genbuhase"
+    },
+    "service": {
+      "hostname": "genbuhase.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1517216080,
+  "expire_in": 157680000,
+  "prev": "031838ed4754c95a94cfa8056253a5d0f652d13ba1150edddb6d35adf1c27cf8",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMImAnicrVJbSFRBGF7dNBOzeyxRhickA7OZM+cyu2RUFGiE2O0hjZaZM3PWk3Z2
+23N200QIu0EGgUgXJYqsqCSSjAoMu2B0sZCwJJWg6KmkrR4q6qXmWL1Ejz0N8/N9
+33zfN3/fZL8vO633+Jpw6OGm82n9d04mfJX264oGiUZZvRRqkGr4+MFrGXfccI3F
+pJAEIIBBA+hUVQgglMkAAaBAAxHDwBipRCGYAgVgTZVlLJuMUKwpCoJA0TXKNWxA
+GRCpSDItO8Ljsbhlu0JWJQY1OTRkU9Y1RmRgQkMDACBMdQ3qJkY6IBhxQayOOh5D
+mKPE4cVWVMzEJTxu7x/4/+w7MS7Hg0Q1oUpkzhkCGqdBJYi4bOqcUlOBQQ/o8LhN
+tnOBjnCbJqqFW6mxSBLjpGVwr1kvyt+Q4ojlVifor1yxeNSNGtFaAah23ZgT8gTc
++pjH2Mlp+LdWmFo2E30KRpLHHStqSyEokIZreeJQhboMNYBBkcTrYlachy0Poeoa
+Fh0D7x2e9EpCECPMmaKrihFUSVAxTIKBqskqIioDpiiHQUQJhCrgjDGqMVEdE58l
+64aJJS/dDjsqhTRhk0SEpGNFbOIm4iL63dtbJvjSsn2ZGenenvmyJ039s32gNMu3
+Oz+1f1Hz19ytPtTdtydAGrqWlXW+OrHVGmyEgSzq/Gi9lzE2vPnVHHV1wZVvj/jH
+k7jk/dCdsfC3FfM2dl4e1Yef7b0Qq5oWe2Kcnz9S2DdxX6BwoKerF84u6Mmlkz/d
+2tb2femMF6kbsDXygFbNRMUL2ssz2qpWvdvQsjarMH0wr+fS44u1d+e37B9a/7ks
+/2ZO04LU8pFrZ9UPH9OP+A9Pzzxzw+hYeKjmZdnivGJ/ZUEzDDVWLGoKDN+c8uFL
+wJ9sl3Y+335ooHfW5bflZ+mS0audM4+WoI7r9M1I2/23Oaetse43OZ+HZpeO3q/r
+XnnwSdWup/2nDlwo7z/Hjs1dl/oJoIdAMg==
+=cnSe
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/genbuhase
+
+==================================================================
