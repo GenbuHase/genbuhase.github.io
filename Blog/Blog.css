@@ -1,0 +1,20 @@
+#Article-Info {
+	Position: Relative;
+}
+
+#Article-Info-Title {
+	Flex: 1;
+}
+
+#Article-Info::After {
+	Content: Var(--createdAt, "(投稿日時：)");
+
+	Display: Inline;
+	Margin-Left: 0.5em;
+
+	Font-Size: 0.75em;
+}
+
+#Article-Content {
+	White-Space: Pre-Line;
+}

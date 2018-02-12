@@ -28,6 +28,9 @@ Main {
 
 
 .mdc-typography--headline {
+	Display: Flex;
+	Align-Items: Flex-End;
+
 	Border-Bottom: Thin Solid LightSeagreen;
 }
 

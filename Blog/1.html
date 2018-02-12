@@ -29,9 +29,15 @@
 				Position: Relative;
 			}
 
-			#Article-Info-CreatedAt {
-				Position: Absolute;
-				Right: 0;
+			#Article-Info-Title {
+				Flex: 1;
+			}
+
+			#Article-Info::After {
+				Content: Var(--createdAt, "(投稿日時：)");
+
+				Display: Inline;
+				Margin-Left: 0.5em;
 
 				Font-Size: 0.75em;
 			}
@@ -44,9 +50,8 @@
 
 	<Body>
 		<Main>
-			<H1 ID = "Article-Info" Class = "mdc-typography--headline">
+			<H1 ID = "Article-Info" Class = "mdc-typography--headline" Style = '--createdAt: "(投稿日時：2018/2/12)"'>
 				<Span ID = "Article-Info-Title">ブログ、始めました。</Span>
-				<Span ID = "Article-Info-CreatedAt">(投稿日時：2018/2/12)</Span>
 			</H1>
 
 			<Section ID = "Article-Content">前々から少しずつ製作してきた<A Href = "https://github.com/GenbuHase/ArticleEditor/">Article Editor</A>がとりあえず完成したので、コイツを使って少しずつブログを書いていきたいと思ってます。
