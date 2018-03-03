@@ -100,3 +100,14 @@ Announce > Date {
 Announce A {
 	Color: Purple;
 }
+
+Album {
+	Display: Flex;
+	Flex-Direction: Row;
+	Justify-Content: Space-Around;
+	Align-Items: Baseline;
+}
+
+Album Img {
+	Width: Var(--Percentage, 20%);
+}
