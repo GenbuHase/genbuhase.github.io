@@ -104,10 +104,11 @@ Announce A {
 Album {
 	Display: Flex;
 	Flex-Direction: Row;
-	Justify-Content: Space-Around;
+	Flex-Wrap: Wrap;
+	Justify-Content: Space-Between;
 	Align-Items: Baseline;
 }
 
 Album Img {
-	Width: Var(--Percentage, 20%);
+	Width: 30%;
 }
