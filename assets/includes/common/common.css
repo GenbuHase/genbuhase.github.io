@@ -105,7 +105,7 @@ Album {
 	Display: Flex;
 	Flex-Direction: Row;
 	Flex-Wrap: Wrap;
-	Justify-Content: Space-Between;
+	Justify-Content: Space-Around;
 	Align-Items: Baseline;
 }
 
