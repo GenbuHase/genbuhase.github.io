@@ -46,6 +46,10 @@
 それにとどまらず、Mastodon自体のソースにも手を出し始め……。
 という事で改善してみた機能が非公開トゥートになります。
 
+また、開発にあたって参考にさせて頂きました！！ありがとうございます！！🙏🙏🙏
+<Script Src = "https://gamelinks007.net/embed.js" Async = "Async"></Script>
+<IFrame Class = "mastodon-embed" Src = "https://gamelinks007.net/@S_H_/99691071767594021/embed" Style = "Max-Width: 100%; Border: 0" Width="400"></IFrame>
+
 <H2 Class = "mdc-typography--subheading2">実際の挙動</H2>
 元来Mastodonには非公開トゥートの機能が実装されています。
 しかし十分に満足できる挙動<A Href = "#表1"><Sup>[表1]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
@@ -69,7 +73,25 @@
 		</Tr>
 	</TBody>
 </Table>
-</Section>
+
+改善された非公開トゥートのコードは<A Href = "https://github.com/GenbuProject/mastodon/tree/feature/privateToot" Target = "_blank">Github</A>に上げてあります。
+Rubyに関しては初心者どころか全くの未経験者なので、基礎的な部分の理解すらままならずにコミットしてしまったりでコミット数が多くなっていますが、修正箇所はかなり少なかったです。
+
+以下にて行程ごとに分けて解説をしていきます💪💪
+
+<H2 Class = "mdc-typography--subheading2">投稿処理を探し当てる</H2>
+まずサーバー側の処理、という事でRubyのコードを漁っていきます。
+app/controller直下にAPI群があったので、漁っていったところstatuses_controller.rbがありました。
+
+このコードを覗いてみると、createメソッドでPostStatusServiceが呼ばれています。
+つまり、PostStatusServiceに処理が書かれているはずです。
+
+……このように芋づる式にコードを辿っていきます。
+
+辿った結果、投稿の配信処理は同インスタンスに対してはapp/services/fan_out_on_write_service.rb、
+他インスタンスに対してはapp/workers/activitypub/distribution_worker.rbということが分かりました！！
+
+<H2 Class = "mdc-typography--subheading2">app/services/fan_out_on_write_service.rb</H2></Section>
 
 			<Section ID = "disqus_thread">
 				<Script>
