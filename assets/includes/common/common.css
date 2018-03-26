@@ -6,6 +6,10 @@ Body {
 	Margin: 0;
 }
 
+Table {
+	Border-Collapse: Collapse;
+}
+
 Div[Data-Component="Frame-Content"] {
 	Display: Flex;
 	Flex-Direction: Column;
