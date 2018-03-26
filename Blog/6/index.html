@@ -4,7 +4,7 @@
 	<Head>
 		<Meta Charset = "UTF-8" />
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
-		<Title>[Mastodon] 非公開トゥートの挙動を変えてみた話。 | どっかのプログラなーいのブログ。</Title>
+		<Title>【Mastodon】非公開トゥートの挙動を変えてみた話。 | どっかのプログラなーいのブログ。</Title>
 
 		<Script Src = "/assets/includes/DOM Extender v3.4.js"></Script>
 		<Script Src = "/assets/includes/material-components-web.min.js"></Script>
@@ -29,11 +29,11 @@
 
 	<Body>
 		<Main>
-			<H1 ID = "Article-Info" Class = "mdc-typography--headline" Style = '--createdAt: "(投稿日時：2018/3/19)"'>
-				<Span ID = "Article-Info-Title">[Mastodon] 非公開トゥートの挙動を変えてみた話。</Span>
+			<H1 ID = "Article-Info" Class = "mdc-typography--headline" Style = '--createdAt: "(投稿日時：2018/3/26)"'>
+				<Span ID = "Article-Info-Title">【Mastodon】非公開トゥートの挙動を変えてみた話。</Span>
 			</H1>
 
-			<Section ID = "Article-Content">どうも、みなさんこんにちは。Genbooです。
+			<Section ID = "Article-Content" Class = "mdc-typography--body2">どうも、みなさんこんにちは。Genbooです。
 今日から春休みに入り、時間的にも余裕が出てきました。
 時間にモチベも重なって、久しぶりにプログラミングにのめり込めてる気がします。
 
@@ -44,8 +44,20 @@
 
 そこで最近はMastodon関連のツールを製作することがかなり増えてきました。
 それにとどまらず、Mastodon自体のソースにも手を出し始め……。
+という事で改善してみた機能が非公開トゥートになります。
 
-という事で改善してみた機能が非公開トゥートになります。</Section>
+<H2 Class = "mdc-typography--subheading2">実際の挙動</H2>
+元来Mastodonには非公開トゥートの機能が実装されています。
+しかし十分に満足できる挙動<A Href = "#表1"><Sup>[表1]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
+『じゃあいっちょ変えてみっか！！』の一声で開発を始めました。
+
+<Span ID = "表1">[表1]</Span>
+|ヘッダー1|ヘッダー2|ヘッダー3|
+|:-----:|:-----|-----:|
+|A|B|C|
+
+<Img Src = "001.png" Alt = "これ" />
+</Section>
 
 			<Section ID = "disqus_thread">
 				<Script>
