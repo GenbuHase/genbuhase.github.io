@@ -33,7 +33,12 @@
 				<Span ID = "Article-Info-Title">【Mastodon】非公開トゥートの挙動を変えてみた話。</Span>
 			</H1>
 
-			<Section ID = "Article-Content" Class = "mdc-typography--body2">どうも、みなさんこんにちは。Genbooです。
+			<Section ID = "Article-Content" Class = "mdc-typography--body2">※この記事における、SSのMastodonバージョンは <B>v2.3.2</B> となります。
+　また、改変コードの状態は記事執筆時のものとなります。
+
+
+
+どうも、みなさんこんにちは。Genbooです。
 今日から春休みに入り、時間的にも余裕が出てきました。
 時間にモチベも重なって、久しぶりにプログラミングにのめり込めてる気がします。
 
@@ -44,7 +49,7 @@
 
 そこで最近はMastodon関連のツールを製作することがかなり増えてきました。
 それにとどまらず、Mastodon自体のソースにも手を出し始め……。
-という事で改善してみた機能が非公開トゥートになります。
+という事で改善してみた機能が <B>非公開トゥート</B> になります。
 
 また、開発にあたって参考にさせて頂きました！！ありがとうございます！！🙏🙏🙏
 <Script Src = "https://gamelinks007.net/embed.js" Async = "Async"></Script>
@@ -52,7 +57,7 @@
 
 <H2 Class = "mdc-typography--subheading2">実際の挙動</H2>
 元来Mastodonには非公開トゥートの機能が実装されています。
-しかし十分に満足できる挙動<A Href = "#表1"><Sup>[表1]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
+しかし十分に満足できる挙動<A Href = "#表1"><Sup>[表1]</Sup></A><A Href = "#表2"><Sup>[表2]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
 『じゃあいっちょ変えてみっか！！』の一声で開発を始めました。
 
 <Span ID = "表1">[表1]</Span>
@@ -63,35 +68,28 @@
 	
 	<TBody>
 		<Tr>
-			<Td>自分の<B>フォロワー</B>に公開</Td>
-			<Td>自分が<B>フォローしているユーザー</B>に公開</Td>
+			<Td>自分の <B>フォロワー</B> に公開</Td>
+			<Td>自分が <B>フォローしているユーザー</B> に公開</Td>
 		</Tr>
 		
 		<Tr>
-			<Td><Img Src = "001.png" Alt = "参考画像" /></Td>
-			<Td><Img Src = "002.png" Alt = "参考画像" /></Td>
+			<Td></Td>
+			<Td></Td>
 		</Tr>
 	</TBody>
 </Table>
 
+<Span ID = "表2">[表2]</Span>
+
+
 改善された非公開トゥートのコードは<A Href = "https://github.com/GenbuProject/mastodon/tree/feature/privateToot" Target = "_blank">Github</A>に上げてあります。
 Rubyに関しては初心者どころか全くの未経験者なので、基礎的な部分の理解すらままならずにコミットしてしまったりでコミット数が多くなっていますが、修正箇所はかなり少なかったです。
 
-以下にて行程ごとに分けて解説をしていきます💪💪
+<S>以下にて行程ごとに分けて解説をしていきます💪💪</S>
 
-<H2 Class = "mdc-typography--subheading2">投稿処理を探し当てる</H2>
-まずサーバー側の処理、という事でRubyのコードを漁っていきます。
-app/controller直下にAPI群があったので、漁っていったところstatuses_controller.rbがありました。
-
-このコードを覗いてみると、createメソッドでPostStatusServiceが呼ばれています。
-つまり、PostStatusServiceに処理が書かれているはずです。
-
-……このように芋づる式にコードを辿っていきます。
-
-辿った結果、投稿の配信処理は同インスタンスに対してはapp/services/fan_out_on_write_service.rb、
-他インスタンスに対してはapp/workers/activitypub/distribution_worker.rbということが分かりました！！
-
-<H2 Class = "mdc-typography--subheading2">app/services/fan_out_on_write_service.rb</H2></Section>
+【追記】
+かなり余裕がなかったので、次の記事にて解説記事を出させて頂こうかなと思ってます…
+書きかけの状態で広まってしまったこと、大変申し訳ございませんでした。</Section>
 
 			<Section ID = "disqus_thread">
 				<Script>
