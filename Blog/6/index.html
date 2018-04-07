@@ -33,12 +33,7 @@
 				<Span ID = "Article-Info-Title">【Mastodon】非公開トゥートの挙動を変えてみた話。</Span>
 			</H1>
 
-			<Section ID = "Article-Content" Class = "mdc-typography--body2">※この記事における、SSのMastodonバージョンは <B>v2.3.2</B> となります。
-　また、改変コードの状態は記事執筆時のものとなります。
-
-
-
-どうも、みなさんこんにちは。Genbooです。
+			<Section ID = "Article-Content" Class = "mdc-typography--body2">どうも、みなさんこんにちは。Genbooです。
 今日から春休みに入り、時間的にも余裕が出てきました。
 時間にモチベも重なって、久しぶりにプログラミングにのめり込めてる気がします。
 
@@ -57,30 +52,8 @@
 
 <H2 Class = "mdc-typography--subheading2">実際の挙動</H2>
 元来Mastodonには非公開トゥートの機能が実装されています。
-しかし十分に満足できる挙動<A Href = "#表1"><Sup>[表1]</Sup></A><A Href = "#表2"><Sup>[表2]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
+しかし十分に満足できる挙動<A Href = "#注釈1"><Sup>[注釈1]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため
 『じゃあいっちょ変えてみっか！！』の一声で開発を始めました。
-
-<Span ID = "表1">[表1]</Span>
-<Table Border = "1">
-	<THead>
-		<Tr><Th>Mastodon</Th><Th>理想</Th></Tr>
-	</THead>
-	
-	<TBody>
-		<Tr>
-			<Td>自分の <B>フォロワー</B> に公開</Td>
-			<Td>自分が <B>フォローしているユーザー</B> に公開</Td>
-		</Tr>
-		
-		<Tr>
-			<Td></Td>
-			<Td></Td>
-		</Tr>
-	</TBody>
-</Table>
-
-<Span ID = "表2">[表2]</Span>
-
 
 改善された非公開トゥートのコードは<A Href = "https://github.com/GenbuProject/mastodon/tree/feature/privateToot" Target = "_blank">Github</A>に上げてあります。
 Rubyに関しては初心者どころか全くの未経験者なので、基礎的な部分の理解すらままならずにコミットしてしまったりでコミット数が多くなっていますが、修正箇所はかなり少なかったです。
@@ -89,7 +62,13 @@ Rubyに関しては初心者どころか全くの未経験者なので、基礎�
 
 【追記】
 かなり余裕がなかったので、次の記事にて解説記事を出させて頂こうかなと思ってます…
-書きかけの状態で広まってしまったこと、大変申し訳ございませんでした。</Section>
+書きかけの状態で広まってしまったこと、大変申し訳ございませんでした。
+
+
+
+<Span ID = "注釈1">[注釈1]</Span>
+現実：自分の <B>フォロワー</B> に対して公開
+理想：自分が <B>フォローしているユーザー</B> に対して公開</Section>
 
 			<Section ID = "disqus_thread">
 				<Script>
