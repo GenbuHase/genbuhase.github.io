@@ -1,0 +1,318 @@
+<!DocType HTML>
+
+<HTML>
+	<Head>
+		<Meta Charset = "UTF-8" />
+		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
+		<Title>【Mastodon】限定公開機能実装の解説のような。 | どっかのプログラなーいのブログ。</Title>
+
+		<Script Src = "/assets/includes/DOM Extender v3.4.js"></Script>
+		<Script Src = "/assets/includes/material-components-web.min.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/material-components-web.min.css" />
+
+		<Script Src = "/assets/includes/common/common.js"></Script>
+		<Link Rel = "StyleSheet" Href = "/assets/includes/common/common.css" />
+
+		<Link Rel = "StyleSheet" Href = "../Blog.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async = "Async"></Script>
+		<Script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag () { dataLayer.push(arguments) }
+			
+			gtag('js', new Date());
+			gtag('set', {'user_id': 'USER_ID'}); // ログインしている user_id を使用してUser-ID を設定します。
+			gtag('config', 'UA-111257667-1');
+		</Script>
+	</Head>
+
+	<Body>
+		<Main>
+			<H1 ID = "Article-Info" Class = "mdc-typography--headline" Style = '--createdAt: "(投稿日時：2018/4/15)"'>
+				<Span ID = "Article-Info-Title">【Mastodon】限定公開機能実装の解説のような。</Span>
+			</H1>
+
+			<Section ID = "Article-Content" Class = "mdc-typography--body2">※この記事におけるMastodonバージョンは <B>v2.3.3</B> となります。
+　また、改変コードの状態は記事執筆時のものとなります。
+
+
+
+どうもお久しぶりです。
+最近ずっと開発の方に専念していたので、ブログ側にまで手が回らずに放置していました…:( ;´꒳`;):
+そんな怠慢の末路、恥ずかしい記事が残ってしまいましたので、挽回という形で新しく記事を投げようと思った次第です🙏
+
+さて、<A Href = "6">前回の記事</A>における <B>非公開トゥート</B> ですが、今更ながら既存の公開範囲を書き換える必要性が無くなりましたので
+公開範囲を新たに追加する、という形で再製作を行いました。
+
+<Img Src = "001.png" Alt = "限定公開プレビュー" />
+
+名前も一新して <B>限定公開機能</B> となりました！！✌(´◉౪◉`)✌
+という訳でソースは<A Href = "https://github.com/Itabashi-don/mastodon/commits/feature/limitedToot">こちら</A>です！
+
+当初はリプの公開範囲をリプ元に合わせようという事をしていたのですが、Sidekiqの再試行に悩まされ、結局今の自分の知識では無理だと判断したので実装を諦めました。
+
+
+
+<A Href = "https://github.com/Itabashi-don/mastodon/compare/v2.3.3...feature/limitedToot" Target = "_blank">v2.3.3との差分</A>をご覧に頂ければ分かるのですが、今回のファイル変更数は12件となっています。
+その内ローカライズデータに3件、フロントエンド側に5件、そしてバックエンド側に4件の変更を加えています。
+まだまだ駆け出しの初心者ですのでこれが大規模なのかどうか分かりませんが、実際にやってみて、比較的容易だったなと思っています。
+
+ブログの方も未だにどういう風に書いていけばいいのか分かっておりませんが、とりあえず解説の様なものでもしていきたいと思います:( ;´꒳`;):
+
+
+
+<H2 Class = "mdc-typography--subheading2">フロントエンド側 - ローカライズ処理</H2>
+ひとまず、追加したい項目の名前と表示名<A Href = "#表1"><Sup>[表1]</Sup></A>を決めます。
+そこから英語と日本語に翻訳すれば大体OKだと思います。
+
+<Span ID = "表1">[表1]</Span>
+<Table Border = "1">
+	<Tr>
+		<Th>ローカライズID</Th>
+		<Th>日本語</Th>
+		<Th>英語</Th>
+	</Tr>
+	
+	<Tr>
+		<Th>privacy.limited.short</Th>
+		<Td>限定公開</Td>
+		<Td>Limited</Td>
+	</Tr>
+	
+	<Tr>
+		<Th>privacy.limited.long</Th>
+		<Td>自分がフォローしているユーザーにだけ公開</Td>
+		<Td>Post to followed users only</Td>
+	</Tr>
+	
+	<Tr>
+		<Th>compose_form.limited_disclaimer</Th>
+		<Td>このトゥートは限定公開です。非公開とは違い、自身がフォローしているユーザーにのみ公開されます。</Td>
+		<Td>This post is for followed users. Only users you're following can view ones.</Td>
+	</Tr>
+</Table>
+
+これらを <I>app/javascript/mastodon/locales</I> 直下のローカライズデータに打ち込んでいきます。
+改変後のソースは<A Href = "https://github.com/Itabashi-don/mastodon/compare/v2.3.3...feature/limitedToot#diff-be68e2cbf3d70594c963caa9d60ac578" Target = "_blank">こちら</A>をご覧下さい。
+
+
+
+<H2 Class = "mdc-typography--subheading2">フロントエンド側 - privacy_dropdown.js</H2>
+サーバー側より目に見える部分の方が実装していて気が楽になると思います。(precompileがあるのでちょっと微妙ですが…)
+という訳でこちらから改変していきます。
+
+<B>公開範囲を追加する</B> という事なので、まず投稿UIを弄りに行きましょう。
+<I>app/javascript/mastodon</I> の下を漁ると <I>features/compose</I> ディレクトリがあります。
+ここが投稿時に表示される画面になっています。
+
+試しに <I>compose_form.js</I> を触ってみると、 <B>PrivacyDropdownContainer</B> が参照されています。
+そしてその中で <B>PrivacyDropdown</B> が参照されています。
+明らかに名前からして怪しい……ですよね？(*´ω｀*)
+
+という訳で覗いてみると、 <I>this.options</I> へ代入している部分があります。
+コードの感じからして、ここに追加すればアイテムも追加されそうです。
+という訳でその部分を書き換えます。
+
+まず、ローカライズに対応させるので最上部の <I>defineMessages</I> メソッドに、先ほど追加したローカライズIDを割り当てます。
+ここで使うのは <I>privacy.limited.short</I> と <I>privacy.limited.long</I> の2つです。
+
+次に <I>this.options</I> に項目を追加します。
+既に追加されているものを参考にして記述しました。
+
+改変後は<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/features/compose/components/privacy_dropdown.js#L164" Target = "_blank">このような感じ</A>になりました。
+
+
+
+<H2 Class = "mdc-typography--subheading2">フロントエンド側 - warning_container.js</H2>
+とりあえずここでprecompileして再起動してみると、公開範囲のドロップダウンに項目が追加されている事が分かります。
+しかし、まだ見栄え的に足りない様な気もします。
+わたしの場合は、非公開のように喚起文を付け加えたいなと思い立ったので、次はそこを改変していきました。
+
+先ほどもあった通り、投稿UIは <I>features/compose</I> の中にあります。
+<I>index.js</I> を見ると <B>ComposeFormContainer</B> があり、更にその中を覗くと <B>ComposeForm</B> が、そしてその中には <B>WarningContainer</B> があります。
+
+<I>props</I> には既に2つ定義されているようです。
+1つは公開範囲が非公開の時、そしてもう1つがハッシュタグを検知した時です。
+
+今回は限定公開の時に喚起文を出すようにしたいので、新たに <I>props</I> に定義を加えます。
+投稿にあたって使用する <I>visibility</I> は"limited"なので、とりあえず <I>needsLockWarning</I> をコピーして書き換えて定義しましょう。
+
+次に <B>WarningWrapper</B> に実際に表示する喚起文の要素を書いていきます。
+ローカライズに対応させるので先と同様に、コピーしてちょちょいと書き換えちゃいましょう👍
+
+ローカライズIDは <I>compose_form.limited_disclaimer</I> です。
+これを参照させて、一応 <I>defaultMessage</I> フィールドにも代入しておきましょう。
+
+という訳で、改変後のソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/features/compose/containers/warning_container.js" Target = "_blank">このよう</A>になります。
+
+
+
+<H2 Class = "mdc-typography--subheading2">フロントエンド側 - action_bar.js 及び status_action_bar.js</H2>
+ここまでは投稿時の処理に注目してきましたが、実際投稿されたトゥートはどのように表示されるのでしょうか。
+限定公開トゥートがブーストされてしまっては困りますし、その他にも色々あるかもしれません。
+(執筆途中にまた一つ不具合を見つけてしまいました…)
+
+という訳で、次はそこら辺を弄っていきます。
+
+まずは限定公開のトゥートのアイコンを決めてみました。
+faiconsのパッケージ内で探してみて <I>fa-low-vision</I> が丁度いいかなと思いましたので、今回はこれを使っていきます。
+
+トゥートされて表示されるときに「限定公開だよ！！」と表明していなければ、どの公開範囲なのかは分かりません。
+という事なのでアイコンが表示されている領域の <B>ActionBar</B> と <B>StatusActionBar</B> を覗いてみます。
+
+ここでは基本のアイコンが <I>fa-retweet</I> に設定されており、公開範囲によって変更される仕組みになっているようです。
+ここを改変して、"limited"の時にアイコンが <I>fa-low-vision</I> に変化するようにします。
+
+また <B>ActionBar</B> コンポーネントのみの変更となりますが、ブーストさせないようにさせなければなりません。
+何故か <B>ActionBar</B> と <B>StatusActionBar</B> では処理の方法が異なるようです。
+統一しちゃえばいいのに…と思うのはわたしだけでしょうか…？
+
+まぁその話は置いておくとして <I>reblog_disabled</I> の取得方法を <B>StatusActionBar</B> の処理に合わせ、更にtrueとfalseを反転させました。
+ここまでのソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/components/status_action_bar.js" Target = "_blank">ここ</A>と<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/features/status/components/action_bar.js" Target = "_blank">ここ</A>を参照して下さい。
+
+
+
+<H2 Class = "mdc-typography--subheading2">フロントエンド側 - reducers/compose.js</H2>
+これがフロントエンド側で最後の変更となります。
+新しく公開範囲を追加した為か、返信時に公開範囲がリプ元のものに合わさってくれない、という問題が発生しました。
+
+という事なので、返信時のReducer側の処理を見てみます。
+なんやかんやあって <I>compose.js</I> に辿り着きました。
+<I>COMPOSE_REPLY</I> の受信時に <I>privacy</I> を設定しているのですが、そこで参照されている <I>privacyPreference</I> では"limited"の設定がされていませんので、新しく条件分岐を作ります。
+
+これでちゃんとリプ元の公開範囲に合わさるようになりました。
+ここまでのソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/reducers/compose.js" Target = "_blank">こちら</A>です。
+
+
+
+<H2 Class = "mdc-typography--subheading2">バックエンド側</H2>
+フロントエンド側の実装は完了したので、次は実際に投稿したり配信する処理を見ていきましょう。
+APIは全て <I>app/controller</I> の下にあるらしく、漁ってみると <I>statuses_controller.rb</I> がありました。
+この中では <B>PostStatusService</B> が呼ばれていますので、次は定義を探しに行きます。
+
+<B>PostStatusService</B> → <B>DistributionWorker</B> → <B>FanOutOnWriteService</B> という風に配信処理部分まで辿り着くことが出来ました。
+ここからが今回の最大の敵だと思います。Ruby超初心者にはかなりキツかったです:( ;´꒳`;):
+
+ではここから更に細分化していきましょう。
+
+
+
+<H2 Class = "mdc-typography--subheading2">バックエンド側 - models/status.rb</H2>
+まず、Rubyの方でも公開範囲を追加します。
+
+<B>Status</B> モデルでおもむろに <I>visibility</I> の定義が行われています。
+今回使っているのは"limited"です。追加しましょう。しましょう。(大事なことなので2度言いました)
+
+ここからは完全にわたしの勘による改変になります。というか言ってしまうとほぼ全て勘ですが(   '-'   )
+最初に <I>permitted_for</I> メソッドの改変を行いました。
+改変してみて分かった事ですが、ここはプロフィール画面での配信に関わっているようです。
+
+<I>followed_by?</I> メソッド(後述)が通る時にのみ <I>limited</I> をpushしています。
+これで、フォローされていればプロフィール画面からトゥートが見える様になりました。
+
+次に <I>as_home_timeline</I> メソッドの改変です。
+ここは…やってみたのですが正直どこが変わったのか分かってません()
+個人的にトゥート数とかの算出に関わりそうだな、って感じのレベルですね…
+
+まぁここは改変なしでも大丈夫な気がします…:( ;´꒳`;):
+
+ここまでのソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/models/status.rb" Target = "_blank">こちら</A>です。多分参考にならなそうな気がしますが(;^ω^)
+
+
+
+<H2 Class = "mdc-typography--subheading2">バックエンド側 - models/concerns/account_interactions.rb</H2>
+限定公開は <B>自分がフォローしているユーザー</B> に対して配信します。
+実装にあたって、自分のフォローしているユーザーのリストが必要になります。
+
+<B>Account</B> モデルには <I>following?</I> メソッドは既に定義されているのですが、今回取得したい <I>followed_by?</I> メソッドは見当たりません。
+「見つからない…どうしよう…」となるぐらいなら実装してしまおう！という事で実装しました(白目)
+
+<B>Account</B> モデルが参照している <I>account_interactions.rb</I> に <I>following?</I> の定義があります。
+わたしの場合ですが、その下に <I>followed_by?</I> メソッドを新しく定義しました。
+
+最初は <I>where</I> メソッドで <I>target_account</I> を指定していたのですが、上手く行かなかったので <I>account</I> にしてみたところ動作しました。
+つまり偶然と勘です。勘って大事だね(爆)
+
+ここまでのソースコードは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/models/concerns/account_interactions.rb" Target = "_blank">こちら</A>になります。
+
+
+
+<H2 Class = "mdc-typography--subheading2">バックエンド側 - services/fan_out_on_write_service.rb</H2>
+<I>call</I> メソッド部分でDMの時にのみ <I>deliver_to_mentioned_followers</I> メソッドが実行されています。
+ここで条件分岐して配信を分けているのだろうと思われます。
+限定公開の時も処理が変わるように、ここに条件分岐を追加して <I>deliver_to_followed_users</I> メソッドを実行させます。
+
+さて、では本命の <I>deliver_to_followed_users</I> メソッドを見ていきます。
+
+ここで一旦配信条件を整理します。
+<B>自分のフォロワーであること</B> 且つ <B>自分がフォローしていること</B> が条件です。こうやって文字にすると結構良かったりします。
+バラバラになって分からなくなった時に是非やってみると纏まるかと思いますよ(*´ω｀*)
+
+はい、という訳で条件の整理が出来ましたので、この条件で配信されるようにコードを実装していきます。
+ここまでの<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/services/fan_out_on_write_service.rb" Target = "_blank">コード</A>はこちらです。
+
+
+
+<H2 Class = "mdc-typography--subheading2">バックエンド側 - workers/activitypub/distribution_worker.rb</H2>
+ここが最後の改変になります。
+限定公開をサポートしていない外部インスタンスには、有無を言わせず流れていってしまいます。
+これはかなり困ります。限定の意味が全く無くなってしまいます。
+
+という事なので最終手段で、そもそも <B>外部に流さない</B> ようにしましょう。
+そこで外部への配信処理を見ていきます。
+先ほど辿った <B>PostStatusService</B> にて、複数の <B>DistributionWorker</B> が呼ばれています。
+
+これらの一つ、ActivityPubのDistributionWorkerを確認してみます。
+<I>workers/activitypub/distribution_worker.rb</I> は数十行程度のかなり短いコードです。
+
+その中の <I>skip_distribution?</I> メソッドで、外部に流すか流さないか判断している模様です。
+限定公開トゥート自体を流さない様にするので、条件を追加しましょう。
+
+ここのソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/workers/activitypub/distribution_worker.rb" Target = "_blank">こちら</A>になります。
+
+
+
+<H2 Class = "mdc-typography--subheading2">実装してみて考察とかなんやら。</H2>
+まずRubyやRailsなど、見たことも触った事もない所からここまで来るのに相当の時間を要してしまった気がします。
+基本的な所の理解が未だに出来ていなかったりしましたが、結構楽しかったです。
+ただ、今までろくにブログを書いたことがなかったのでどうやって書いていいか迷いました:( ;´꒳`;):
+
+<S>じゃあ書かなきゃいいって話なんですけど(爆)</S>
+
+この限定公開の実装にあたって、わたしを突き動かしてくれた一言がありました。
+この場をお借りして感謝申し上げます。本当にありがとう🙏🙏🙏
+
+これからも楽しく色々実装していけたらな、そして実装を通じて色んな知識を蓄えていけたらな、と思います。
+長々と書き連ねてしまって本当にごめんなさい。ここまで見て頂いた方々、本当にありがとうございます。
+そして前回の記事に関して、不十分な状態で広まってしまったことをお詫び申し上げます。
+
+かなりの未熟者ですが、これからも見守ってて下さいませ。
+ではまた(*･ω･)*_ _)</Section>
+
+			<Section ID = "disqus_thread">
+				<Script>
+					/**
+					*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+					*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+					/*
+					var disqus_config = function () {
+						this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					*/
+					(() => { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+							s.src = 'https://genbuhase-blog.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</Script>
+	
+				<NoScript>
+					Please enable JavaScript to view the <A Href = "https://disqus.com/?ref_noscript">comments powered by Disqus.</A>
+				</NoScript>
+			</Section>
+		</Main>
+	</Body>
+</HTML>
