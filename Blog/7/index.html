@@ -33,16 +33,15 @@
 				<Span ID = "Article-Info-Title">【Mastodon】限定公開機能実装の解説のような。</Span>
 			</H1>
 
-			<Section ID = "Article-Content" Class = "mdc-typography--body2">※この記事におけるMastodonバージョンは <B>v2.3.3</B> となります。
-　また、改変コードの状態は記事執筆時のものとなります。
-
+			<Section ID = "Article-Content" Class = "mdc-typography--body2">※この記事は<A Href = "../6">過去記事</A>の続きです。
+※この記事におけるMastodonバージョンは <B>v2.3.3</B> となります。また、コードの状態は記事執筆時のものとなります。
 
 
 どうもお久しぶりです。
 最近ずっと開発の方に専念していたので、ブログ側にまで手が回らずに放置していました…:( ;´꒳`;):
 そんな怠慢の末路、恥ずかしい記事が残ってしまいましたので、挽回という形で新しく記事を投げようと思った次第です🙏
 
-さて、<A Href = "6">前回の記事</A>における <B>非公開トゥート</B> ですが、今更ながら既存の公開範囲を書き換える必要性が無くなりましたので
+さて、<A Href = "../6">前回の記事</A>における <B>非公開トゥート</B> ですが、今更ながら既存の公開範囲を書き換える必要性が無くなりましたので
 公開範囲を新たに追加する、という形で再製作を行いました。
 
 <Img Src = "001.png" Alt = "限定公開プレビュー" />
@@ -60,6 +59,10 @@
 
 ブログの方も未だにどういう風に書いていけばいいのか分かっておりませんが、とりあえず解説の様なものでもしていきたいと思います:( ;´꒳`;):
 
+また、開発にあたって参考にさせて頂きました！！ありがとうございます！！🙏🙏🙏
+<Script Src = "https://gamelinks007.net/embed.js" Async = "Async"></Script>
+<IFrame Class = "mastodon-embed" Src = "https://gamelinks007.net/@S_H_/99691071767594021/embed" Style = "Max-Width: 100%; Border: 0" Width="400"></IFrame>
+
 
 
 <H2 Class = "mdc-typography--subheading2">フロントエンド側 - ローカライズ処理</H2>
@@ -68,11 +71,13 @@
 
 <Span ID = "表1">[表1]</Span>
 <Table Border = "1">
-	<Tr>
-		<Th>ローカライズID</Th>
-		<Th>日本語</Th>
-		<Th>英語</Th>
-	</Tr>
+	<THead>
+		<Tr>
+			<Th>ローカライズID</Th>
+			<Th>日本語</Th>
+			<Th>英語</Th>
+		</Tr>
+	</THead>
 	
 	<Tr>
 		<Th>privacy.limited.short</Th>

@@ -64,6 +64,7 @@ Main Img {
 
 	Display: Inline-Block;
 	Width: 0.5rem;
+	Min-Width: 0.5rem;
 	Margin-Right: 0.5em;
 
 	Background: MediumPurple;
