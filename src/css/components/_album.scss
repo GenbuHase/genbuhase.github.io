@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+Album {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+
+	Img {
+		width: 30%;
+	}
+}

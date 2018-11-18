@@ -1,0 +1,122 @@
+HTML,
+Body {
+  height: 100%;
+}
+
+Body {
+  margin: 0;
+}
+
+Div[Data-Component=Frame-Content] {
+  display: flex;
+  flex-direction: column;
+}
+
+UL[Data-Component=Frame-Drawer_SNSList] {
+  margin: 0 auto;
+}
+
+UL[Data-Component=Frame-Drawer_SNSList] A > Span {
+  vertical-align: middle;
+}
+
+Main {
+  flex: 1;
+  padding: 1rem;
+}
+
+Main Img {
+  max-width: 100%;
+}
+
+Table {
+  border-collapse: collapse;
+}
+
+.mdc-typography--headline {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: thin solid lightseagreen;
+}
+
+.mdc-typography--headline::Before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+  border: 1rem solid transparent;
+  border-color: transparent lightseagreen lightseagreen transparent;
+}
+
+.mdc-typography--subheading2 {
+  display: flex;
+  border-bottom: thin solid mediumpurple;
+}
+
+.mdc-typography--subheading2::Before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  min-width: 0.5rem;
+  margin-right: 0.5em;
+  background: mediumpurple;
+}
+
+Pre.prettyprint {
+  width: auto;
+  margin: 0;
+  font-family: "Meiryo UI";
+  white-space: pre;
+  overflow-x: auto;
+}
+
+YouTube {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+@media (min-width: 800px) {
+  YouTube {
+    width: 640px;
+    height: 360px;
+    padding-top: 0;
+  }
+}
+
+YouTube > IFrame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+Album {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+Album Img {
+  width: 30%;
+}
+
+Announce {
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  background: darkkhaki;
+  border: medium ridge lightseagreen;
+}
+
+Announce > Date {
+  border-bottom: thin solid;
+}
+
+Announce A {
+  color: purple;
+}

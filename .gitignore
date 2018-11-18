@@ -1,0 +1,6 @@
+# Npm files
+node_modules/
+
+# Scss files
+.sass-cache/
+*.css.map
