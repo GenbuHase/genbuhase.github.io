@@ -4,6 +4,7 @@
 	"description": "A homepage of GenbuHase",
 	"main": "gulpfile.js",
 	"dependencies": {
+		"del": "^3.0.0",
 		"gulp": "^3.9.1",
 		"gulp-concat": "^2.6.1",
 		"gulp-ejs": "^3.3.0",

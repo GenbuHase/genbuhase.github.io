@@ -1,5 +1,5 @@
 <%-
-	include("../!templates/_template-header", {
+	include("../!templates/_header", {
 		name: "Drawing",
 		title: "どろういんぐ。",
 		favicon: "favicon.ico",
@@ -18,203 +18,28 @@
 
 			<Album Class = "mdc-grid-list">
 				<UL Class = "mdc-grid-list__tiles">
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>＼ﾃﾞｪｪｪｪｪｪﾝ／</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/30</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>Android・iOS論争</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/03</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-					
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>ありがと</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/02</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>うれしみが深い</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/03</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>おつかれ</Drawing-Title>
-							<Drawing-DrawedAt>2018/02/09</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>きらきら</Drawing-Title>
-							<Drawing-DrawedAt>2017/10/09</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>だいすき</Drawing-Title>
-							<Drawing-DrawedAt>2018/02/08</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>なか卯最終形態</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/30</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>なんなんぎんなん</Drawing-Title>
-							<Drawing-DrawedAt>2017/11/13</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>にんげん</Drawing-Title>
-							<Drawing-DrawedAt>2017/11/12</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>にんじん</Drawing-Title>
-							<Drawing-DrawedAt>2017/11/12</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>はぁと</Drawing-Title>
-							<Drawing-DrawedAt>2017/10/09</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>ポッ by はるるん</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/02</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>ゆるせにゃん</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/17</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>わかりみが深い</Drawing-Title>
-							<Drawing-DrawedAt>2017/11/12</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>暇</Drawing-Title>
-							<Drawing-DrawedAt>2017/10/09</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>過疎たす</Drawing-Title>
-							<Drawing-DrawedAt>2017/10/09</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>私</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/03</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>人生を歩む by はるるん</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/04</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>竹生える</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/11</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>通知ベル</Drawing-Title>
-							<Drawing-DrawedAt>2017/11/12</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
-
-					<Drawing>
-						<Drawing-Picture></Drawing-Picture>
-
-						<Drawing-Details>
-							<Drawing-Title>独りじゃない</Drawing-Title>
-							<Drawing-DrawedAt>2017/12/12</Drawing-DrawedAt>
-						</Drawing-Details>
-					</Drawing>
+					<%- include("../!templates/_drawing", { name: "＼ﾃﾞｪｪｪｪｪｪﾝ／", drawedAt: "2017/12/30" }) %>
+					<%- include("../!templates/_drawing", { name: "Android・iOS論争", drawedAt: "2017/12/03" }) %>
+					<%- include("../!templates/_drawing", { name: "ありがと", drawedAt: "2017/12/02" }) %>
+					<%- include("../!templates/_drawing", { name: "うれしみが深い", drawedAt: "2017/12/03" }) %>
+					<%- include("../!templates/_drawing", { name: "おつかれ", drawedAt: "2018/02/09" }) %>
+					<%- include("../!templates/_drawing", { name: "きらきら", drawedAt: "2017/10/09" }) %>
+					<%- include("../!templates/_drawing", { name: "だいすき", drawedAt: "2018/02/08" }) %>
+					<%- include("../!templates/_drawing", { name: "なか卯最終形態", drawedAt: "2017/12/30" }) %>
+					<%- include("../!templates/_drawing", { name: "なんなんぎんなん", drawedAt: "2017/11/13" }) %>
+					<%- include("../!templates/_drawing", { name: "にんげん", drawedAt: "2017/11/12" }) %>
+					<%- include("../!templates/_drawing", { name: "にんじん", drawedAt: "2017/11/12" }) %>
+					<%- include("../!templates/_drawing", { name: "はぁと", drawedAt: "2017/10/09" }) %>
+					<%- include("../!templates/_drawing", { name: "ポッ by はるるん", drawedAt: "2017/12/02" }) %>
+					<%- include("../!templates/_drawing", { name: "ゆるせにゃん", drawedAt: "2017/12/17" }) %>
+					<%- include("../!templates/_drawing", { name: "わかりみが深い", drawedAt: "2017/11/12" }) %>
+					<%- include("../!templates/_drawing", { name: "暇", drawedAt: "2017/10/09" }) %>
+					<%- include("../!templates/_drawing", { name: "過疎たす", drawedAt: "2017/10/09" }) %>
+					<%- include("../!templates/_drawing", { name: "私", drawedAt: "2017/12/03" }) %>
+					<%- include("../!templates/_drawing", { name: "人生を歩む by はるるん", drawedAt: "2017/12/04" }) %>
+					<%- include("../!templates/_drawing", { name: "竹生える", drawedAt: "2017/12/11" }) %>
+					<%- include("../!templates/_drawing", { name: "通知ベル", drawedAt: "2017/11/12" }) %>
+					<%- include("../!templates/_drawing", { name: "独りじゃない", drawedAt: "2017/12/12" }) %>
 				</UL>
 			</Album>
-<%- include("../!templates/_template-footer") %>
+<%- include("../!templates/_footer") %>

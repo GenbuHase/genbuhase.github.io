@@ -1,0 +1,8 @@
+<Drawing Class = "mdc-grid-tile mdc-grid-list--twoline-caption">
+	<%- `<Drawing-Picture Class = "mdc-grid-tile__primary" Style = "background-image: URL('assets/images/${name}.png')"></Drawing-Picture>` %>
+	
+	<Drawing-Details Class = "mdc-grid-tile__secondary">
+		<Drawing-Title Class = "mdc-grid-tile__title"><%= name %></Drawing-Title>
+		<Drawing-DrawedAt Class = "mdc-grid-tile__support-text"><%= drawedAt || "製作日時不明" %></Drawing-DrawedAt>
+	</Drawing-Details>
+</Drawing>
