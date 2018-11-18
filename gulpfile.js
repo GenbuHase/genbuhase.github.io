@@ -9,7 +9,7 @@ gulp.task("default", ["watch"]);
 
 gulp.task("watch", ["compile"], () => {
 	gulp.watch("./src/!js/**/*.js", ["js-compile"]);
-	gulp.watch("./src/!css/**/*.scss", ["scss-compile"]);
+	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
 });
 
@@ -27,6 +27,11 @@ gulp.task("scss-compile", () => {
 		.pipe(gulpPlumber())
 		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
 		.pipe(gulp.dest("./css"));
+
+	gulp.src(["!./src/!css/**/*.scss", "./src/**/*.scss"])
+		.pipe(gulpPlumber())
+		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
+		.pipe(gulp.dest("./"));
 });
 
 gulp.task("ejs-compile", () => {

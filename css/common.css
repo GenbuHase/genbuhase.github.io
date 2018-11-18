@@ -1,7 +1,7 @@
-@import url(/src/!libs/material-components-web.min.css);
+@import url(/src/!libs/Material-Design-Components/material-components-web.min.css);
 @import url(/src/!libs/Material-Icons/material-icons.css);
 @import url(/src/!libs/Material-Icons-Extended/material-icons-extended.css);
-@import url(/src/!libs/code-prettify_sunburst.css);
+@import url(/src/!libs/Code-Prettify/code-prettify_sunburst.css);
 HTML,
 Body {
   height: 100%;
