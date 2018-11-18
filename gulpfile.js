@@ -75,19 +75,5 @@ gulp.task("watch", ["compile"], () => {
 	gulp.watch("./src/!js/**/*.js", ["js-compile"]);
 	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
-
-	gulp.watch(["!./src/!*/**/*.*", ...notTransferedFiles.map(file => `!./src/**/${file}`), "./src/**/*.*"])
-		.on("change", ({ type, path }) => {
-			switch (type) {
-				default:
-				case "added":
-				case "changed":
-					transferAsset(path);
-					break;
-
-				case "deleted":
-					cleanAsset(path);
-					break;
-			}
-		});
+	gulp.watch(["!./src/!*/**/*.*", ...notTransferedFiles.map(file => `!./src/**/${file}`), "./src/**/*.*"], ["transfer"]);
 });
