@@ -5,7 +5,7 @@
 		<Meta Charset = "UTF-8" />
 		<Title><%= title ? title + '｜' : '' %>どっかのプログラなーいのサイト。</Title>
 		
-		<%- isHome ? '<Link Rel = "Icon" Href = "favicon.ico" />' : '' %>
+		<%- (!isHome && !favicon) ? '' : `<Link Rel = "Icon" Href = "${isHome ? "favicon.ico" : favicon ? favicon : ""}" />` %>
 		<%- isHome ? '<Link Rel = "Canonical" Href = "https://genbuhase.github.io/" />' : '' %>
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 

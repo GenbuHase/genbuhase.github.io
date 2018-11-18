@@ -11,9 +11,10 @@ gulp.task("watch", ["compile"], () => {
 	gulp.watch("./src/!js/**/*.js", ["js-compile"]);
 	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
+	gulp.watch("./src/**/*.*", ["transfer"]);
 });
 
-gulp.task("compile", ["js-compile", "scss-compile", "ejs-compile"]);
+gulp.task("compile", ["js-compile", "scss-compile", "ejs-compile", "transfer"]);
 
 gulp.task("js-compile", () => {
 	gulp.src("./src/!libs/**/*.js")
@@ -40,4 +41,16 @@ gulp.task("ejs-compile", () => {
 		.pipe(ejs())
 		.pipe(gulpRename({ extname: ".html" }))
 		.pipe(gulp.dest("./"));
+});
+
+gulp.task("transfer", () => {
+	gulp.src([
+		"!./src/!*/**/*.*",
+		"!./src/**/*.html",
+		"!./src/**/*.css",
+		"!./src/**/*.ejs",
+		"!./src/**/*.scss",
+		
+		"./src/**/*.*"
+	]).pipe(gulp.dest("./"));
 });
