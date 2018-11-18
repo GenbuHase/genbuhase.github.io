@@ -51,14 +51,14 @@ const transferAssets = () => {
 	]).pipe(gulp.dest("./"));
 };
 
-const transferAsset = e => {
-	console.info(`Starting to transfer '${e.path}'...`);
-	gulp.src(e.path).pipe(gulp.dest("./"));
+const transferAsset = filename => {
+	console.info(`Starting to transfer '${filename}'...`);
+	gulp.src(filename).pipe(gulp.dest("./"));
 };
 
-const cleanAsset = e => {
-	console.info(`Starting to clean '${e.path}'...`);
-	// fs.unlink(e.path);
+const cleanAsset = filename => {
+	console.info(`Starting to clean '${filename}'...`);
+	// fs.unlink(filename);
 };
 
 
@@ -76,8 +76,18 @@ gulp.task("watch", ["compile"], () => {
 	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
 
-	gulp.watch("./src/**/*.*")
-		.on("change", transferAsset)
-		.on("add", transferAsset)
-		.on("unlink", cleanAsset);
+	gulp.watch(["!./src/!*/**/*.*", ...notTransferedFiles.map(file => `!./src/**/${file}`), "./src/**/*.*"])
+		.on("change", ({ type, path }) => {
+			switch (type) {
+				default:
+				case "added":
+				case "changed":
+					transferAsset(path);
+					break;
+
+				case "deleted":
+					cleanAsset(path);
+					break;
+			}
+		});
 });
