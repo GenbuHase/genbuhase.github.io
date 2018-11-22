@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+Modlist {
+	display: block;
+
+	> UL {
+		justify-content: space-around;
+	}
+}
+
+Mod {
+	width: 300px;
+
+	ModName {
+		display: block;
+		width: 10em;
+		overflow: hidden;
+		
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}

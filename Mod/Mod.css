@@ -1,0 +1,19 @@
+Modlist {
+  display: block;
+}
+
+Modlist > UL {
+  justify-content: space-around;
+}
+
+Mod {
+  width: 300px;
+}
+
+Mod ModName {
+  display: block;
+  width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

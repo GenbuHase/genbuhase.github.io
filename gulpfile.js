@@ -4,7 +4,6 @@ const gulpRename = require("gulp-rename");
 const gulpConcat = require("gulp-concat");
 const sass = require("gulp-sass");
 const ejs = require("gulp-ejs");
-const fs = require("fs");
 
 
 
@@ -75,5 +74,11 @@ gulp.task("watch", ["compile"], () => {
 	gulp.watch("./src/!js/**/*.js", ["js-compile"]);
 	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
-	gulp.watch(["!./src/!*/**/*.*", ...notTransferedFiles.map(file => `!./src/**/${file}`), "./src/**/*.*"], ["transfer"]);
+
+	gulp.watch([
+		"!./src/!*/**/*.*",
+		...notTransferedFiles.map(file => `!./src/**/${file}`),
+		
+		"./src/**/*.*"
+	], ["transfer"]);
 });
