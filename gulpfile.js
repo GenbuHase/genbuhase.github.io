@@ -30,12 +30,12 @@ const bundleLibs = () => {
 };
 
 const compileScss = () => {
-	gulp.src("./src/!css/**/*.scss")
-		.pipe(gulpPlumber())
-		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
-		.pipe(gulp.dest("./css"));
+	//gulp.src("./src/!css/**/*.scss")
+	//	.pipe(gulpPlumber())
+	//	.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
+	//	.pipe(gulp.dest("./css"));
 
-	gulp.src(["./src/**/*.scss", "!./src/!css/**/*.scss"])
+	gulp.src(["./src/**/*.scss", "!./src/!libs/**/*.scss", "!./src/!css/**/*.scss"])
 		.pipe(gulpPlumber())
 		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
 		.pipe(gulp.dest("./"));
@@ -62,21 +62,14 @@ const transferAssets = () => {
 
 gulp.task("default", ["watch"]);
 gulp.task("lib-bundle", bundleLibs);
-gulp.task("scss-compile", () => {});
-gulp.task("ejs-compile", () => {});
+gulp.task("scss-compile", compileScss);
+gulp.task("ejs-compile", compileEjs);
 gulp.task("transfer", () => {});
 gulp.task("compile", ["lib-bundle", "scss-compile", "ejs-compile", "transfer"]);
 
 gulp.task("watch", ["compile"], () => {
 	gulp.watch("./src/!libs/**/*.js", ["lib-bundle"]);
-
-	gulp.watch([
-		"./src/!css/**/*.scss",
-		"./src/**/*.scss",
-
-		"!./src/!libs/**/*.scss"
-	], ["scss-compile"]);
-
+	gulp.watch("./src/**/*.scss", ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
 
 	gulp.watch([

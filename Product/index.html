@@ -1,54 +1,18 @@
-<%
-	const needInit = (variable) => (typeof variable === "undefined");
-
-	const SITENAME = "どっかのプログラなーいのサイト。";
-
-	const defaultConfigs = {
-		name: '""',
-		title: '""',
-		favicon: 'null',
-		libraries: '[]',
-		isHome: 'false',
-		hasScript: 'false',
-		hasStyle: 'false'
-	};
-
-	for (const config in defaultConfigs) {
-		try {
-			eval(config);
-		} catch (error) {
-			eval(`${config} = ${defaultConfigs[config]}`);
-		}
-	}
-%><!DocType HTML>
+<!DocType HTML>
 
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title><%= isHome ? (title ? title : SITENAME) : (title ? `${title}｜${SITENAME}` : SITENAME) %></Title>
+		<Title>Product｜どっかのプログラなーいのサイト。</Title>
 		
-		<%- (!isHome && !favicon) ? '' : `<Link Rel = "Icon" Href = "${isHome ? "favicon.ico" : (favicon ? favicon : "")}" />` %>
-		<%- isHome ? '<Link Rel = "Canonical" Href = "https://genbuhase.github.io/" />' : '' %>
+		
+		
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 
-		<Link Rel = "StyleSheet" Href = "/css/common.css" /><%-
-		hasStyle ? `<Link Rel = "StyleSheet" Href = "./${name}.css" />` : '' %>
+		<Link Rel = "StyleSheet" Href = "/css/common.css" />
 
-		<Script Src = "/js/common.js"></Script><%-
-		hasScript ? `<Script Src = "./${name}.js"></Script>` : '' %>
-		<%
-			for (var lib of libraries) {
-				var tag = "";
-
-				switch (lib.type) {
-					case "SCRIPT":
-						tag = `<Script Src = "${lib.src}"></Script>`;
-						break;
-					case "STYLE":
-						tag = `<Link Rel = "StyleSheet" Href = "${lib.src}" />`;
-						break;
-				} %><%- tag %>
-		<%	} %>
+		<Script Src = "/js/common.js"></Script>
+		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async></Script>
@@ -70,7 +34,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo"><%= title ? title + '｜' : '' %>どっかのプログラなーいのサイト。</Span>
+					<Span Class = "brand-logo">Product｜どっかのプログラなーいのサイト。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -87,3 +51,7 @@
 		</UL>
 
 		<Main>
+			
+		</Main>
+	</Body>
+</HTML>

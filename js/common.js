@@ -69,17 +69,9 @@ u.test(l.className)){q=!0;break}if(!q){d.className+=" prettyprinted";q=k.lang;if
 l:l,a:null,i:null,c:null,g:null})}}}t<r.length?Q.setTimeout(f,250):"function"===typeof a&&a()}for(var c=d||document.body,g=c.ownerDocument||document,c=[c.getElementsByTagName("pre"),c.getElementsByTagName("code"),c.getElementsByTagName("xmp")],r=[],k=0;k<c.length;++k)for(var n=0,l=c[k].length;n<l;++n)r.push(c[k][n]);var c=null,b=Date;b.now||(b={now:function(){return+new Date}});var t=0,v=/\blang(?:uage)?-([\w.]+)(?!\S)/,u=/\bprettyprint\b/,e=/\bprettyprinted\b/,x=/pre|xmp/i,D=/^code$/i,w=/^(?:pre|code|xmp)$/i,
 h={};f()}},R=Q.define;"function"===typeof R&&R.amd&&R("google-code-prettify",[],function(){return U})})();return g}();S||k.setTimeout(T,0)})();}()
 
+/* global M */
+
 window.addEventListener("DOMContentLoaded", () => {
-	new mdc.toolbar.MDCToolbar(document.querySelector('Header[Data-Component="Frame-Content_Toolbar"]'));
-
-	document.querySelector('*[Data-Component="Frame-Content_Toolbar_DrawerBtn"]').addEventListener("click", () => {
-		let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('*[Data-Component="Frame-Drawer"]'));
-		drawer.open = !drawer.open;
-	});
-		
-	window.mdc.autoInit();
+	const sidenavs = document.querySelectorAll(".sidenav");
+	for (const sidenav of sidenavs) M.Sidenav.init(sidenav);
 });
-
-
-
-/* global mdc */
