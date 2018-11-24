@@ -14,11 +14,19 @@ const notTransferedFiles = [
 	"*.scss"
 ];
 
-const compileJs = () => {
-	gulp.src("./src/!libs/**/*.js")
-		.pipe(gulpPlumber())
+const bundleLibs = () => {
+	gulp.src([
+		"./src/!libs/materialize-1.0.0/js/bin/materialize.min.js",
+		"./src/!libs/!(materialize-1.0.0)/**/*.js",
+		"./src/!libs/*.js",
+	])	.pipe(gulpPlumber())
 		.pipe(gulpConcat("common.js"))
 		.pipe(gulp.dest("./js"));
+
+	gulp.src("./src/!libs/common.scss")
+		.pipe(gulpPlumber())
+		.pipe(sass({ outputStyle: "compact", sourceMap: true }))
+		.pipe(gulp.dest("./css"));
 };
 
 const compileScss = () => {
@@ -27,14 +35,14 @@ const compileScss = () => {
 		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
 		.pipe(gulp.dest("./css"));
 
-	gulp.src(["!./src/!css/**/*.scss", "./src/**/*.scss"])
+	gulp.src(["./src/**/*.scss", "!./src/!css/**/*.scss"])
 		.pipe(gulpPlumber())
 		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
 		.pipe(gulp.dest("./"));
 };
 
 const compileEjs = () => {
-	gulp.src(["!./src/**/_*.ejs", "./src/**/*.ejs"])
+	gulp.src(["./src/**/*.ejs", "!./src/**/_*.ejs"])
 		.pipe(gulpPlumber())
 		.pipe(ejs())
 		.pipe(gulpRename({ extname: ".html" }))
@@ -50,35 +58,31 @@ const transferAssets = () => {
 	]).pipe(gulp.dest("./"));
 };
 
-const transferAsset = filename => {
-	console.info(`Starting to transfer '${filename}'...`);
-	gulp.src(filename).pipe(gulp.dest("./"));
-};
-
-const cleanAsset = filename => {
-	console.info(`Starting to clean '${filename}'...`);
-	// fs.unlink(filename);
-};
-
 
 
 gulp.task("default", ["watch"]);
-
-gulp.task("compile", ["js-compile", "scss-compile", "ejs-compile", "transfer"]);
-gulp.task("js-compile", compileJs);
-gulp.task("scss-compile", compileScss);
-gulp.task("ejs-compile", compileEjs);
-gulp.task("transfer", transferAssets);
+gulp.task("lib-bundle", bundleLibs);
+gulp.task("scss-compile", () => {});
+gulp.task("ejs-compile", () => {});
+gulp.task("transfer", () => {});
+gulp.task("compile", ["lib-bundle", "scss-compile", "ejs-compile", "transfer"]);
 
 gulp.task("watch", ["compile"], () => {
-	gulp.watch("./src/!js/**/*.js", ["js-compile"]);
-	gulp.watch(["./src/!css/**/*.scss", "./src/**/*.scss"], ["scss-compile"]);
+	gulp.watch("./src/!libs/**/*.js", ["lib-bundle"]);
+
+	gulp.watch([
+		"./src/!css/**/*.scss",
+		"./src/**/*.scss",
+
+		"!./src/!libs/**/*.scss"
+	], ["scss-compile"]);
+
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
 
 	gulp.watch([
+		"./src/**/*.*",
+
 		"!./src/!*/**/*.*",
-		...notTransferedFiles.map(file => `!./src/**/${file}`),
-		
-		"./src/**/*.*"
+		...notTransferedFiles.map(file => `!./src/**/${file}`)
 	], ["transfer"]);
 });

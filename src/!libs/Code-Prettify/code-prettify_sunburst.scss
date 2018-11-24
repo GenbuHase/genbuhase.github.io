@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+code,
+pre {
+	&.str {
+		color: #65B042;
+
+		@media print { color: #060 }
+	}
+
+	&.kwd {
+		color: #E28964;
+
+		@media print {
+			color: #006;
+			font-weight: 700;
+		}
+	}
+
+	&.com {
+		color: #AEAEAE;
+		font-style: italic;
+
+		@media print { color: #600 }
+	}
+
+	&.typ {
+		color: #89bdff;
+
+		@media print {
+			color: #404;
+			font-weight: 700;
+		}
+	}
+
+	&.lit {
+		color: #3387CC;
+
+		@media print { color: #044 }
+	}
+
+	&.pln,
+	&.pun { color: #fff }
+
+	&.pln {
+		@media print { color: #000 }
+	}
+
+	&.pun {
+		@media print { color: #440 }
+	}
+
+	&.tag {
+		color: #89bdff;
+
+		@media print {
+			color: #006;
+			font-weight: 700;
+		}
+	}
+
+	&.atn {
+		color: #bdb76b;
+
+		@media print { color: #404 }
+	}
+
+	&.atv {
+		color: #65B042;
+
+		@media print { color: #060 }
+	}
+
+	&.dec { color: #3387CC }
+
+	&.prettyprint {
+		background-color: #000;
+		border-radius: 8px;
+	}
+}
+
+pre.prettyprint {
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+	white-space: pre-wrap;
+}
+
+ol.linenums {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #AEAEAE;
+}
+
+li {
+	@for $num from 0 to 8 {
+		&.L#{$num} {
+			list-style-type: none;
+		}
+	}
+}

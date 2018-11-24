@@ -2,9 +2,9 @@
   font-family: 'Material Icons Extended';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons Extended'),
-       url("Material Icons Extended.woff2") format('woff2'),
-       url("Material Icons Extended.ttf") format('truetype');
+  src: local('MaterialIcons-Extended'),
+       url(MaterialIcons-Extended.woff2) format('woff2'),
+       url(MaterialIcons-Extended.ttf) format('truetype');
 }
 
 .material-icons-extended {
