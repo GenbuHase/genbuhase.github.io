@@ -1,5 +1,15 @@
 <!DocType HTML>
+<%
+	const needInit = (variable) => (typeof variable === "undefined");
 
+	if (needInit(name)) var name = "";
+	if (needInit(title)) var title = "";
+	if (needInit(favicon)) var favicon = null;
+	if (needInit(libraries)) var libraries = [];
+	if (needInit(isHome)) var isHome = false;
+	if (needInit(hasScript)) var hasScript = false;
+	if (needInit(hasStyle)) var hasStyle = false;
+%>
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
@@ -14,6 +24,20 @@
 
 		<Script Src = "/js/common.js"></Script>
 		<%- hasScript ? `<Script Src = "./${name}.js"></Script>` : '' %>
+
+		<%
+			for (var lib of libraries) {
+				var tag = "";
+
+				switch (lib.type) {
+					case "SCRIPT":
+						tag = `<Script Src = "${lib.src}"></Script>`;
+						break;
+					case "STYLE":
+						tag = `<Link Rel = "StyleSheet" Href = "${lib.src}" />`;
+						break;
+				} %><%- tag %>
+		<%	} %>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async = "Async"></Script>

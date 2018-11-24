@@ -1,0 +1,16 @@
+<%
+	const needInit = (variable) => (typeof variable === "undefined");
+
+	if (needInit(name)) var name = "";
+	if (needInit(logs)) var logs = [];
+%><%
+	for (var log of logs) {
+		if (needInit(log.changes)) log.changes = []; %>
+<Changelog>
+	<ModVersion Class = "mdc-typography--subheading1"><%= `${name} ${log.version} (${log.releasedAt})` %></ModVersion>
+	<UL Class = "mdc-list mdc-list--dense">
+		<% for (var change of log.changes) { %><Li Class = "mdc-list-item"><%= change %></Li>
+		<% } %>
+	</UL>
+</Changelog>
+<% } %>

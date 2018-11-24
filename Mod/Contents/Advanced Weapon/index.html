@@ -1,0 +1,207 @@
+<!DocType HTML>
+
+<HTML>
+	<Head>
+		<Meta Charset = "UTF-8" />
+		<Title>Advanced Weapon｜どっかのプログラなーいのサイト。</Title>
+		
+		<Link Rel = "Icon" Href = "./favicon.ico" />
+		
+		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
+
+		<Link Rel = "StyleSheet" Href = "/css/common.css" />
+		<Link Rel = "StyleSheet" Href = "./Advanced Weapon.css" />
+
+		<Script Src = "/js/common.js"></Script>
+		
+
+		<Link Rel = "StyleSheet" Href = "../Detail.css" />
+		
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async = "Async"></Script>
+		<Script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag () { dataLayer.push(arguments) }
+			
+			gtag('js', new Date());
+			gtag('set', {'user_id': 'USER_ID'}); // ログインしている user_id を使用してUser-ID を設定します。
+			gtag('config', 'UA-111257667-1');
+		</Script>
+	</Head>
+
+	<Body>
+		<Aside Data-Component = "Frame-Drawer" Class = "mdc-temporary-drawer">
+			<Nav Class = "mdc-temporary-drawer__drawer">
+				<Div Class = "mdc-temporary-drawer__toolbar-spacer"></Div>
+
+				<Nav Class = "mdc-temporary-drawer__content mdc-list">
+					<A Class = "mdc-list-item" Href = "/">
+						<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">home</I>
+						Top
+					</A>
+
+					<A Class = "mdc-list-item" Href = "/Product/">
+						<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">extension</I>
+						Product
+					</A>
+
+					<A Class = "mdc-list-item" Href = "/Mod/">
+						<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">code</I>
+						Mod
+					</A>
+
+					<A Class = "mdc-list-item" Href = "/Blog/">
+						<I Class = "material-icons mdc-list-item__start-detail" Aria-Hidden = "true">book</I>
+						Blog
+					</A>
+
+					<A Class = "mdc-list-item" Href = "/Drawing/">
+						<Img Class = "mdc-list-item__start-detail" Src = "/Drawing/favicon.ico" Aria-Hidden = "true"></I>
+						Drawing
+					</A>
+				</Nav>
+
+				<Div Class = "mdc-temporary-drawer__toolbar-spacer"></Div>
+
+				<UL Data-Component = "Frame-Drawer_SNSList" Class = "mdc-list">
+					<A Class = "mdc-button material-icons-extended mdc-theme--text-icon-on-background" Href = "https://plus.google.com/106666684430101995501" Target = "_blank">
+						<Span>google_plus</Span>
+					</A>
+
+					<A Class = "mdc-button material-icons-extended mdc-theme--text-icon-on-background" Href = "https://github.com/GenbuHase/" Target = "_blank">
+						<Span>
+							<Svg Style = "Width: 24px; Height: 24px" ViewBox = "0 0 24 24">
+								<Path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" Style = "Fill: var(--mdc-theme-text-icon-on-background, #000000)" />
+							</Svg>
+						</Span>
+					</A>
+
+					<A Class = "mdc-button material-icons-extended mdc-theme--text-icon-on-background" Href = "https://hangouts.google.com/?action=chat&pi=106666684430101995501" Target = "_blank">
+						<Span>hangout</Span>
+					</A>
+
+					<A Class = "mdc-button material-icons-extended mdc-theme--text-icon-on-background" Href = "https://plus.google.com/share?url=https://genbuhase.github.io/" Target = "_blank">
+						<Span>share</Span>
+					</A>
+				</UL>
+			</Nav>
+		</Aside>
+
+		<Div Data-Component = "Frame-Content">
+			<Header Data-Component = "Frame-Content_Toolbar" Class = "mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-elevation--z4">
+				<Div Class = "mdc-toolbar__row">
+					<Section Class = "mdc-toolbar__section mdc-toolbar__section--align-start">
+						<A Data-Component = "Frame-Content_Toolbar_DrawerBtn" Class = "mdc-toolbar__menu-icon material-icons" Href = "javascript:void(0)">menu</A>
+						<Span Data-Component = "Frame-Content_Toolbar_Title" Class = "mdc-toolbar__title">Advanced Weapon｜どっかのプログラなーいのサイト。</Span>
+					</Section>
+				</Div>
+			</Header>
+		</Div>
+
+		<Main Class = "mdc-typography mdc-toolbar-fixed-adjust">
+			<ModName Class = "mdc-typography--headline">Advanced Weapon</ModName>
+
+			<Section ID = "Overview">
+				<SectionName Class = "mdc-typography--title">1. Overview</SectionName>
+				<Content Class = "mdc-typography--body1">
+					このModはMinecraft PEに多数の武器を追加します。
+					日本語と英語のローカライズ化に対応しています。
+
+					<A Href = "https://plus.google.com/108639302275989213773" Target = "_blank">シグマらなーい猫うさぎ</A>様との共同製作Modになっています。
+					このModの著作権は両者に帰属します。
+				</Content>
+			</Section>
+
+			<Section ID = "Weapons">
+				<SectionName Class = "mdc-typography--title">2. Weapons</SectionName>
+				<Content Class = "mdc-grid-list mdc-typography--body1">
+					<UL Class = "mdc-grid-list__tiles">
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/BloodSword.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">BloodSword</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 501</ItemID>
+	</Section>
+</ItemCard>
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/IronSlasher.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">IronSlasher</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 502</ItemID>
+	</Section>
+</ItemCard>
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/Hrunting.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">Hrunting</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 503</ItemID>
+	</Section>
+</ItemCard>
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/Laevateinn.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">Laevateinn</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 504</ItemID>
+	</Section>
+</ItemCard>
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/Crasher.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">Crasher</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 521</ItemID>
+	</Section>
+</ItemCard>
+						<ItemCard Class = "mdc-card mdc-elevation--z5">
+	<Item Class = "mdc-card__media" Style = "background-image: url('images/Tomahawk.png')"></Item>
+
+	<Section Class = "mdc-card__primary">
+		<ItemName Class = "mdc-card__title">Tomahawk</ItemName>
+		<ItemID Class = "mdc-card__subtitle">ID: 522</ItemID>
+	</Section>
+</ItemCard>
+					</UL>
+				</Content>
+			</Section>
+
+			<Section ID = "Changelogs">
+				<SectionName Class = "mdc-typography--title">3. Changelogs</SectionName>
+				<Content Class = "mdc-typography--body1">
+					
+<Changelog>
+	<ModVersion Class = "mdc-typography--subheading1">Advanced Weapon v1.1 (2017/05/25)</ModVersion>
+	<UL Class = "mdc-list mdc-list--dense">
+		<Li Class = "mdc-list-item">Android 4.xに対応</Li>
+		<Li Class = "mdc-list-item">重大なバグの修正</Li>
+		
+	</UL>
+</Changelog>
+
+<Changelog>
+	<ModVersion Class = "mdc-typography--subheading1">Advanced Weapon v1.0 (2017/05/22)</ModVersion>
+	<UL Class = "mdc-list mdc-list--dense">
+		<Li Class = "mdc-list-item">Advanced Weaponを初リリース</Li>
+		
+	</UL>
+</Changelog>
+
+				</Content>
+			</Section>
+
+			<Section ID = "Downloads">
+				<SectionName Class = "mdc-typography--title">4. Downloads</SectionName>
+				<Downloads Class = "mdc-list mdc-list--dense">
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.1.js" Download>v1.1</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.0.js" Download>v1.0</A></Li>
+					
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon Resource.zip" Download>Advanced Weapon リソースパック</A></Li>
+				</Downloads>
+			</Section>
+		</Main>
+	</Body>
+</HTML>

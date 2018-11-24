@@ -1,0 +1,76 @@
+<%-
+	include("../../../!templates/_header", {
+		name: "Advanced Weapon",
+		title: "Advanced Weapon",
+		favicon: "./favicon.ico",
+		
+		libraries: [
+			{ type: "STYLE", src: "../Detail.css" }
+		],
+
+		hasStyle: true
+	}) %>
+			<ModName Class = "mdc-typography--headline">Advanced Weapon</ModName>
+
+			<Section ID = "Overview">
+				<SectionName Class = "mdc-typography--title">1. Overview</SectionName>
+				<Content Class = "mdc-typography--body1">
+					このModはMinecraft PEに多数の武器を追加します。
+					日本語と英語のローカライズ化に対応しています。
+
+					<A Href = "https://plus.google.com/108639302275989213773" Target = "_blank">シグマらなーい猫うさぎ</A>様との共同製作Modになっています。
+					このModの著作権は両者に帰属します。
+				</Content>
+			</Section>
+
+			<Section ID = "Weapons">
+				<SectionName Class = "mdc-typography--title">2. Weapons</SectionName>
+				<Content Class = "mdc-grid-list mdc-typography--body1">
+					<UL Class = "mdc-grid-list__tiles">
+						<%- include("../../../!templates/mod/_itemcard", { name: "BloodSword", id: 501, image: "images/BloodSword.png" }) %>
+						<%- include("../../../!templates/mod/_itemcard", { name: "IronSlasher", id: 502, image: "images/IronSlasher.png" }) %>
+						<%- include("../../../!templates/mod/_itemcard", { name: "Hrunting", id: 503, image: "images/Hrunting.png" }) %>
+						<%- include("../../../!templates/mod/_itemcard", { name: "Laevateinn", id: 504, image: "images/Laevateinn.png" }) %>
+						<%- include("../../../!templates/mod/_itemcard", { name: "Crasher", id: 521, image: "images/Crasher.png" }) %>
+						<%- include("../../../!templates/mod/_itemcard", { name: "Tomahawk", id: 522, image: "images/Tomahawk.png" }) %>
+					</UL>
+				</Content>
+			</Section>
+
+			<Section ID = "Changelogs">
+				<SectionName Class = "mdc-typography--title">3. Changelogs</SectionName>
+				<Content Class = "mdc-typography--body1">
+					<%-
+						include("../../../!templates/mod/_changelog", {
+							name: "Advanced Weapon",
+							logs: [
+								{
+									version: "v1.1",
+									releasedAt: "2017/05/25",
+
+									changes: [
+										"Android 4.xに対応",
+										"重大なバグの修正"
+									]
+								},
+
+								{
+									version: "v1.0",
+									releasedAt: "2017/05/22",
+									changes: ["Advanced Weaponを初リリース"]
+								}
+							]
+						}) %>
+				</Content>
+			</Section>
+
+			<Section ID = "Downloads">
+				<SectionName Class = "mdc-typography--title">4. Downloads</SectionName>
+				<Downloads Class = "mdc-list mdc-list--dense">
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.1.js" Download>v1.1</A></Li>
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.0.js" Download>v1.0</A></Li>
+					
+					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon Resource.zip" Download>Advanced Weapon リソースパック</A></Li>
+				</Downloads>
+			</Section>
+<%- include("../../../!templates/_footer") %>

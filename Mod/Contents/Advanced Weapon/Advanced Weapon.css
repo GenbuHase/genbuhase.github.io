@@ -1,0 +1,3 @@
+ModName::before {
+  background-image: url("./favicon.ico");
+}
