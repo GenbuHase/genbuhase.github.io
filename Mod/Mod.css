@@ -1,19 +1,15 @@
-Modlist {
-  display: block;
+main .mod-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-Modlist > UL {
-  justify-content: space-around;
+main .mod-list .card {
+  display: inline-block;
+  width: 256px;
 }
 
-Mod {
-  width: 300px;
-}
-
-Mod ModName {
-  display: block;
-  width: 10em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+main .mod-list .card .card-title {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
 }

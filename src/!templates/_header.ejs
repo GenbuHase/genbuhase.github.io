@@ -1,9 +1,7 @@
 <%
-	const needInit = (variable) => (typeof variable === "undefined");
+	include("./_global");
 
-	const SITENAME = "どっかのプログラなーいのサイト。";
-
-	const defaultConfigs = {
+	init({
 		name: '""',
 		title: '""',
 		favicon: 'null',
@@ -11,15 +9,7 @@
 		isHome: 'false',
 		hasScript: 'false',
 		hasStyle: 'false'
-	};
-
-	for (const config in defaultConfigs) {
-		try {
-			eval(config);
-		} catch (error) {
-			eval(`${config} = ${defaultConfigs[config]}`);
-		}
-	}
+	});
 %><!DocType HTML>
 
 <HTML>

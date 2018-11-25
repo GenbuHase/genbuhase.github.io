@@ -1,8 +1,10 @@
 <%
-	const needInit = (variable) => (typeof variable === "undefined");
+	include("../_global");
 
-	if (needInit(name)) var name = "";
-	if (needInit(logs)) var logs = [];
+	init({
+		name: '""',
+		logs: '[]'
+	});
 %><%
 	for (var log of logs) {
 		if (needInit(log.changes)) log.changes = []; %>

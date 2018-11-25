@@ -30,12 +30,7 @@ const bundleLibs = () => {
 };
 
 const compileScss = () => {
-	//gulp.src("./src/!css/**/*.scss")
-	//	.pipe(gulpPlumber())
-	//	.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
-	//	.pipe(gulp.dest("./css"));
-
-	gulp.src(["./src/**/*.scss", "!./src/!libs/**/*.scss", "!./src/!css/**/*.scss"])
+	gulp.src(["./src/**/*.scss", "!./src/!libs/**/*.scss"])
 		.pipe(gulpPlumber())
 		.pipe(sass({ outputStyle: "expanded", sourceMap: true }))
 		.pipe(gulp.dest("./"));

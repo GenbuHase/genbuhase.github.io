@@ -1,32 +1,41 @@
-<%-
+<%
+	include("../!templates/_global");
+
+	init({
+		mods: '[]'
+	});
+%><%-
 	include("../!templates/_header", {
 		name: "Mod",
 		title: "Mod",
 		
 		hasStyle: true
 	}) %>
-			<H1 Class = "mdc-typography--headline">Mod一覧</H1>
-
-			<Modlist Class = "mdc-grid-list mdc-grid-list--with-icon-align-end">
-				<UL Class = "mdc-grid-list__tiles">
-					<%- include("../!templates/mod/_mod", { name: "Advanced Weapon", dir: "Advanced Weapon", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Animal Rider", dir: "Animal Rider", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Command Tools", dir: "Command Tools", hasIcon: false }) %>
-					<%- include("../!templates/mod/_mod", { name: "Customizable Blocks", dir: "Customizable Blocks", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Data Helper", dir: "Data Helper", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Earth Defence Force For MCPE", dir: "EDFFM", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "GUI Helper", dir: "GUI Helper", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Many Phones", dir: "Many Phones", hasIcon: true }) %>
-					<%- include("../!templates/mod/_mod", { name: "More Records", dir: "More Records", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Reality Building", dir: "Reality Building", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Scripting+", dir: "Scripting+", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Too Many Bombs", dir: "Too Many Bombs", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Trap Tools", dir: "Trap Tools", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Vehicle Rider", dir: "Vehicle Rider", hasIcon: false }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Villager's Inventory", dir: "Villager's Inventory", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "WorldEdit", dir: "WorldEdit", hasIcon: true }) %>
-					<%- // include("../!templates/mod/_mod", { name: "Zero Gravity", dir: "Zero Gravity", hasIcon: false }) %>
-					<%- include("../!templates/mod/_mod", { name: "まさにカオス", dir: "まさにカオス", hasIcon: false }) %>
-				</UL>
-			</Modlist>
+			<H1 Class = "heading">Mod一覧</H1>
+			
+			<UL Class = "mod-list">
+				<%-
+					include("../!templates/mod/_modlist", {
+						mods: [
+							{ name: "Advanced Weapon", hasIcon: true },
+							{ name: "Animal Rider" },
+							{ name: "Command Tools" },
+							{ name: "Customizable Blocks", hasIcon: true },
+							{ name: "Data Helper" },
+							{ name: "Earth Defence Force For MCPE", dir: "EDFFM", hasIcon: true },
+							{ name: "GUI Helper" },
+							{ name: "Many Phones", hasIcon: true },
+							{ name: "More Records", hasIcon: true },
+							{ name: "Reality Building" },
+							{ name: "Scripting+" },
+							{ name: "Too Many Bombs", hasIcon: true },
+							{ name: "Trap Tools", hasIcon: true },
+							{ name: "Vehicle Rider" },
+							{ name: "Villager's Inventory", hasIcon: true },
+							{ name: "WorldEdit", hasIcon: true },
+							{ name: "Zero Gravity" },
+							{ name: "まさにカオス" }
+						]
+					}) %>
+			</UL>
 <%- include("../!templates/_footer") %>
