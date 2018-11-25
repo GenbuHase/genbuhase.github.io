@@ -5,8 +5,8 @@
 	var hasIcon = true;
 %><%-
 	include("../../../!templates/_header", {
-		name: "Advanced Weapon",
-		title: "Advanced Weapon｜Mod",
+		name,
+		title: `${name}｜Mod`,
 		favicon: "./favicon.ico",
 		
 		libraries: [
@@ -77,11 +77,13 @@
 			<Article>
 				<H2 Class = "subheading">4. Download</H2>
 
-				<Downloads Class = "mdc-list mdc-list--dense">
-					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.1.js" Download>v1.1</A></Li>
-					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.0.js" Download>v1.0</A></Li>
-					
-					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon Resource.zip" Download>Advanced Weapon リソースパック</A></Li>
-				</Downloads>
+				<%-
+					include("../../../!templates/_downloads", {
+						files: [
+							{ name: `${name} v1.1`, path: `download/${name} v1.1.js` },
+							{ name: `${name} v1.0`, path: `download/${name} v1.0.js` },
+							{ name: `${name} リソースパック`, path: `download/${name} Resource.zip` }
+						]
+					}) %>
 			</Article>
 <%- include("../../../!templates/_footer") %>
