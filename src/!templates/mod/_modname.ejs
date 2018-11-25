@@ -1,0 +1,9 @@
+<%
+	include("../_global");
+
+	init({
+		name: '""',
+		hasIcon: 'false'
+	});
+%><%- `<H1 Class = "mod-name heading">${name}</H1>` %>
+<%- `<Style>.mod-name::before { background-image: url(${hasIcon ? "favicon.ico" : ""}) }</Style>` %>

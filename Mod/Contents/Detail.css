@@ -1,14 +1,24 @@
-ModName {
-  display: block;
-  margin: 0.5em 0 1em 0;
-}
-
-ModName:not(.noImage)::before {
-  width: 2rem;
-  height: 2rem;
+main .mod-name:not(.noImage)::before {
+  width: 1.5em;
+  height: 1.5em;
   background-position: center;
   background-size: cover;
   border: none !important;
+}
+
+main .item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .item-list .item {
+  display: inline-block;
+  width: 256px;
+  margin-right: 1em;
+}
+
+main .item-list .item:last-of-type {
+  margin-right: inherit;
 }
 
 Main Section {

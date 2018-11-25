@@ -5,13 +5,13 @@
 		mods: '[]'
 	});
 %><%
-	for (var mod of mods) {
+	for (const mod of mods) {
 		if (needInit(mod.dir)) mod.dir = mod.name;
 		if (needInit(mod.hasIcon)) mod.hasIcon = false; %>
-<Div Class = "card">
-	<Div Class = "card-image">
+<Div Class = "mod card">
+	<Div Class = "mod-image card-image">
 		<%- `<Img Src = "${mod.hasIcon ? `./Contents/${mod.dir}/favicon.ico` : "./assets/noImage.png"}" />` %>
-		<Span Class = "card-title truncate"><%- mod.name %></Span>
+		<Span Class = "mod-name card-title truncate"><%- mod.name %></Span>
 	</Div>
 
 	<Div Class = "card-action">

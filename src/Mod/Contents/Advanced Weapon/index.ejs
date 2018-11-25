@@ -1,7 +1,12 @@
-<%-
+<%
+	include("../../../!templates/_global");
+%><%
+	var name = "Advanced Weapon";
+	var hasIcon = true;
+%><%-
 	include("../../../!templates/_header", {
 		name: "Advanced Weapon",
-		title: "Advanced Weapon",
+		title: "Advanced Weapon｜Mod",
 		favicon: "./favicon.ico",
 		
 		libraries: [
@@ -10,36 +15,44 @@
 
 		hasStyle: true
 	}) %>
-			<ModName Class = "mdc-typography--headline">Advanced Weapon</ModName>
+			<%- include("../../../!templates/mod/_modname", { name, hasIcon }) %>
 
-			<Section ID = "Overview">
-				<SectionName Class = "mdc-typography--title">1. Overview</SectionName>
-				<Content Class = "mdc-typography--body1">
-					このModはMinecraft PEに多数の武器を追加します。
-					日本語と英語のローカライズ化に対応しています。
+			<Article>
+				<H2 Class = "subheading">1. Overview</H2>
 
-					<A Href = "https://plus.google.com/108639302275989213773" Target = "_blank">シグマらなーい猫うさぎ</A>様との共同製作Modになっています。
+				<P>
+					このModはMinecraft PEに多数の武器を追加します。<Br />
+					日本語と英語のローカライズに対応しています。
+					
+					<Br /><Br />
+
+					<A Href = "https://plus.google.com/108639302275989213773" Target = "_blank">シグマらなーい猫うさぎ</A>様との共同製作Modになっています。<Br />
 					このModの著作権は両者に帰属します。
-				</Content>
-			</Section>
+				</P>
+			</Article>
 
-			<Section ID = "Weapons">
-				<SectionName Class = "mdc-typography--title">2. Weapons</SectionName>
-				<Content Class = "mdc-grid-list mdc-typography--body1">
-					<UL Class = "mdc-grid-list__tiles">
-						<%- include("../../../!templates/mod/_itemcard", { name: "BloodSword", id: 501, image: "images/BloodSword.png" }) %>
-						<%- include("../../../!templates/mod/_itemcard", { name: "IronSlasher", id: 502, image: "images/IronSlasher.png" }) %>
-						<%- include("../../../!templates/mod/_itemcard", { name: "Hrunting", id: 503, image: "images/Hrunting.png" }) %>
-						<%- include("../../../!templates/mod/_itemcard", { name: "Laevateinn", id: 504, image: "images/Laevateinn.png" }) %>
-						<%- include("../../../!templates/mod/_itemcard", { name: "Crasher", id: 521, image: "images/Crasher.png" }) %>
-						<%- include("../../../!templates/mod/_itemcard", { name: "Tomahawk", id: 522, image: "images/Tomahawk.png" }) %>
-					</UL>
-				</Content>
-			</Section>
+			<Article>
+				<H2 Class = "subheading">2. Weapons</H2>
 
-			<Section ID = "Changelogs">
-				<SectionName Class = "mdc-typography--title">3. Changelogs</SectionName>
-				<Content Class = "mdc-typography--body1">
+				<UL Class = "item-list">
+					<%-
+						include("../../../!templates/mod/_itemlist", {
+							items: [
+								{ name: "BloodSword", id: 501, image: "images/BloodSword.png" },
+								{ name: "IronSlasher", id: 502, image: "images/IronSlasher.png" },
+								{ name: "Hrunting", id: 503, image: "images/Hrunting.png" },
+								{ name: "Laevateinn", id: 504, image: "images/Laevateinn.png" },
+								{ name: "Crasher", id: 521, image: "images/Crasher.png" },
+								{ name: "Tomahawk", id: 522, image: "images/Tomahawk.png" }
+							]
+						}); %>
+				</UL>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">3. Changelog</H2>
+
+				<P>
 					<%-
 						include("../../../!templates/mod/_changelog", {
 							name: "Advanced Weapon",
@@ -61,16 +74,17 @@
 								}
 							]
 						}) %>
-				</Content>
-			</Section>
+				</P>
+			</Article>
 
-			<Section ID = "Downloads">
-				<SectionName Class = "mdc-typography--title">4. Downloads</SectionName>
+			<Article>
+				<H2 Class = "subheading">4. Download</H2>
+
 				<Downloads Class = "mdc-list mdc-list--dense">
 					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.1.js" Download>v1.1</A></Li>
 					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon v1.0.js" Download>v1.0</A></Li>
 					
 					<Li Class = "mdc-list-item"><A Href = "download/Advanced Weapon Resource.zip" Download>Advanced Weapon リソースパック</A></Li>
 				</Downloads>
-			</Section>
+			</Article>
 <%- include("../../../!templates/_footer") %>

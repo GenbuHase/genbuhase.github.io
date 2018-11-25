@@ -27,7 +27,7 @@
 		<Script Src = "/js/common.js"></Script><%-
 		hasScript ? `<Script Src = "./${name}.js"></Script>` : '' %>
 		<%
-			for (var lib of libraries) {
+			for (const lib of libraries) {
 				var tag = "";
 
 				switch (lib.type) {
