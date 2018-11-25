@@ -3,7 +3,7 @@
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title>Advanced Weapon｜Mod｜どっかのプログラなーいのサイト。</Title>
+		<Title>Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Title>
 		
 		<Link Rel = "Icon" Href = "./favicon.ico" />
 		
@@ -35,7 +35,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo">Advanced Weapon｜Mod｜どっかのプログラなーいのサイト。</Span>
+					<Span Class = "brand-logo">Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -77,88 +77,52 @@
 		</UL>
 
 		<Main>
-			<H1 Class = "mod-name heading">Advanced Weapon</H1>
+			<H1 Class = "mod-name heading">Customizable Blocks</H1>
 <Style>.mod-name::before { background-image: url(favicon.ico) }</Style>
 
 			<Article>
 				<H2 Class = "subheading">1. Overview</H2>
 
 				<P>
-					このModはMinecraft PEに多数の武器を追加します。<Br />
-					日本語と英語のローカライズに対応しています。
-					
-					<Br /><Br />
-
-					<A Href = "https://plus.google.com/108639302275989213773" Target = "_blank">シグマらなーい猫うさぎ</A>様との共同製作Modになっています。<Br />
-					このModの著作権は両者に帰属します。
+					このModでは、自由自在にカスタマイズできるブロックを追加します。
 				</P>
 			</Article>
 
 			<Article>
-				<H2 Class = "subheading">2. Weapons</H2>
+				<H2 Class = "subheading">2. Detail</H2>
 
-				<UL Class = "item-list">
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/BloodSword.png" />
-		</Div>
+				<P>
+					このModを適用した状態でワールドに入ると、現在のワールドのフォルダにCustomizableBlocks.cfgが生成されます。<Br />
+					CustomizableBlocks.cfgを、必ず以下の形式に沿って編集してください。
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">BloodSword</Span>
-			<P Class = "item-id">ID: 501</P>
-		</Div>
-	</Div>
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/IronSlasher.png" />
-		</Div>
+					<Br /><Br />
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">IronSlasher</Span>
-			<P Class = "item-id">ID: 502</P>
-		</Div>
-	</Div>
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/Hrunting.png" />
-		</Div>
+					入力された内容に応じて追加されるレコードの情報が変化します。
+<Pre Class = "prettyprint lang-js">[
+	{
+		"Damage": 対応ダメージ値(int型),
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">Hrunting</Span>
-			<P Class = "item-id">ID: 503</P>
-		</Div>
-	</Div>
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/Laevateinn.png" />
-		</Div>
+		"Property": {
+			"Textures": [ //ブロックテクスチャ設定
+				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
+				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
+				...
+			],
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">Laevateinn</Span>
-			<P Class = "item-id">ID: 504</P>
-		</Div>
-	</Div>
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/Crasher.png" />
-		</Div>
+			"Shapes": [ //ブロック形状設定
+				[開始X(int型), 開始Y(int型), 開始Z(int型)],
+				[終了X(int型), 終了Y(int型), 終了Z(int型)]
+			]
+		}
+	},
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">Crasher</Span>
-			<P Class = "item-id">ID: 521</P>
-		</Div>
-	</Div>
-	<Div Class = "item card">
-		<Div Class = "item-image card-image grey lighten-2">
-			<Img Src = "images/Tomahawk.png" />
-		</Div>
+	{
+		...
+	},
 
-		<Div Class = "item-description card-content">
-			<Span Class = "item-name card-title truncate">Tomahawk</Span>
-			<P Class = "item-id">ID: 522</P>
-		</Div>
-	</Div>
-</UL>
+	...
+]</Pre>
+				</P>
 			</Article>
 
 			<Article>
@@ -171,19 +135,10 @@
 
 	<TBody>
 		<Tr>
-			<Td>Advanced Weapon v1.1 (2017/05/25)</Td>
+			<Td>Customizable Blocks v1.0 (2017/03/09)</Td>
 
 			<Td>
-				Android 4.xに対応<Br />
-				重大なバグの修正<Br />
-				
-			</Td>
-		</Tr>
-		<Tr>
-			<Td>Advanced Weapon v1.0 (2017/05/22)</Td>
-
-			<Td>
-				Advanced Weaponを初リリース<Br />
+				Customizable Blocksを初リリース<Br />
 				
 			</Td>
 		</Tr>
@@ -200,9 +155,7 @@
 	</THead>
 
 	<TBody>
-		<Tr><Td><A Href = "download/Advanced Weapon v1.1.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Advanced Weapon v1.1</A></Td></Tr>
-		<Tr><Td><A Href = "download/Advanced Weapon v1.0.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Advanced Weapon v1.0</A></Td></Tr>
-		<Tr><Td><A Href = "download/Advanced Weapon Resource.zip" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Advanced Weapon リソースパック</A></Td></Tr>
+		<Tr><Td><A Href = "download/Customizable Blocks v1.0.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Customizable Blocks v1.0</A></Td></Tr>
 	</TBody>
 </Table>
 			</Article>

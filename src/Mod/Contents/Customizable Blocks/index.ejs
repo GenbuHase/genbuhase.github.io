@@ -1,0 +1,91 @@
+<%
+	include("../../../!templates/_global");
+%><%
+	var name = "Customizable Blocks";
+	var hasIcon = true;
+%><%-
+	include("../../../!templates/_header", {
+		name,
+		title: `${name}｜Mod`,
+		favicon: "./favicon.ico",
+		
+		libraries: [
+			{ type: "STYLE", src: "../Detail.css" }
+		]
+	}) %>
+			<%- include("../../../!templates/mod/_modname", { name, hasIcon }) %>
+
+			<Article>
+				<H2 Class = "subheading">1. Overview</H2>
+
+				<P>
+					このModでは、自由自在にカスタマイズできるブロックを追加します。
+				</P>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">2. Detail</H2>
+
+				<P>
+					このModを適用した状態でワールドに入ると、現在のワールドのフォルダにCustomizableBlocks.cfgが生成されます。<Br />
+					CustomizableBlocks.cfgを、必ず以下の形式に沿って編集してください。
+
+					<Br /><Br />
+
+					入力された内容に応じて追加されるレコードの情報が変化します。
+<Pre Class = "prettyprint lang-js">[
+	{
+		"Damage": 対応ダメージ値(int型),
+
+		"Property": {
+			"Textures": [ //ブロックテクスチャ設定
+				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
+				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
+				...
+			],
+
+			"Shapes": [ //ブロック形状設定
+				[開始X(int型), 開始Y(int型), 開始Z(int型)],
+				[終了X(int型), 終了Y(int型), 終了Z(int型)]
+			]
+		}
+	},
+
+	{
+		...
+	},
+
+	...
+]</Pre>
+				</P>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">3. Changelog</H2>
+
+				<%-
+					include("../../../!templates/_changelog", {
+						name,
+
+						logs: [
+							{
+								version: "v1.0",
+								releasedAt: "2017/03/09",
+
+								changes: ["Customizable Blocksを初リリース"]
+							}
+						]
+					}) %>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">4. Download</H2>
+
+				<%-
+					include("../../../!templates/_downloads", {
+						files: [
+							{ name: `${name} v1.0`, path: `download/${name} v1.0.js` }
+						]
+					}) %>
+			</Article>
+<%- include("../../../!templates/_footer") %>

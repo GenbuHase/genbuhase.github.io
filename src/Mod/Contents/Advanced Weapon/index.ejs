@@ -11,9 +11,7 @@
 		
 		libraries: [
 			{ type: "STYLE", src: "../Detail.css" }
-		],
-
-		hasStyle: true
+		]
 	}) %>
 			<%- include("../../../!templates/mod/_modname", { name, hasIcon }) %>
 
@@ -52,7 +50,7 @@
 
 				<%-
 					include("../../../!templates/_changelog", {
-						name: "Advanced Weapon",
+						name,
 
 						logs: [
 							{
