@@ -34,47 +34,44 @@
 			<Article>
 				<H2 Class = "subheading">2. Weapons</H2>
 
-				<UL Class = "item-list">
-					<%-
-						include("../../../!templates/mod/_itemlist", {
-							items: [
-								{ name: "BloodSword", id: 501, image: "images/BloodSword.png" },
-								{ name: "IronSlasher", id: 502, image: "images/IronSlasher.png" },
-								{ name: "Hrunting", id: 503, image: "images/Hrunting.png" },
-								{ name: "Laevateinn", id: 504, image: "images/Laevateinn.png" },
-								{ name: "Crasher", id: 521, image: "images/Crasher.png" },
-								{ name: "Tomahawk", id: 522, image: "images/Tomahawk.png" }
-							]
-						}); %>
-				</UL>
+				<%-
+					include("../../../!templates/mod/_itemlist", {
+						items: [
+							{ name: "BloodSword", id: 501, image: "images/BloodSword.png" },
+							{ name: "IronSlasher", id: 502, image: "images/IronSlasher.png" },
+							{ name: "Hrunting", id: 503, image: "images/Hrunting.png" },
+							{ name: "Laevateinn", id: 504, image: "images/Laevateinn.png" },
+							{ name: "Crasher", id: 521, image: "images/Crasher.png" },
+							{ name: "Tomahawk", id: 522, image: "images/Tomahawk.png" }
+						]
+					}); %>
 			</Article>
 
 			<Article>
 				<H2 Class = "subheading">3. Changelog</H2>
 
-				<P>
-					<%-
-						include("../../../!templates/mod/_changelog", {
-							name: "Advanced Weapon",
-							logs: [
-								{
-									version: "v1.1",
-									releasedAt: "2017/05/25",
+				<%-
+					include("../../../!templates/_changelog", {
+						name: "Advanced Weapon",
 
-									changes: [
-										"Android 4.xに対応",
-										"重大なバグの修正"
-									]
-								},
+						logs: [
+							{
+								version: "v1.1",
+								releasedAt: "2017/05/25",
 
-								{
-									version: "v1.0",
-									releasedAt: "2017/05/22",
-									changes: ["Advanced Weaponを初リリース"]
-								}
-							]
-						}) %>
-				</P>
+								changes: [
+									"Android 4.xに対応",
+									"重大なバグの修正"
+								]
+							},
+
+							{
+								version: "v1.0",
+								releasedAt: "2017/05/22",
+								changes: ["Advanced Weaponを初リリース"]
+							}
+						]
+					}) %>
 			</Article>
 
 			<Article>

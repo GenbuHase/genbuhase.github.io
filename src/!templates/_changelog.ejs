@@ -1,0 +1,25 @@
+<%
+	include("./_global");
+
+	init({
+		name: '""',
+		logs: '[]'
+	});
+%><Table>
+	<THead>
+		<Tr><Th>Version</Th><Th>Released date</Th></Tr>
+	</THead>
+
+	<TBody><%
+for (const log of logs) {
+	if (needInit(log.changes)) log.changes = []; %>
+		<Tr>
+			<Td><%= `${name} ${log.version} (${log.releasedAt})` %></Td>
+
+			<Td>
+				<% for (const change of log.changes) { %><%= change %><Br />
+				<% } %>
+			</Td>
+		</Tr><% } %>
+	</TBody>
+</Table>
