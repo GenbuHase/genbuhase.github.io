@@ -1,0 +1,20 @@
+.heading {
+  @extend h5;
+
+  display: flex;
+  align-items: flex-end;
+
+  line-height: 2;
+  border-bottom: thin solid $primary-color;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 0.5em;
+
+    border: 0.75em solid transparent;
+    border-color: transparent $primary-color $primary-color transparent;
+  }
+}

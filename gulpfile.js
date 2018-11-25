@@ -50,11 +50,13 @@ const compileEjs = () => {
 };
 
 const transferAssets = () => {
+	gulp.src("./src/assets/**/*.*").pipe(gulp.dest("./assets"));
+
 	gulp.src([
+		"./src/**/*.*",
+
 		"!./src/!*/**/*.*",
 		...notTransferedFiles.map(file => `!./src/**/${file}`),
-		
-		"./src/**/*.*"
 	]).pipe(gulp.dest("./"));
 };
 
@@ -64,18 +66,12 @@ gulp.task("default", ["watch"]);
 gulp.task("lib-bundle", bundleLibs);
 gulp.task("scss-compile", compileScss);
 gulp.task("ejs-compile", compileEjs);
-gulp.task("transfer", () => {});
+gulp.task("transfer", transferAssets);
 gulp.task("compile", ["lib-bundle", "scss-compile", "ejs-compile", "transfer"]);
 
 gulp.task("watch", ["compile"], () => {
-	gulp.watch("./src/!libs/**/*.js", ["lib-bundle"]);
+	gulp.watch("./src/!libs/**/*.*", ["lib-bundle"]);
 	gulp.watch("./src/**/*.scss", ["scss-compile"]);
 	gulp.watch("./src/**/*.ejs", ["ejs-compile"]);
-
-	gulp.watch([
-		"./src/**/*.*",
-
-		"!./src/!*/**/*.*",
-		...notTransferedFiles.map(file => `!./src/**/${file}`)
-	], ["transfer"]);
+	gulp.watch("./src/**/*.*", ["transfer"]);
 });

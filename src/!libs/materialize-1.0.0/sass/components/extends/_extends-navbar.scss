@@ -1,0 +1,7 @@
+nav {
+  .brand-logo {
+    margin-left: 2.5em;
+
+    @media #{$medium-and-down} { margin-left: 0 }
+  }
+}

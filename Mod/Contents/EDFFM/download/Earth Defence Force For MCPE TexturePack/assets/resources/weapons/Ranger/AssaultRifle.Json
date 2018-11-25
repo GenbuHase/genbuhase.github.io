@@ -1,0 +1,347 @@
+[
+	{
+		"ID": 501,
+		"Name": "AF14",
+		"LV": 0,
+		"Ammo": 120,
+		"Damage": 10,
+		"Accuracy": "B",
+		"FireRate": 12.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 502,
+		"Name": "AF14RA",
+		"LV": 1,
+		"Ammo": 200,
+		"Damage": 6,
+		"Accuracy": "B",
+		"FireRate": 30.0,
+		"ReloadTime": 2.5
+	},
+	
+	{
+		"ID": 503,
+		"Name": "AF14ST",
+		"LV": 2,
+		"Ammo": 10,
+		"Damage": 70,
+		"Accuracy": "A+",
+		"FireRate": 3.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 504,
+		"Name": "フュージョンブラスター",
+		"LV": 2,
+		"Ammo": 900,
+		"Damage": 25,
+		"Accuracy": "S+",
+		"FireRate": 60.0,
+		"ReloadTime": null
+	},
+	
+	{
+		"ID": 505,
+		"Name": "AF14RAR",
+		"LV": 4,
+		"Ammo": 150,
+		"Damage": 5.4,
+		"Accuracy": "B",
+		"FireRate": 60.0,
+		"ReloadTime": 2.0
+	},
+	
+	{
+		"ID": 506,
+		"Name": "AF14-B3",
+		"LV": 5,
+		"Ammo": 30,
+		"Damage": 40,
+		"Accuracy": "A-",
+		"FireRate": 2.0,
+		"ReloadTime": 1.5,
+		
+		"Burst": 3,
+		"Zoom": 2
+	},
+	
+	{
+		"ID": 507,
+		"Name": "AF15",
+		"LV": 7,
+		"Ammo": 120,
+		"Damage": 17,
+		"Accuracy": "B",
+		"FireRate": 12.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 508,
+		"Name": "AF15ST",
+		"LV": 10,
+		"Ammo": 8,
+		"Damage": 105,
+		"Accuracy": "A+",
+		"FireRate": 3.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 509,
+		"Name": "フュージョンブラスターG1",
+		"LV": 12,
+		"Ammo": 1500,
+		"Damage": 35,
+		"Accuracy": "S+",
+		"FireRate": 60.0,
+		"ReloadTime": null
+	},
+	
+	{
+		"ID": 510,
+		"Name": "AF16",
+		"LV": 12,
+		"Ammo": 100,
+		"Damage": 23,
+		"Accuracy": "B",
+		"FireRate": 12.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 511,
+		"Name": "AF-V",
+		"LV": 13,
+		"Ammo": 105,
+		"Damage": 12,
+		"Accuracy": "B+",
+		"FireRate": 12.0,
+		"ReloadTime": 1.5,
+		
+		"FireAmount": 2
+	},
+	
+	{
+		"ID": 512,
+		"Name": "AF16RA",
+		"LV": 16,
+		"Ammo": 200,
+		"Damage": 12,
+		"Accuracy": "C",
+		"FireRate": 30.0,
+		"ReloadTime": 2.5
+	},
+	
+	{
+		"ID": 513,
+		"Name": "AF17",
+		"LV": 18,
+		"Ammo": 120,
+		"Damage": 26,
+		"Accuracy": "B",
+		"FireRate": 12.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 514,
+		"Name": "AF18",
+		"LV": 23,
+		"Ammo": 120,
+		"Damage": 30,
+		"Accuracy": "B",
+		"FireRate": 15.0,
+		"ReloadTime": 2.0
+	},
+	
+	{
+		"ID": 515,
+		"Name": "AF18RA",
+		"LV": 25,
+		"Ammo": 250,
+		"Damage": 18,
+		"Accuracy": "A+",
+		"FireRate": 30.0,
+		"ReloadTime": 2.5
+	},
+	
+	{
+		"ID": 516,
+		"Name": "AF18X",
+		"LV": 26,
+		"Ammo": 140,
+		"Damage": 50,
+		"Accuracy": "E",
+		"FireRate": 12.0,
+		"ReloadTime": 2.0
+	},
+	
+	{
+		"ID": 517,
+		"Name": "AF19ST",
+		"LV": 28,
+		"Ammo": 10,
+		"Damage": 230,
+		"Accuracy": "A+",
+		"FireRate": 4.0,
+		"ReloadTime": 1.5
+	},
+	
+	{
+		"ID": 518,
+		"Name": "フュージョンブラスターG2",
+		"LV": 32,
+		"Ammo": 1500,
+		"Damage": 90,
+		"Accuracy": "S+",
+		"FireRate": 60.0,
+		"ReloadTime": null
+	},
+	
+	{
+		"ID": 519,
+		"Name": "AF19",
+		"LV": 32,
+		"Ammo": 120,
+		"Damage": 44,
+		"Accuracy": "B+",
+		"FireRate": 15.0,
+		"ReloadTime": 1.5,
+		
+		"Zoom": 2
+	},
+	
+	{
+		"ID": 520,
+		"Name": "AF19RA",
+		"LV": 38,
+		"Ammo": 250,
+		"Damage": 33,
+		"Accuracy": "B+",
+		"FireRate": 30.0,
+		"ReloadTime": 5.0
+	},
+	
+	{
+		"ID": 521,
+		"Name": "AF19X-B3",
+		"LV": 43,
+		"Ammo": 120,
+		"Damage": 150,
+		"Accuracy": "B",
+		"FireRate": 2.0,
+		"ReloadTime": 1.5,
+		
+		"Burst": 3,
+		"Zoom": 2
+	},
+	
+	{
+		"ID": 522,
+		"Name": "AF20",
+		"LV": 46,
+		"Ammo": 140,
+		"Damage": 92,
+		"Accuracy": "A-",
+		"FireRate": 12.0,
+		"ReloadTime": 2.0
+	},
+	
+	{
+		"ID": 523,
+		"Name": "AF20ST",
+		"LV": 51,
+		"Ammo": 5,
+		"Damage": 1200,
+		"Accuracy": "S+",
+		"FireRate": 4.0,
+		"ReloadTime": 5.0
+	},
+	
+	{
+		"ID": 524,
+		"Name": "AF20RAR",
+		"LV": 56,
+		"Ammo": 999,
+		"Damage": 26,
+		"Accuracy": "B",
+		"FireRate": 60.0,
+		"ReloadTime": 3.0
+	},
+	
+	{
+		"ID": 525,
+		"Name": "AF21-B4",
+		"LV": 60,
+		"Ammo": 140,
+		"Damage": 260,
+		"Accuracy": "A+",
+		"FireRate": 2.0,
+		"ReloadTime": 3.0,
+		
+		"Burst": 4
+	},
+	
+	{
+		"ID": 526,
+		"Name": "フュージョンブラスターDA",
+		"LV": 61,
+		"Ammo": 1200,
+		"Damage": 300,
+		"Accuracy": "S+",
+		"FireRate": 60.0,
+		"ReloadTime": null
+	},
+	
+	{
+		"ID": 527,
+		"Name": "AF99",
+		"LV": 64,
+		"Ammo": 160,
+		"Damage": 140,
+		"Accuracy": "A",
+		"FireRate": 15.0,
+		"ReloadTime": 2.0,
+		
+		"Zoom": 2
+	},
+	
+	{
+		"ID": 528,
+		"Name": "AF99ST",
+		"LV": 69,
+		"Ammo": 20,
+		"Damage": 800,
+		"Accuracy": "S+",
+		"FireRate": 4.0,
+		"ReloadTime": 3.0
+	},
+	
+	{
+		"ID": 529,
+		"Name": "フュージョンブラスターZD",
+		"LV": 75,
+		"Ammo": 1500,
+		"Damage": 350,
+		"Accuracy": "S+",
+		"FireRate": 60.0,
+		"ReloadTime": null
+	},
+	
+	{
+		"ID": 530,
+		"Name": "AF100",
+		"LV": 75,
+		"Ammo": 180,
+		"Damage": 220,
+		"Accuracy": "A",
+		"FireRate": 15.0,
+		"ReloadTime": 2.0,
+		
+		"Zoom": 2
+	}
+]
