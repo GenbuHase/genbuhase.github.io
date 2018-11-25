@@ -3093,13 +3093,17 @@ main { padding: 1em; padding-left: calc(300px + 1em); }
 
 main img { max-width: 100%; }
 
-nav .brand-logo { margin-left: 2.5em; }
+.nav-wrapper { display: flex; flex-direction: row; }
 
-@media only screen and (max-width: 992px) { nav .brand-logo { margin-left: 0; } }
+.nav-wrapper .brand-logo { position: relative; flex: 1; margin: auto 1.5em auto 2.5em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+@media only screen and (max-width: 992px) { .nav-wrapper .brand-logo { left: auto; margin-left: 0; transform: none; } }
 
 .heading { display: flex; align-items: flex-end; line-height: 2; border-bottom: thin solid #ee6e73; }
 
 .heading::before { content: ""; display: inline-block; vertical-align: bottom; margin-right: 0.5em; border: 0.75em solid transparent; border-color: transparent #ee6e73 #ee6e73 transparent; }
+
+article { font-size: 0.875rem; letter-spacing: 0.04em; line-height: 1.5rem; }
 
 .sidenav { display: flex; flex-direction: column; height: 100%; padding-bottom: 0; }
 

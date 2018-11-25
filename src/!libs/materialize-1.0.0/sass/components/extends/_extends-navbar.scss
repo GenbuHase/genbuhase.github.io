@@ -1,7 +1,21 @@
-nav {
-  .brand-logo {
-    margin-left: 2.5em;
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
 
-    @media #{$medium-and-down} { margin-left: 0 }
+  .brand-logo {
+    position: relative;
+    flex: 1;
+    margin: auto 1.5em auto 2.5em;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @media #{$medium-and-down} {
+      left: auto;
+
+      margin-left: 0;
+      transform: none;
+    }
   }
 }
