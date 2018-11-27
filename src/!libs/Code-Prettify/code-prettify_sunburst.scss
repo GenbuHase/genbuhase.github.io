@@ -2,13 +2,13 @@
 
 code,
 pre {
-	&.str {
+	.str {
 		color: #65B042;
 
 		@media print { color: #060 }
 	}
 
-	&.kwd {
+	.kwd {
 		color: #E28964;
 
 		@media print {
@@ -17,14 +17,14 @@ pre {
 		}
 	}
 
-	&.com {
+	.com {
 		color: #AEAEAE;
 		font-style: italic;
 
 		@media print { color: #600 }
 	}
 
-	&.typ {
+	.typ {
 		color: #89bdff;
 
 		@media print {
@@ -33,24 +33,24 @@ pre {
 		}
 	}
 
-	&.lit {
+	.lit {
 		color: #3387CC;
 
 		@media print { color: #044 }
 	}
 
-	&.pln,
-	&.pun { color: #fff }
+	.pln,
+	.pun { color: #fff }
 
-	&.pln {
+	.pln {
 		@media print { color: #000 }
 	}
 
-	&.pun {
+	.pun {
 		@media print { color: #440 }
 	}
 
-	&.tag {
+	.tag {
 		color: #89bdff;
 
 		@media print {
@@ -59,19 +59,19 @@ pre {
 		}
 	}
 
-	&.atn {
+	.atn {
 		color: #bdb76b;
 
 		@media print { color: #404 }
 	}
 
-	&.atv {
+	.atv {
 		color: #65B042;
 
 		@media print { color: #060 }
 	}
 
-	&.dec { color: #3387CC }
+	.dec { color: #3387CC }
 
 	&.prettyprint {
 		background-color: #000;
