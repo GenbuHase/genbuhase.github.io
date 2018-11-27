@@ -3119,6 +3119,12 @@ article { font-size: 0.875rem; letter-spacing: 0.04em; line-height: 1.5rem; }
 
 .sidenav-footer .link svg path { fill: #343434; }
 
+YouTube { position: relative; display: block; width: 100%; padding-top: 56.25%; }
+
+@media (min-width: 800px) { YouTube { width: 640px; height: 360px; padding-top: 0; } }
+
+YouTube > iframe { position: absolute; top: 0; right: 0; width: 100%; height: 100%; }
+
 @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(MaterialIcons-Regular.eot); /* For IE6-8 */ src: local("Material Icons"), local("MaterialIcons-Regular"), url(MaterialIcons-Regular.woff2) format("woff2"), url(MaterialIcons-Regular.woff) format("woff"), url(MaterialIcons-Regular.ttf) format("truetype"); }
 
 .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; /* Preferred icon size */ display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr; /* Support for all WebKit browsers. */ -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */ text-rendering: optimizeLegibility; /* Support for Firefox. */ -moz-osx-font-smoothing: grayscale; /* Support for IE. */ font-feature-settings: 'liga'; }
@@ -3169,7 +3175,7 @@ code .dec, pre .dec { color: #3387CC; }
 
 code.prettyprint, pre.prettyprint { background-color: #000; border-radius: 8px; }
 
-pre.prettyprint { width: 95%; margin: 1em auto; padding: 1em; white-space: pre-wrap; }
+pre.prettyprint { width: 95%; padding: 1em; white-space: pre; overflow: auto; font-family: monospace; }
 
 ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; }
 

@@ -3,7 +3,7 @@
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title>Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Title>
+		<Title>More Records｜Mod｜どっかのプログラなーいのサイト。</Title>
 		
 		<Link Rel = "Icon" Href = "./favicon.ico" />
 		
@@ -35,7 +35,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo">Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Span>
+					<Span Class = "brand-logo">More Records｜Mod｜どっかのプログラなーいのサイト。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -77,57 +77,78 @@
 		</UL>
 
 		<Main>
-			<H1 Class = "mod-name heading">Customizable Blocks</H1>
+			<H1 Class = "mod-name heading">More Records</H1>
 <Style>.mod-name::before { background-image: url(favicon.ico) }</Style>
 
 			<Article>
 				<H2 Class = "subheading">1. Overview</H2>
 
 				<P>
-					このModでは、自由自在にカスタマイズできるブロックを追加します。
+					このModはMinecraft PEにレコードを追加します。
 				</P>
 			</Article>
 
 			<Article>
-				<H2 Class = "subheading">2. Detail</H2>
+				<H2 Class = "subheading">2. How to Use</H2>
 
 				<P>
-					このModを適用した状態でワールドに入ると、現在のワールドのフォルダにCustomizableBlocks.cfgが生成されます。<Br />
-					CustomizableBlocks.cfgを、必ず以下の形式に沿って編集してください。
+					最初にこのModを導入すると、Mojangフォルダー内にMore Records/Records.Jsonが生成されます。<Br />
+					生成されたRecords.Jsonを、必ず下記の形式に沿って編集して下さい。
 
 					<Br /><Br />
 
-					入力された内容に応じて追加されるブロックの情報が変化します。
+					入力された内容に応じて追加されるレコードの情報が変化します。
 				</P>
 
 				<Pre Class = "prettyprint lang-js">[
 	{
-		"Damage": 対応ダメージ値(int型),
-
-		"Property": {
-			"Textures": [ //ブロックテクスチャ設定
-				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
-				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
-				...
-			],
-
-			"Shapes": [ //ブロック形状設定
-				[開始X(int型), 開始Y(int型), 開始Z(int型)],
-				[終了X(int型), 終了Y(int型), 終了Z(int型)]
-			]
-		}
+		"ID": レコードID(int型),
+		"Name": レコードの名前(String型),
+		"Type": レコードの色(1～12),
+		"URL": 音声ファイルの絶対パス(String型)
 	},
 
 	{
 		...
 	},
-
+	
 	...
 ]</Pre>
 			</Article>
 
 			<Article>
-				<H2 Class = "subheading">3. Changelog</H2>
+				<H2 Class = "subheading">3. Blocks</H2>
+
+				<UL Class = "item-list">
+	<Div Class = "item card">
+		<Div Class = "item-image card-image grey lighten-2">
+			<Img Src = "images/Jukebox.png" />
+		</Div>
+
+		<Div Class = "item-description card-content">
+			<Span Class = "item-name card-title truncate">ジュークボックス</Span>
+			<P Class = "item-id">ID: 250</P>
+		</Div>
+	</Div>
+</UL>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">4. Movies</H2>
+
+				<YouTube>
+					<IFrame
+						Src = "https://www.youtube.com/embed/i7bJC_IiTCg?rel=0"
+						FrameBorder = "0"
+						Gesture = "media"
+						Allow = "encrypted-media"
+						AllowFullScreen = "AllowFullScreen">
+					</IFrame>
+				</YouTube>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading">5. Changelog</H2>
 
 				<Table Class = "highlight">
 	<THead>
@@ -136,10 +157,43 @@
 
 	<TBody>
 		<Tr>
-			<Td>Customizable Blocks v1.0 (2017/03/09)</Td>
+			<Td>More Records Release 1.04 (2016/03/29)</Td>
 
 			<Td>
-				Customizable Blocksを初リリース<Br />
+				コードの抜け落ちを修正<Br />
+				
+			</Td>
+		</Tr>
+		<Tr>
+			<Td>More Records Release 1.03 (2016/03/28)</Td>
+
+			<Td>
+				複数設置に対応<Br />
+				著作権名義を変更<Br />
+				
+			</Td>
+		</Tr>
+		<Tr>
+			<Td>More Records Release 1.02 (2016/03/22)</Td>
+
+			<Td>
+				ドロップを実装<Br />
+				
+			</Td>
+		</Tr>
+		<Tr>
+			<Td>More Records Release 1.01 (2016/03/22)</Td>
+
+			<Td>
+				ファイル生成に関するバグを修正<Br />
+				
+			</Td>
+		</Tr>
+		<Tr>
+			<Td>More Records Release 1.00 (2016/03/22)</Td>
+
+			<Td>
+				More Recordsを初リリース<Br />
 				
 			</Td>
 		</Tr>
@@ -148,7 +202,7 @@
 			</Article>
 
 			<Article>
-				<H2 Class = "subheading">4. Download</H2>
+				<H2 Class = "subheading">6. Download</H2>
 
 				<Table Class = "highlight">
 	<THead>
@@ -156,7 +210,12 @@
 	</THead>
 
 	<TBody>
-		<Tr><Td><A Href = "download/Customizable Blocks v1.0.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Customizable Blocks v1.0</A></Td></Tr>
+		<Tr><Td><A Href = "download/Release/More Records Release 1.04.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records Release 1.04</A></Td></Tr>
+		<Tr><Td><A Href = "download/Release/More Records Release 1.03.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records Release 1.03</A></Td></Tr>
+		<Tr><Td><A Href = "download/Release/More Records Release 1.02.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records Release 1.02</A></Td></Tr>
+		<Tr><Td><A Href = "download/Release/More Records Release 1.01.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records Release 1.01</A></Td></Tr>
+		<Tr><Td><A Href = "download/Release/More Records Release 1.00.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records Release 1.00</A></Td></Tr>
+		<Tr><Td><A Href = "download/More Records Resources.zip" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>More Records リソースパック</A></Td></Tr>
 	</TBody>
 </Table>
 			</Article>

@@ -81,9 +81,12 @@ pre {
 
 pre.prettyprint {
 	width: 95%;
-	margin: 1em auto;
 	padding: 1em;
-	white-space: pre-wrap;
+
+	white-space: pre;
+	overflow: auto;
+
+	font-family: monospace;
 }
 
 ol.linenums {

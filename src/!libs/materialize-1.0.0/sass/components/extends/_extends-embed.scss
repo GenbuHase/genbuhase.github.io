@@ -1,15 +1,3 @@
-@charset "UTF-8";
-
-Pre.prettyprint {
-	width: auto;
-	margin: 0;
-
-	font-family: "Meiryo UI";
-
-	white-space: pre;
-	overflow-x: auto;
-}
-
 YouTube {
 	position: relative;
 
@@ -23,7 +11,7 @@ YouTube {
 		padding-top: 0;
 	}
 
-	> IFrame {
+	> iframe {
 		position: absolute;
 		top: 0;
 		right: 0;
