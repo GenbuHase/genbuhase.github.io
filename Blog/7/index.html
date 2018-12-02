@@ -85,7 +85,9 @@
 				※この記事は<A Href = "../6">過去記事</A>の続きです。<Br />
 				※この記事におけるMastodonバージョンは <B>v2.3.3</B> となります。また、コードの状態は記事執筆時のものとなります。
 
-				<Br /><Br /><Br />
+				<Br /><Br /><Br /><Br />
+
+
 
 				どうもお久しぶりです。<Br />
 				最近ずっと開発の方に専念していたので、ブログ側にまで手が回らずに放置していました…:( ;´꒳`;):<Br />
@@ -111,6 +113,8 @@
 
 				<Br /><Br /><Br /><Br />
 
+
+
 				<A Href = "https://github.com/Itabashi-don/mastodon/compare/v2.3.3...feature/limitedToot" Target = "_blank">v2.3.3との差分</A>をご覧に頂ければ分かるのですが、今回のファイル変更数は12件となっています。<Br />
 				その内ローカライズデータに3件、フロントエンド側に5件、そしてバックエンド側に4件の変更を加えています。<Br />
 				まだまだ駆け出しの初心者ですのでこれが大規模なのかどうか分かりませんが、実際にやってみて、比較的容易だったなと思っています。
@@ -131,6 +135,7 @@
 				</IFrame>
 
 				<Br /><Br />
+
 
 				<H2 Class = "subheading subheading-1">フロントエンド側 - ローカライズ処理</H2>
 				ひとまず、追加したい項目の名前と表示名<A Href = "#表1"><Sup>[表1]</Sup></A>を決めます。<Br />
@@ -174,6 +179,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">フロントエンド側 - privacy_dropdown.js</H2>
 				サーバー側より目に見える部分の方が実装していて気が楽になると思います。(precompileがあるのでちょっと微妙ですが…)<Br />
 				という訳でこちらから改変していきます。
@@ -212,6 +218,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">フロントエンド側 - warning_container.js</H2>
 				とりあえずここでprecompileして再起動してみると、公開範囲のドロップダウンに項目が追加されている事が分かります。<Br />
 				しかし、まだ見栄え的に足りない様な気もします。<Br />
@@ -247,6 +254,7 @@
 				という訳で、改変後のソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/javascript/mastodon/features/compose/containers/warning_container.js" Target = "_blank">このよう</A>になります。
 
 				<Br /><Br />
+
 
 				<H2 Class = "subheading subheading-1">フロントエンド側 - action_bar.js 及び status_action_bar.js</H2>
 				ここまでは投稿時の処理に注目してきましたが、実際投稿されたトゥートはどのように表示されるのでしょうか。<Br />
@@ -285,6 +293,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">フロントエンド側 - reducers/compose.js</H2>
 				これがフロントエンド側で最後の変更となります。<Br />
 				新しく公開範囲を追加した為か、返信時に公開範囲がリプ元のものに合わさってくれない、という問題が発生しました。
@@ -302,6 +311,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">バックエンド側</H2>
 				フロントエンド側の実装は完了したので、次は実際に投稿したり配信する処理を見ていきましょう。<Br />
 				APIは全て <I>app/controller</I> の下にあるらしく、漁ってみると <I>statuses_controller.rb</I> がありました。<Br />
@@ -317,6 +327,7 @@
 				ではここから更に細分化していきましょう。
 
 				<Br /><Br />
+
 
 				<H2 Class = "subheading subheading-1">バックエンド側 - models/status.rb</H2>
 				まず、Rubyの方でも公開範囲を追加します。
@@ -353,6 +364,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">バックエンド側 - models/concerns/account_interactions.rb</H2>
 				限定公開は <B>自分がフォローしているユーザー</B> に対して配信します。<Br />
 				実装にあたって、自分のフォローしているユーザーのリストが必要になります。
@@ -378,6 +390,7 @@
 
 				<Br /><Br />
 
+
 				<H2 Class = "subheading subheading-1">バックエンド側 - services/fan_out_on_write_service.rb</H2>
 				<I>call</I> メソッド部分でDMの時にのみ <I>deliver_to_mentioned_followers</I> メソッドが実行されています。<Br />
 				ここで条件分岐して配信を分けているのだろうと思われます。<Br />
@@ -399,6 +412,7 @@
 				ここまでの<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/services/fan_out_on_write_service.rb" Target = "_blank">コード</A>はこちらです。
 
 				<Br /><Br />
+
 
 				<H2 Class = "subheading subheading-1">バックエンド側 - workers/activitypub/distribution_worker.rb</H2>
 				ここが最後の改変になります。<Br />
@@ -426,6 +440,7 @@
 				ここのソースは<A Href = "https://github.com/Itabashi-don/mastodon/blob/59b522982d6137ed659ce81c5fcc503e2463d98d/app/workers/activitypub/distribution_worker.rb" Target = "_blank">こちら</A>になります。
 
 				<Br /><Br />
+				
 
 				<H2 Class = "subheading subheading-1">実装してみて考察とかなんやら。</H2>
 				まずRubyやRailsなど、見たことも触った事もない所からここまで来るのに相当の時間を要してしまった気がします。<Br />
