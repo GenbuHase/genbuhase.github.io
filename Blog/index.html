@@ -3,16 +3,15 @@
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title>Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Title>
+		<Title>どっかのプログラなーいのブログ。</Title>
 		
-		<Link Rel = "Icon" Href = "./favicon.ico" />
-		
+		<Link Rel = "Icon" Href = "favicon.ico" />
+		<Link Rel = "Canonical" Href = "https://genbuhase.github.io/" />
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 
-		<Link Rel = "StyleSheet" Href = "/css/common.css" />
+		<Link Rel = "StyleSheet" Href = "/css/common.css" /><Link Rel = "StyleSheet" Href = "./Blog.css" />
 
 		<Script Src = "/js/common.js"></Script>
-		<Link Rel = "StyleSheet" Href = "../Detail.css" />
 		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -35,7 +34,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo">Customizable Blocks｜Mod｜どっかのプログラなーいのサイト。</Span>
+					<Span Class = "brand-logo">どっかのプログラなーいのブログ。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -77,89 +76,7 @@
 		</UL>
 
 		<Main>
-			<H1 Class = "mod-name false heading">Customizable Blocks</H1>
-<Style>.mod-name::before { background-image: url(favicon.ico) }</Style>
-
-			<Article>
-				<H2 Class = "subheading">1. Overview</H2>
-
-				<P>
-					このModでは、自由自在にカスタマイズできるブロックを追加します。
-				</P>
-			</Article>
-
-			<Article>
-				<H2 Class = "subheading">2. Detail</H2>
-
-				<P>
-					このModを適用した状態でワールドに入ると、現在のワールドのフォルダにCustomizableBlocks.cfgが生成されます。<Br />
-					CustomizableBlocks.cfgを、必ず以下の形式に沿って編集してください。
-
-					<Br /><Br />
-
-					入力された内容に応じて追加されるブロックの情報が変化します。
-				</P>
-
-				<Pre Class = "prettyprint lang-js">[
-	{
-		"Damage": 対応ダメージ値(int型),
-
-		"Property": {
-			"Textures": [ //ブロックテクスチャ設定
-				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
-				[テクスチャネーム(String型), テクスチャダメージ値(int型)],
-				...
-			],
-
-			"Shapes": [ //ブロック形状設定
-				[開始X(int型), 開始Y(int型), 開始Z(int型)],
-				[終了X(int型), 終了Y(int型), 終了Z(int型)]
-			]
-		}
-	},
-
-	{
-		...
-	},
-
-	...
-]</Pre>
-			</Article>
-
-			<Article>
-				<H2 Class = "subheading">3. Changelog</H2>
-
-				<Table Class = "highlight">
-	<THead>
-		<Tr><Th>Version (Released date)</Th><Th>Contents</Th></Tr>
-	</THead>
-
-	<TBody>
-		<Tr>
-			<Td>Customizable Blocks v1.0 (2017/03/09)</Td>
-
-			<Td>
-				Customizable Blocksを初リリース<Br />
-				
-			</Td>
-		</Tr>
-	</TBody>
-</Table>
-			</Article>
-
-			<Article>
-				<H2 Class = "subheading">4. Download</H2>
-
-				<Table Class = "highlight">
-	<THead>
-		<Tr><Th>File</Th></Tr>
-	</THead>
-
-	<TBody>
-		<Tr><Td><A Href = "download/Customizable Blocks v1.0.js" Download OnClick = 'M.toast({ html: "Thank you for downloading😊" })'>Customizable Blocks v1.0</A></Td></Tr>
-	</TBody>
-</Table>
-			</Article>
+			
 		</Main>
 	</Body>
 </HTML>

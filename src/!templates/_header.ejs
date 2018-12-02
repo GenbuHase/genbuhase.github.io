@@ -60,7 +60,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo"><%= title ? title + '｜' : '' %>どっかのプログラなーいのサイト。</Span>
+					<Span Class = "brand-logo"><%= isHome ? (title ? title : SITENAME) : (title ? `${title}｜${SITENAME}` : SITENAME) %></Span>
 				</Div>
 			</Nav>
 		</Header>

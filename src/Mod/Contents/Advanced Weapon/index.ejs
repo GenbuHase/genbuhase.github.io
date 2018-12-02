@@ -1,13 +1,13 @@
 <%
 	include("../../../!templates/_global");
 %><%
-	var name = "Advanced Weapon";
-	var hasIcon = true;
+	const name = "Advanced Weapon";
+	const hasIcon = true;
 %><%-
 	include("../../../!templates/_header", {
 		name,
 		title: `${name}｜Mod`,
-		favicon: "./favicon.ico",
+		favicon: hasIcon ? "./favicon.ico" : null,
 		
 		libraries: [
 			{ type: "STYLE", src: "../Detail.css" }

@@ -1,13 +1,13 @@
 <%
 	include("../../../!templates/_global");
 %><%
-	var name = "Customizable Blocks";
-	var hasIcon = true;
+	const name = "Customizable Blocks";
+	const hasIcon = true;
 %><%-
 	include("../../../!templates/_header", {
 		name,
 		title: `${name}｜Mod`,
-		favicon: "./favicon.ico",
+		favicon: hasIcon ? "./favicon.ico" : null,
 		
 		libraries: [
 			{ type: "STYLE", src: "../Detail.css" }
