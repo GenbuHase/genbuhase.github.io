@@ -1,9 +1,11 @@
-<%-
+<%
+	include("../!templates/_global");
+%><%-
 	include("../!templates/_header", {
 		name: "Blog",
-		title: "どっかのプログラなーいのブログ。",
 
-		isHome: true, hasStyle: true
+		hasStyle: true,
+		SITENAME: "どっかのプログラなーいのブログ。"
 	}) %>
 			
 <%- include("../!templates/_footer") %>

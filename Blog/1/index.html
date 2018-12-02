@@ -3,15 +3,16 @@
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title>どっかのプログラなーいのブログ。</Title>
+		<Title>ブログ、始めました。｜どっかのプログラなーいのブログ。</Title>
 		
 		
 		
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 
-		<Link Rel = "StyleSheet" Href = "/css/common.css" /><Link Rel = "StyleSheet" Href = "./Blog.css" />
+		<Link Rel = "StyleSheet" Href = "/css/common.css" />
 
 		<Script Src = "/js/common.js"></Script>
+		<Link Rel = "StyleSheet" Href = "../Blog.css" />
 		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -34,7 +35,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo">どっかのプログラなーいのブログ。</Span>
+					<Span Class = "brand-logo">ブログ、始めました。｜どっかのプログラなーいのブログ。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -76,7 +77,44 @@
 		</UL>
 
 		<Main>
-			
+			<H1 Class = "article-info heading" Style = "--publishedAt: '(投稿日時：2018/2/12)'">
+				<Span Class = "article-title">ブログ、始めました。</Span>
+			</H1>
+			<Article Class = "article-content">前々から少しずつ製作してきた<A Href = "https://github.com/GenbuHase/ArticleEditor" Target = "_blank">Article Editor</A>がとりあえず完成したので、コイツを使って少しずつブログを書いていきたいと思ってます。
+
+			<S>…モチベが続けｂ(((殴</S>
+
+			さて、気付けば今年も既に2ヵ月が過ぎています…早いですね:( ;´꒳`;):
+			最近想定外にプログラミングに飽きが来ていて何もする事がなく、その中でふと「ちゃんと作るか」と思ったのがArticle Editorでした。
+			まぁ一回作ってしまえばそのまま自分のサイトに使えるので、強制的にモチベ上げて…みたいな感じで何とか無事に出来ました。
+
+			…はい。
+			<S>全然書くことねぇ</S>
+
+			まぁこんな感じでちょくちょく書いていくかと思いますが、今後ともよろしくお願いします(*･ω･)*_ _)</Article>
+			<Article ID = "disqus_thread">
+				<Script>
+					/**
+					*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+					*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+					/*
+					var disqus_config = function () {
+						this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					};
+					*/
+					(() => { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+							s.src = 'https://genbuhase-blog.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</Script>
+	
+				<NoScript>
+					Please enable JavaScript to view the <A Href = "https://disqus.com/?ref_noscript">comments powered by Disqus.</A>
+				</NoScript>
+			</Article>
 		</Main>
 	</Body>
 </HTML>

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.article {
+	&-info {
+		&::after {
+			content: var(--publishedAt, "(投稿日時：)");
+
+			display: inline;
+			margin-left: 0.5em;
+
+			font-size: 0.75em;
+		}
+	}
+
+	&-title {
+		flex: 1;
+		line-height: 1.5;
+	}
+
+	&-content {
+		white-space: pre-line;
+	}
+}
+
+#disqus_thread {
+	margin-top: 3em;
+}
