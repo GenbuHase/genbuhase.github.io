@@ -3,7 +3,7 @@
 <HTML>
 	<Head>
 		<Meta Charset = "UTF-8" />
-		<Title>ブログ、始めました。｜どっかのプログラなーいのブログ。</Title>
+		<Title>【Mastodon】非公開トゥートの挙動を変えてみた話。｜どっかのプログラなーいのブログ。</Title>
 		
 		
 		
@@ -35,7 +35,7 @@
 						<I Class = "material-icons">menu</I>
 					</A>
 
-					<Span Class = "brand-logo">ブログ、始めました。｜どっかのプログラなーいのブログ。</Span>
+					<Span Class = "brand-logo">【Mastodon】非公開トゥートの挙動を変えてみた話。｜どっかのプログラなーいのブログ。</Span>
 				</Div>
 			</Nav>
 		</Header>
@@ -77,31 +77,77 @@
 		</UL>
 
 		<Main>
-			<H1 Class = "article-info heading" Style = "--publishedAt: '(投稿日時：2018/2/12)'">
-				<Span Class = "article-title">ブログ、始めました。</Span>
+			<H1 Class = "article-info heading" Style = "--publishedAt: '(投稿日時：2018/3/26)'">
+				<Span Class = "article-title">【Mastodon】非公開トゥートの挙動を変えてみた話。</Span>
 			</H1>
 			
 			<Article Class = "article-content">
-				前々から少しずつ製作してきた<A Href = "https://github.com/GenbuHase/ArticleEditor" Target = "_blank">Article Editor</A>がとりあえず完成したので、コイツを使って少しずつブログを書いていきたいと思ってます。
+				※この記事は<A Href = "../7">こちら</A>に続きます。
+
+				<Br /><Br /><Br /><Br />
+
+				どうも、みなさんこんにちは。Genbooです。<Br />
+				今日から春休みに入り、時間的にも余裕が出てきました。<Br />
+				時間にモチベも重なって、久しぶりにプログラミングにのめり込めてる気がします。
 
 				<Br /><Br />
 
-				<S>…モチベが続けｂ(((殴</S>
+				さて、最近ですがMastodonというSNSに没頭しています。<Br />
+				それも世界1位のTPD(Toot per Days, 要するに1日の平均投稿率)ユーザーにも数回なっています……ｗ
 
 				<Br /><Br />
 
-				さて、気付けば今年も既に2ヵ月が過ぎています…早いですね:( ;´꒳`;):<Br />
-				最近想定外にプログラミングに飽きが来ていて何もする事がなく、その中でふと「ちゃんと作るか」と思ったのがArticle Editorでした。<Br />
-				まぁ一回作ってしまえばそのまま自分のサイトに使えるので、強制的にモチベ上げて…みたいな感じで何とか無事に出来ました。
+				<S>つまり廃人ですね(白目)</S>
 
 				<Br /><Br />
 
-				…はい。<Br />
-				<S>全然書くことねぇ</S>
+				そこで最近はMastodon関連のツールを製作することがかなり増えてきました。<Br />
+				それにとどまらず、Mastodon自体のソースにも手を出し始め……。<Br />
+				という事で改善してみた機能が <B>非公開トゥート</B> になります。
 
 				<Br /><Br />
-				
-				まぁこんな感じでちょくちょく書いていくかと思いますが、今後ともよろしくお願いします(*･ω･)*_ _)
+
+				また、開発にあたって参考にさせて頂きました！！ありがとうございます！！🙏🙏🙏<Br />
+				<Script Src = "https://gamelinks007.net/embed.js" Async = "Async"></Script>
+				<IFrame
+					Class = "mastodon-embed"
+					Src = "https://gamelinks007.net/@S_H_/99691071767594021/embed"
+					Style = "Max-Width: 100%; Border: 0"
+					Width="400">
+				</IFrame>
+
+				<Br /><Br />
+
+				<H2 Class = "subheading subheading-1">実際の挙動</H2>
+				元来Mastodonには非公開トゥートの機能が実装されています。<Br />
+				しかし十分に満足できる挙動<A Href = "#注釈1"><Sup>[注釈1]</Sup></A>ではなく、また不便なシチュエーションも多々出てきたため、<Br />
+				『じゃあいっちょ変えてみっか！！』の一声で開発を始めました。
+
+				<Br /><Br />
+
+				改善された非公開トゥートのコードは<A Href = "https://github.com/GenbuProject/mastodon/tree/feature/deprecated/privateToot" Target = "_blank">Github</A>に上げてあります。<Br />
+				Rubyに関しては初心者どころか全くの未経験者なので、基礎的な部分の理解すらままならずにコミットしてしまったりでコミット数が多くなっていますが、修正箇所はかなり少なかったです。
+
+				<Br /><Br />
+
+				<S>以下にて行程ごとに分けて解説をしていきます💪💪</S>
+
+				<Br /><Br />
+
+				【追記】<Br />
+				かなり余裕がなかったので、次の記事にて解説記事を出させて頂こうかなと思ってます…<Br />
+				書きかけの状態で広まってしまったこと、大変申し訳ございませんでした。
+
+				<Br /><Br />
+
+				そして、非公開トゥートと記事が気に入らなかったので、どちらも書き直しを行いました。<Br />
+				記事は<A Href = "../7">こちら</A>からどうぞ。
+
+				<Br /><Br /><Br />
+
+				<Span ID = "注釈1">[注釈1]</Span><Br />
+				現実：自分の <B>フォロワー</B> に対して公開<Br />
+				理想：自分が <B>フォローしているユーザー</B> に対して公開
 			</Article>
 			<Article ID = "disqus_thread">
 				<Script>
