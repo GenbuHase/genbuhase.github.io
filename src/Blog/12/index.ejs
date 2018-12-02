@@ -1,0 +1,57 @@
+<%- include("../../!templates/_blog-header", { id: 12, title: "【Mastodon】MastodonRater v1.0 リリースしました！", publishedAt: "2018/5/2" }) %>
+			<Article Class = "article-content">
+				どうもお久しぶりです。Genbooです。<Br />
+				やっとです！！MastodonRaterの再製作がやっと終わりました！！！✌︎('ω'✌︎ )
+
+				<Br /><Br />
+
+				まぁ例によって<A Href = "https://mastodon-rater.herokuapp.com/" Target = "_blank">MastodonRater</A>へのリンクと<A Href = "https://github.com/GenbuProject/MastodonRater-Nodejs/" Target = "_blank">Github</A>へのリンク投げておきますっ(｀･ω･´)ゞ
+
+				<Br /><Br />
+
+				今回の再製作で見直した部分は、ざっと羅列すると <B>動作環境・UI・DB導入・ローカライズ</B> の4点になるかな、と思います。
+
+				<Br /><Br />
+
+				まず、新生MastodonRaterでは動作環境が異なっています。<Br />
+				以前のものはごく単純な静的ページであったのに対し、今回書き直したものは<A Href = "https://nodejs.org/" Target = "_blank">Node.js</A>で動作しています。<Br />
+				後でご紹介するDBの導入や、その他動作の最適化などに必須だったため、環境を一新してみました。<Br />
+				つまり言い換えれば <B>Github Pagesでは動かない</B> という事になります。ここ要注意です。テストに出ま……せん。多分。出たら教えて下さい。<Br />
+				なので、今回は<A Href = "https://heroku.com/" Target = "_blank">Heroku</A>を使って動かしています。実際に使ってみて、初めて凄さを実感できました。
+
+				<Br /><Br />
+
+				次にUIを一新しています。<Br />
+				前バージョンでは<A Href = "https://material.io/" Target = "_blank">Material Design Components</A>を導入していたのですが、今回は<A Href = "http://materializecss.com/" Target = "_blank">Materialize</A>を利用しています。<Br />
+				Article Editorでも使ってるアレです。例のサーモン(Or たらこ)です。<Br />
+				MDCから変更した事により、かなりデザインの自由度が上がりました。
+
+				<Br /><Br />
+
+				そして、DBを導入しました。<Br />
+				今までのものはわたしが手動でアカウントを作ってアプリを生成していた為に、色んなインスタンスでは使う事が出来ない、という状況が生まれていました。<Br />
+				しかし、DBを導入する事によってアプリが存在しなければ自動で生成し、生成されたアプリの情報を保存しておいて <B>1つのインスタンスにつき1回のアプリ生成</B> を実現することが出来ました。
+
+				<Br /><Br />
+
+				最後にローカライズです。<Br />
+				ローカライズ機能については再製作初期から着手していました。<Br />
+				<B>localStorage</B> の利用を取りやめて <B>Cookie</B> を使う事によって、無駄なデータ圧迫を防いでいます。<Br />
+				現時点では日本語と英語に対応しています。(どなたか他の言語手伝っていただけたら嬉しかったりします(ﾎﾞｿｯ<Br />
+				仕組み的には <I>localesディレクトリ</I> の中に各言語のjsonファイルをぶち込んで、それをJavaScript側で読み込んでいるだけなのでかなり簡単になっています。<Br />
+				ですが、如何に綺麗なコードで、如何に早く適用できるかにこだわってみました。<Br />
+				かなり上手くできたかなーと思っています✌︎('ω'✌︎ )
+
+				<Br /><Br />
+
+				最近全くMastodonに顔を出していませんが、それでもとりあえずリリース出来たので一安心できました。<Br />
+				まぁ多分使ってくれる人なんて居ないとは思いますが……:( ;´꒳`;):
+
+				<Br /><Br />
+
+				ひとまずMastodon関連はこれにて終了かな？と思っています。<Br />
+				他に作るものも一応あったりしますので……(Simple Threadとかいろいろ)<Br />
+				また色んなものリリースしたらここに書き留めようかなーと思います。<Br />
+				ではまた。ごきげんよう。
+			</Article>
+<%- include("../../!templates/_blog-footer") %>
