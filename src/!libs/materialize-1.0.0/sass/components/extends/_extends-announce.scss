@@ -1,0 +1,17 @@
+Announce {
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+
+  color: color("shades", "white");
+  background: $primary-color;
+  border: 2px solid $secondary-color;
+
+  summary {
+    border-bottom: 1px solid;
+  }
+
+  a {
+    color: color("teal", "accent-1");
+  }
+}

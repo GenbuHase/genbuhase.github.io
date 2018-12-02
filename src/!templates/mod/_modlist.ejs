@@ -5,17 +5,17 @@
 		mods: '[]'
 	});
 %><UL Class = "mod-list"><%
-	for (const mod of mods) {
-		if (needInit(mod.dir)) mod.dir = mod.name;
-		if (needInit(mod.hasIcon)) mod.hasIcon = false; %>
+for (const mod of mods) {
+	if (needInit(mod.dir)) mod.dir = mod.name;
+	if (needInit(mod.hasIcon)) mod.hasIcon = false; %>
 	<Div Class = "mod card">
 		<Div Class = "mod-image card-image">
-			<%- `<Img Src = "${mod.hasIcon ? `./Contents/${mod.dir}/favicon.ico` : "./assets/noImage.png"}" />` %>
-			<Span Class = "mod-name card-title truncate"><%- mod.name %></Span>
+			<%- `<Img Src = "${mod.hasIcon ? `./Contents/${mod.dir}/favicon.ico` : './assets/noImage.png'}" />` %>
+			<Span Class = "mod-name card-title truncate"><%= mod.name %></Span>
 		</Div>
 
 		<Div Class = "card-action">
-			<%- `<A Href = "${mod.dir ? `./Contents/${mod.dir}/` : "#"}">Get Started</A>` %>
+			<%- `<A Href = "${mod.dir ? `./Contents/${mod.dir}/` : '#'}">Get Started</A>` %>
 		</Div>
 	</Div><% } %>
 </UL>

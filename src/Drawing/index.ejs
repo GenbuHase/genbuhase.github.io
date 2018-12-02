@@ -6,40 +6,44 @@
 
 		hasStyle: true
 	}) %>
-			<H1 Class = "mdc-typography--headline">どろういんぐ。</H1>
+			<H1 Class = "heading">どろういんぐ。</H1>
 
 			<Announce>
-				<Date Class = "mdc-typography--subheading2">2018/01/05(Fri)</Date>
-				<Summary Class = "mdc-typography--body2">
-					LINEクリエイターズスタンプにて<A Href = "https://store.line.me/stickershop/product/1864073/" Target = "_blank">Genbooスタンプ</A>が発売されました！！<Br />
-					もし気に入って頂けましたら幸いです！！
-				</Summary>
+				<Details>
+					<Summary>2018/01/05(Fri)</Summary>
+					
+					<P>
+						LINEクリエイターズスタンプにて<A Href = "https://store.line.me/stickershop/product/1864073/" Target = "_blank">Genbooスタンプ</A>が発売されました！！<Br />
+						もし気に入って頂けましたら幸いです！！
+					</P>
+				</Details>
 			</Announce>
 
-			<Album Class = "mdc-grid-list">
-				<UL Class = "mdc-grid-list__tiles">
-					<%- include("../!templates/_drawing", { name: "＼ﾃﾞｪｪｪｪｪｪﾝ／", drawedAt: "2017/12/30" }) %>
-					<%- include("../!templates/_drawing", { name: "Android・iOS論争", drawedAt: "2017/12/03" }) %>
-					<%- include("../!templates/_drawing", { name: "ありがと", drawedAt: "2017/12/02" }) %>
-					<%- include("../!templates/_drawing", { name: "うれしみが深い", drawedAt: "2017/12/03" }) %>
-					<%- include("../!templates/_drawing", { name: "おつかれ", drawedAt: "2018/02/09" }) %>
-					<%- include("../!templates/_drawing", { name: "きらきら", drawedAt: "2017/10/09" }) %>
-					<%- include("../!templates/_drawing", { name: "だいすき", drawedAt: "2018/02/08" }) %>
-					<%- include("../!templates/_drawing", { name: "なか卯最終形態", drawedAt: "2017/12/30" }) %>
-					<%- include("../!templates/_drawing", { name: "なんなんぎんなん", drawedAt: "2017/11/13" }) %>
-					<%- include("../!templates/_drawing", { name: "にんげん", drawedAt: "2017/11/12" }) %>
-					<%- include("../!templates/_drawing", { name: "にんじん", drawedAt: "2017/11/12" }) %>
-					<%- include("../!templates/_drawing", { name: "はぁと", drawedAt: "2017/10/09" }) %>
-					<%- include("../!templates/_drawing", { name: "ポッ by はるるん", drawedAt: "2017/12/02" }) %>
-					<%- include("../!templates/_drawing", { name: "ゆるせにゃん", drawedAt: "2017/12/17" }) %>
-					<%- include("../!templates/_drawing", { name: "わかりみが深い", drawedAt: "2017/11/12" }) %>
-					<%- include("../!templates/_drawing", { name: "暇", drawedAt: "2017/10/09" }) %>
-					<%- include("../!templates/_drawing", { name: "過疎たす", drawedAt: "2017/10/09" }) %>
-					<%- include("../!templates/_drawing", { name: "私", drawedAt: "2017/12/03" }) %>
-					<%- include("../!templates/_drawing", { name: "人生を歩む by はるるん", drawedAt: "2017/12/04" }) %>
-					<%- include("../!templates/_drawing", { name: "竹生える", drawedAt: "2017/12/11" }) %>
-					<%- include("../!templates/_drawing", { name: "通知ベル", drawedAt: "2017/11/12" }) %>
-					<%- include("../!templates/_drawing", { name: "独りじゃない", drawedAt: "2017/12/12" }) %>
-				</UL>
-			</Album>
+			<%-
+				include("../!templates/_drawing", {
+					items: [
+						{ name: "＼ﾃﾞｪｪｪｪｪｪﾝ／", drawedAt: "2017/12/30" },
+						{ name: "Android・iOS論争", drawedAt: "2017/12/03" },
+						{ name: "ありがと", drawedAt: "2017/12/02" },
+						{ name: "うれしみが深い", drawedAt: "2017/12/03" },
+						{ name: "おつかれ", drawedAt: "2018/02/09" },
+						{ name: "きらきら", drawedAt: "2017/10/09" },
+						{ name: "だいすき", drawedAt: "2018/02/08" },
+						{ name: "なか卯最終形態", drawedAt: "2017/12/30" },
+						{ name: "なんなんぎんなん", drawedAt: "2017/11/13" },
+						{ name: "にんげん", drawedAt: "2017/11/12" },
+						{ name: "にんじん", drawedAt: "2017/11/12" },
+						{ name: "はぁと", drawedAt: "2017/10/09" },
+						{ name: "ポッ by はるるん", drawedAt: "2017/12/02" },
+						{ name: "ゆるせにゃん", drawedAt: "2017/12/17" },
+						{ name: "わかりみが深い", drawedAt: "2017/11/12" },
+						{ name: "暇", drawedAt: "2017/10/09" },
+						{ name: "過疎たす", drawedAt: "2017/10/09" },
+						{ name: "私", drawedAt: "2017/12/03" },
+						{ name: "人生を歩む by はるるん", drawedAt: "2017/12/04" },
+						{ name: "竹生える", drawedAt: "2017/12/11" },
+						{ name: "通知ベル", drawedAt: "2017/11/12" },
+						{ name: "独りじゃない", drawedAt: "2017/12/12" }
+					]
+				}) %>
 <%- include("../!templates/_footer") %>
