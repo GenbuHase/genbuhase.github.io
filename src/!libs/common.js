@@ -9,4 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const materialboxes = document.querySelectorAll(".materialboxed");
 	for (const materialbox of materialboxes) M.Materialbox.init(materialbox);
+
+	const collapsibles = document.querySelectorAll(".collapsible");
+	for (const collapsible of collapsibles) M.Collapsible.init(collapsible, { accordion: !collapsible.classList.contains("expandable") });
 });
