@@ -4,3 +4,6 @@ node_modules/
 # Scss files
 .sass-cache/
 *.css.map
+
+# Symbolic links
+Portfolio
