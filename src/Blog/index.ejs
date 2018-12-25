@@ -7,5 +7,24 @@
 		hasStyle: true,
 		SITENAME: "どっかのプログラなーいのブログ。"
 	}) %>
-			
+			<%-
+				include("../!templates/blog/_blog-articles", {
+					articles: [
+						{ id: 1, title: "ブログ、始めました。", publishedAt: "2018/2/12" },
+						{ id: 2, title: "Article Editor v1.0.0 公開しました！", publishedAt: "2018/2/12" },
+						{ id: 3, title: "✨Valentine Day in 2018✨", publishedAt: "2018/2/14" },
+						{ id: 4, title: "宿題と学力は大して関係無かった話", publishedAt: "2018/2/15" },
+						{ id: 5, title: "✨16歳を迎えて✨", publishedAt: "2018/3/3" },
+						{ id: 6, title: "【Mastodon】非公開トゥートの挙動を変えてみた話。", publishedAt: "2018/3/26" },
+						{ id: 7, title: "【Mastodon】限定公開機能実装の解説のような。", publishedAt: "2018/4/15" },
+						{ id: 8, title: "【Mastodon】これからのMastodonライフ。", publishedAt: "2018/4/16" },
+						{ id: 9, title: "国境を超えた日", publishedAt: "2018/4/24" },
+						{ id: 10, title: "遥か遠くの走馬灯にて。", publishedAt: "2018/4/25" },
+						{ id: 11, title: "SNSをどこまで信じるべきか", publishedAt: "2018/4/26" },
+						{ id: 12, title: "【Mastodon】MastodonRater v1.0 リリースしました！", publishedAt: "2018/5/2" },
+						{ id: 13, title: "自分を変える、一年を。", publishedAt: "2018/6/23" },
+						{ id: 14, title: "Life is Tech! Summer Camp in 2018@立教大学5days [8/11 - 8/15]を振り返って", publishedAt: "2018/8/17" },
+						{ id: 15, title: "「自分を変える、一年を。」プロジェクトの進捗について", publishedAt: "2018/11/14" }
+					]
+				}) %>
 <%- include("../!templates/_footer") %>

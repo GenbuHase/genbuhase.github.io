@@ -1,0 +1,24 @@
+<%
+	include("../_global");
+
+	init({
+		articles: '[]'
+	});
+%><Div Class = "container">
+	<Div Class = "row"><%
+for (const article of articles) {
+	if (needInit(article.id)) article.id = 0;
+	if (needInit(article.title)) article.title = "";
+	if (needInit(article.publishedAt)) article.publishedAt = "1970/1/1"; %>
+		<Div Class = "card col s12 materialize-red darken-3 white-text">
+			<Div Class = "card-content">
+				<Span Class = "card-title"><Span Class = "badge new" Data-Badge-Caption = "">記事ID: <%= article.id %></Span><%= article.title %></Span>
+				<P>記事寄稿日: <%= article.publishedAt %></P>
+			</Div>
+
+			<Div Class = "card-action">
+				<%- `<A Href = "./${article.id}/">Check Article</A>` %>
+			</Div>
+		</Div><% } %>
+	</Div>
+</Div>
