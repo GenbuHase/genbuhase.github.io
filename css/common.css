@@ -3093,11 +3093,11 @@ input[type=range]::-ms-thumb { border: none; height: 14px; width: 14px; border-r
 
 header, footer { margin-left: 300px; }
 
-@media only screen and (max-width: 992px) { header, footer { padding-left: 0; } }
+@media only screen and (max-width: 992px) { header, footer { margin-left: 0; } }
 
 main { margin-left: 300px; padding: 1em; }
 
-@media only screen and (max-width: 992px) { main { padding-left: 1em; } }
+@media only screen and (max-width: 992px) { main { margin-left: 0; } }
 
 main img { max-width: 100%; }
 
