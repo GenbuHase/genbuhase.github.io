@@ -7,6 +7,12 @@ footer {
   @media #{$medium-and-down} { padding-left: 0 }
 }
 
+nav {
+  width: calc(100% - #{$sidenav-width});
+
+  @media #{$medium-and-down} { width: 100% }
+}
+
 main {
   padding: 1em;
   padding-left: calc(#{$sidenav-width} + 1em);
@@ -16,8 +22,4 @@ main {
   img {
     max-width: 100%;
   }
-}
-
-nav {
-  width: calc(100% - #{$sidenav-width});
 }
