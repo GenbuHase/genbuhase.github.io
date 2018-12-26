@@ -1,21 +1,13 @@
-$sidenav-width: 300px !default;
-
 header,
 footer {
-  padding-left: $sidenav-width;
+  margin-left: $sidenav-width;
 
   @media #{$medium-and-down} { padding-left: 0 }
 }
 
-nav {
-  width: calc(100% - #{$sidenav-width});
-
-  @media #{$medium-and-down} { width: 100% }
-}
-
 main {
+  margin-left: $sidenav-width;
   padding: 1em;
-  padding-left: calc(#{$sidenav-width} + 1em);
 
   @media #{$medium-and-down} { padding-left: 1em }
 

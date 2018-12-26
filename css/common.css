@@ -3091,19 +3091,19 @@ input[type=range]::-ms-thumb { border: none; height: 14px; width: 14px; border-r
   .timepicker-text-container { top: 32%; }
   .timepicker-display-am-pm { position: relative; right: auto; bottom: auto; text-align: center; margin-top: 1.2rem; } }
 
-header, footer { padding-left: 300px; }
+header, footer { margin-left: 300px; }
 
 @media only screen and (max-width: 992px) { header, footer { padding-left: 0; } }
 
-nav { width: calc(100% - 300px); }
-
-@media only screen and (max-width: 992px) { nav { width: 100%; } }
-
-main { padding: 1em; padding-left: calc(300px + 1em); }
+main { margin-left: 300px; padding: 1em; }
 
 @media only screen and (max-width: 992px) { main { padding-left: 1em; } }
 
 main img { max-width: 100%; }
+
+.navbar-fixed > nav { width: calc(100% - 300px); }
+
+@media only screen and (max-width: 992px) { .navbar-fixed > nav { width: 100%; } }
 
 .nav-wrapper { display: flex; flex-direction: row; }
 

@@ -1,3 +1,9 @@
+.navbar-fixed > nav {
+  width: calc(100% - #{$sidenav-width});
+  
+  @media #{$medium-and-down} { width: 100% }
+}
+
 .nav-wrapper {
   display: flex;
   flex-direction: row;
