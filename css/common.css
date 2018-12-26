@@ -3101,6 +3101,8 @@ main { padding: 1em; padding-left: calc(300px + 1em); }
 
 main img { max-width: 100%; }
 
+nav { width: calc(100% - 300px); }
+
 .nav-wrapper { display: flex; flex-direction: row; }
 
 .nav-wrapper .brand-logo { position: relative; flex: 1; margin: auto 1.5em auto 2.5em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
@@ -3135,11 +3137,23 @@ article { font-size: 0.875rem; letter-spacing: 0.04em; line-height: 1.5rem; }
 
 .sidenav-footer .link svg path { fill: #343434; }
 
-Announce { display: block; margin: 1em 0; padding: 1em; color: #FFFFFF; background: #ee6e73; border: 2px solid #26a69a; }
+announce { display: block; margin: 1em 0; padding: 1em; color: #FFFFFF; background: #ee6e73; border: 2px solid #26a69a; }
 
-Announce summary { border-bottom: 1px solid; }
+announce summary { border-bottom: 1px solid; }
 
-Announce a { color: #a7ffeb; }
+announce a { color: #a7ffeb; }
+
+html::-webkit-scrollbar { width: 10px; height: 10px; }
+
+html::-webkit-scrollbar-track-piece { background-color: #ffffff; }
+
+html::-webkit-scrollbar-thumb { background-color: #f6b2b5; }
+
+html::-webkit-scrollbar-thumb:hover { background-color: #ee6e73; }
+
+html::-webkit-scrollbar-thumb:active { background-color: #e62a31; }
+
+html::-webkit-scrollbar-button { display: none; }
 
 @font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(MaterialIcons-Regular.eot); /* For IE6-8 */ src: local("Material Icons"), local("MaterialIcons-Regular"), url(MaterialIcons-Regular.woff2) format("woff2"), url(MaterialIcons-Regular.woff) format("woff"), url(MaterialIcons-Regular.ttf) format("truetype"); }
 

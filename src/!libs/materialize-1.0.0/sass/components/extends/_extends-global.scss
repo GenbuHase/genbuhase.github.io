@@ -17,3 +17,7 @@ main {
     max-width: 100%;
   }
 }
+
+nav {
+  width: calc(100% - #{$sidenav-width});
+}
