@@ -1,0 +1,211 @@
+<!DocType HTML>
+
+<HTML>
+	<Head>
+		<Meta Charset = "UTF-8" />
+		<Title>Article Editor｜どっかのプログラなーいのサイト。</Title>
+		
+		
+		
+		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
+
+		<Link Rel = "StyleSheet" Href = "/css/common.css" />
+		
+
+		<Script Src = "/js/common.js"></Script>
+		
+		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-111257667-1" Async></Script>
+		<Script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag () { dataLayer.push(arguments) }
+			
+			gtag('js', new Date());
+			gtag('set', {'user_id': 'USER_ID'}); // ログインしている user_id を使用してUser-ID を設定します。
+			gtag('config', 'UA-111257667-1');
+		</Script>
+	</Head>
+
+	<Body>
+		<Header Class = "navbar-fixed">
+			<Nav>
+				<Div Class = "nav-wrapper">
+					<A Class = "sidenav-trigger" Data-Target = "side-drawer" Href = "#">
+						<I Class = "material-icons">menu</I>
+					</A>
+
+					<Span Class = "brand-logo">Article Editor｜どっかのプログラなーいのサイト。</Span>
+				</Div>
+			</Nav>
+		</Header>
+
+		<UL ID = "side-drawer" Class = "sidenav sidenav-fixed">
+			<A Class = "user-state-panel" Href = "/Portfolio/">
+				<Div Class = "user-view">
+					<Span Class = "badge new" Data-Badge-Caption = "">Check Portfolio</Span>
+
+					<Div Class = "background"></Div>
+					<Img Class = "user-state--photo circle" Src = "/Portfolio/assets/account/Google+/005.png" />
+					<Span Class = "name user-state--name">どっかのげんちゃん。</Span>
+					<Span Class = "email user-state--email">In a lot of places!</Span>
+				</Div>
+			</A>
+
+			<Li Class = "divider"></Li>
+
+			<Li><A Href = "/"><I Class = "material-icons">home</I>Top</A></Li>
+			<Li><A Href = "/Product/"><I Class = "material-icons">extension</I>Product</A></Li>
+			<Li><A Href = "/Mod/"><I Class = "material-icons">code</I>Mod</A></Li>
+			<Li><A Href = "/Blog/"><I Class = "material-icons">book</I>Blog</A></Li>
+			<Li><A Href = "/Drawing/"><I Style = "background: url('/Drawing/favicon.ico') center / contain no-repeat"></I>Drawing</A></Li>
+
+			<Li Class = "spacer"></Li>
+			<Li Class = "divider"></Li>
+
+			<Div Class = "sidenav-footer">
+				<A Class = "link waves-effect" Href = "https://plus.google.com/106666684430101995501" Target = "_blank"><I Class = "material-icons-extended">google_plus</I></A>
+
+				<A Class = "link waves-effect" Href = "https://github.com/GenbuHase" Target = "_blank">
+					<Svg Style = "Width: 24px; Height: 24px" ViewBox = "0 0 24 24">
+						<Path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+					</Svg>
+				</A>
+
+				<A Class = "link waves-effect" Href = "https://hangouts.google.com/?action=chat&pi=106666684430101995501" Target = "_blank"><I Class = "material-icons-extended">hangout</I></A>
+			</Div>
+		</UL>
+
+		<Main>
+			<H1 Class = "heading">Article Editor</H1>
+
+			<Img Class = "responsive-img materialboxed" Src = "./assets/Screenshot001.png" Data-Caption = "ブログ形式サイトのための記事編集ツール" />
+
+			<Article>
+				<H2 Class = "subheading subheading-2">概要｜Overview</H2>
+
+				<P>
+					このツールを使うと、簡単にブログ形式サイトの記事を執筆することが出来ます。
+				</P>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">主な機能｜Features</H2>
+
+				<UL Class = "browser-default">
+					<Li>テンプレートHTMLを利用した記事生成</Li>
+					<Li>記事のID管理</Li>
+					<Li>軽快な動作</Li>
+				</UL>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">動作環境・開発環境｜Requirement</H2>
+
+				<UL Class = "browser-default">
+					<Li><A Href = "https://nodejs.org/" Target = "_blank">Node.js</A></Li>
+				</UL>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">使用方法｜How to Use</H2>
+
+				<Div>
+					初回実行時、必要なディレクトリが自動で生成されます。
+
+					<OL>
+						<Li>
+							<Code>template/index.html</Code>(以下テンプレートHTML)を編集します。<Br />
+							テンプレートHTML内では、以下の特殊変数が利用できます。
+
+							<UL Class = "browser-default">
+								<Li><Code>${title}</Code> ... 記事タイトル</Li>
+								<Li><Code>${createdAt}</Code> ... 記事作成日</Li>
+								<Li><Code>${content}</Code> ... 記事内容</Li>
+							</UL>
+						</Li>
+
+						<Li>Article Editorを起動するために<Code>npm start</Code>を実行します。</Li>
+						<Li>起動後、<A Href = "http://localhost:8005" Target = "_blank">http://localhost:8005</A>にアクセスします。</Li>
+						<Li>ページの指示に従って執筆しましょう！</Li>
+					</OL>
+				</Div>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">インストール方法｜Installation</H2>
+
+				<Div>
+					以下のコマンドを実行してください。
+
+					<Pre Class = "prettyprint lang-bsh">
+$ git clone https://github.com/GenbuHase/ArticleEditor.git
+$ cd ArticleEditor
+$ npm install
+</Pre>
+				</Div>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">設定 | Config</H2>
+
+				<Div>
+					<Code>system/config.js</Code>はコンフィグファイルとなっております。
+
+					<Pre Class = "prettyprint lang-js">
+{
+	PORT: 起動ポート(Number),
+
+	PATH: {
+		ARTICLE: 記事データ格納ディレクトリ(String),
+		PUBLISH: 生成記事格納ディレクトリ(String),
+		MEDIA: 記事別メディア格納ディレクトリ(String),
+		COMMONMEDIA: ブログ内メディア格納ディレクトリ(String),
+		TEMPLATE: テンプレートHTML格納ディレクトリ(String)
+	},
+
+	onCreate: 新規作成時に呼ばれるコールバック関数(Function),
+	onDelete: 記事削除時に呼ばれるコールバック関数(Function),
+	onSave: 記事保存時に呼ばれるコールバック関数(Function),
+	onPublish: 記事生成時に呼ばれるコールバック関数(Function),
+	onUpload: メディアアップロード時に呼ばれるコールバック関数(Function)
+}
+</Pre>
+				</Div>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">ダウンロード｜Download</H2>
+
+				<P>
+					<A Href = "https://github.com/GenbuHase/ArticleEditor/releases" Target = "_blank">こちら</A>より、リリース版のダウンロードが行えます。
+				</P>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">スクリーンショット｜Screenshots</H2>
+
+				<P>
+					<Img Class = "responsive-img materialboxed" Src = "./assets/Screenshot001.png" />
+				</P>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">作者｜Author</H2>
+
+				<UL Class = "browser-default">
+					<Li><A Href = "https://github.com/GenbuHase" Target = "_blank">Genbu Hase</A></Li>
+				</UL>
+			</Article>
+
+			<Article>
+				<H2 Class = "subheading subheading-2">ライセンス｜License</H2>
+
+				<P>
+					<A Href = "https://github.com/GenbuHase/ArticleEditor/blob/master/LICENSE" Target = "_blank">MIT License</A>
+				</P>
+			</Article>
+		</Main>
+	</Body>
+</HTML>

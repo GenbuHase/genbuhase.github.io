@@ -10,7 +10,7 @@ for (const mod of mods) {
 	if (needInit(mod.hasIcon)) mod.hasIcon = false; %>
 	<Div Class = "mod card">
 		<Div Class = "mod-image card-image">
-			<%- `<Img Src = "${mod.hasIcon ? `./Contents/${mod.dir}/favicon.ico` : './assets/noImage.png'}" />` %>
+			<%- `<Img Src = "${mod.hasIcon ? `./Contents/${mod.dir}/favicon.ico` : '../assets/noImage.png'}" />` %>
 			<Span Class = "mod-name card-title truncate"><%= mod.name %></Span>
 		</Div>
 

@@ -2,7 +2,7 @@
 	include("./_global");
 
 	init({
-		name: '""',
+		// name: '""',
 		title: '""',
 		favicon: 'null',
 		libraries: '[]',
@@ -21,11 +21,11 @@
 		<%- isHome ? '<Link Rel = "Canonical" Href = "https://genbuhase.github.io/" />' : '' %>
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 
-		<Link Rel = "StyleSheet" Href = "/css/common.css" /><%-
-		hasStyle ? `<Link Rel = "StyleSheet" Href = "./${name}.css" />` : '' %>
+		<Link Rel = "StyleSheet" Href = "/css/common.css" />
+		<%- hasStyle ? `<Link Rel = "StyleSheet" Href = "./${name}.css" />` : '' %>
 
-		<Script Src = "/js/common.js"></Script><%-
-		hasScript ? `<Script Src = "./${name}.js"></Script>` : '' %>
+		<Script Src = "/js/common.js"></Script>
+		<%- hasScript ? `<Script Src = "./${name}.js"></Script>` : '' %>
 		<%
 			for (const lib of libraries) {
 				var tag = "";

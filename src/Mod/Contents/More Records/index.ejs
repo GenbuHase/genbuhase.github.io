@@ -3,18 +3,7 @@
 %><%
 	const name = "More Records";
 	const hasIcon = true;
-%><%-
-	include("../../../!templates/_header", {
-		name,
-		title: `${name}｜Mod`,
-		favicon: hasIcon ? "./favicon.ico" : null,
-		
-		libraries: [
-			{ type: "STYLE", src: "../Detail.css" }
-		]
-	}) %>
-			<%- include("../../../!templates/mod/_modname", { name, hasIcon }) %>
-
+%><%- include("../../../!templates/mod/_mod-header", { name, hasIcon }) %>
 			<Article>
 				<H2 Class = "subheading">1. Overview</H2>
 
@@ -140,4 +129,4 @@
 						]
 					}) %>
 			</Article>
-<%- include("../../../!templates/_footer") %>
+<%- include("../../../!templates/mod/_mod-footer") %>

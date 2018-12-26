@@ -1,0 +1,23 @@
+<%
+	include("./_global");
+
+	init({
+		products: '[]'
+	});
+%><Div Class = "products container">
+	<Div Class = "row"><%
+for (const product of products) {
+	if (needInit(product.dir)) product.dir = product.name;
+	if (needInit(product.hasPreview)) product.hasPreview = false; %>
+		<%- `<Div Class = "card col s12${!product.hasPreview ? " m6" : ""}">` %>
+			<Div Class = "card-image">
+				<%- `<Img Src = "${product.hasPreview ? `./${product.dir}/${product.hasPreview}` : '../assets/noImage.png'}" />` %>
+				<Span Class = "card-title truncate"><%= product.name %></Span>
+			</Div>
+
+			<Div Class = "card-action">
+				<%- `<A Href = "${product.dir ? `./${product.dir}/` : '#'}">Get Started</A>` %>
+			</Div>
+		</Div><% } %>
+	</Div>
+</Div>

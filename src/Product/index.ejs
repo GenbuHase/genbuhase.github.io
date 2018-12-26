@@ -3,7 +3,14 @@
 %><%-
 	include("../!templates/_header", {
 		name: "Product",
-		title: "Product"
+		title: "Product",
+
+		hasStyle: true
 	}) %>
-			
+			<%-
+				include("../!templates/_product", {
+					products: [
+						{ name: "Article Editor", dir: "ArticleEditor", hasPreview: "assets/Screenshot001.png" }
+					]
+				}) %>
 <%- include("../!templates/_footer") %>
