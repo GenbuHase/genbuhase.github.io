@@ -17,6 +17,8 @@
 		<Meta Charset = "UTF-8" />
 		<Title><%= isHome ? (title ? title : SITENAME) : (title ? `${title}｜${SITENAME}` : SITENAME) %></Title>
 		
+		<%- isHome ? '<Meta Name = "Description" Content = "どっかのプログラなーいとかいうげんちゃんのサイト。" />' : '' %>
+		<%- isHome ? '<Meta Name = "Keywords" Content = "げんちゃん,玄ちゃん,プログラなーい,どっかのげんちゃん,Genbu Hase,Genboo" />' : '' %>
 		<%- (!isHome && !favicon) ? '' : `<Link Rel = "Icon" Href = "${isHome ? "favicon.ico" : (favicon ? favicon : "")}" />` %>
 		<%- isHome ? '<Link Rel = "Canonical" Href = "https://genbuhase.github.io/" />' : '' %>
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
