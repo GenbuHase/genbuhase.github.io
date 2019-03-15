@@ -9,6 +9,7 @@
 .article-title {
   flex: 1;
   line-height: 1.5;
+  text-align: justify;
 }
 
 #disqus_thread {
