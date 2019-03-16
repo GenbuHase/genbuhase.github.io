@@ -51,6 +51,7 @@ const transferAssets = () => {
 		"./src/**/*.*",
 
 		"!./src/!*/**/*.*",
+		"!./src/Blog/Backup/*.*",
 		...notTransferedFiles.map(file => `!./src/**/${file}`),
 	]).pipe(gulp.dest("./"));
 };
