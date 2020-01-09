@@ -1,5 +1,0 @@
-{
-	"eslint.options": {
-		"envs": ["es6", "node"]
-	}
-}

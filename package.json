@@ -1,27 +1,45 @@
 {
 	"name": "genbuhase-github-io",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"description": "A homepage of GenbuHase",
-	"main": "gulpfile.js",
-	"dependencies": {
-		"del": "^3.0.0",
-		"gulp": "^3.9.1",
-		"gulp-concat": "^2.6.1",
-		"gulp-ejs": "^3.3.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-rename": "^1.4.0",
-		"gulp-sass": "^4.0.2"
-	},
-	"devDependencies": {},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint"
 	},
+	"dependencies": {
+		"core-js": "^3.4.3",
+		"vue": "^2.6.10",
+		"vue-router": "^3.1.3",
+		"vuex": "^3.1.2"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "^4.1.0",
+		"@vue/cli-plugin-eslint": "^4.1.0",
+		"@vue/cli-plugin-router": "^4.1.0",
+		"@vue/cli-plugin-vuex": "^4.1.0",
+		"@vue/cli-service": "^4.1.0",
+		"@vue/eslint-config-standard": "^4.0.0",
+		"babel-eslint": "^10.0.3",
+		"eslint": "^5.16.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/GenbuHase/genbuhase.github.io.git"
 	},
-	"author": "Genbu Hase (https://genbuhase.github.io/)",
-	"license": "No License",
+	"author": {
+		"name": "Genbu Hase",
+		"url": "https://genbuhase.github.io/"
+	},
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/GenbuHase/genbuhase.github.io/issues"
 	},
