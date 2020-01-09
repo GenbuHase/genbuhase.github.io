@@ -1,0 +1,56 @@
+.heading {
+  @extend h5;
+
+  display: flex;
+  align-items: flex-end;
+
+  line-height: 2;
+  border-bottom: 1px solid $primary-color;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 0.5em;
+
+    border: 0.75em solid transparent;
+    border-color: transparent $primary-color $primary-color transparent;
+  }
+}
+
+$subheading-colors: $secondary-color, color("purple", "base");
+
+.subheading {
+  @extend h4;
+  
+  line-height: 1.75;
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  @each $color in $subheading-colors {
+    $index: index($list: $subheading-colors, $value: $color);
+
+    &-#{$index} {
+      display: flex;
+      border-bottom: thin solid $color;
+
+      &::before {
+        content: "";
+
+        display: inline-block;
+        width: 0.5em;
+        min-width: 0.5em;
+        margin-right: 0.5em;
+
+        background: $color;
+      }
+    }
+  }
+}
+
+article {
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5rem;
+}

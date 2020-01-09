@@ -1,0 +1,17 @@
+header,
+footer {
+  margin-left: $sidenav-width;
+
+  @media #{$medium-and-down} { margin-left: 0 }
+}
+
+main {
+  margin-left: $sidenav-width;
+  padding: 1em;
+
+  @media #{$medium-and-down} { margin-left: 0 }
+
+  img {
+    max-width: 100%;
+  }
+}

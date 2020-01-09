@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+HTML,
+Body {
+	height: 100%;
+}
+
+Body {
+	margin: 0;
+}
+
+Div[Data-Component=Frame-Content] {
+	display: flex;
+	flex-direction: column;
+}
+
+UL[Data-Component=Frame-Drawer_SNSList] {
+	margin: 0 auto;
+
+	A > Span {
+		vertical-align: middle;
+	}
+}
+
+Main {
+	flex: 1;
+	padding: 1rem;
+
+	Img {
+		max-width: 100%;
+	}
+}
+
+Table {
+	border-collapse: collapse;
+}
