@@ -1,6 +1,6 @@
 {
 	"name": "genbuhase-github-io",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"description": "A homepage of GenbuHase",
 	"scripts": {
 		"serve": "vue-cli-service serve",
@@ -9,6 +9,7 @@
 	},
 	"dependencies": {
 		"core-js": "^3.4.3",
+		"fomantic-ui": "^2.8.3",
 		"vue": "^2.6.10",
 		"vue-router": "^3.1.3"
 	},
