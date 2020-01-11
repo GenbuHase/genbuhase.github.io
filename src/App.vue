@@ -1,5 +1,7 @@
 <template>
 	<Div ID = "App">
+		<Title>{{ pageTitle || "どっかのプログラなーいのサイト。" }}</Title>
+
 		<Navigation />
 
 		<transition name = "pageRouting" mode = "out-in" @enter = "onRoutingEnter">
@@ -40,6 +42,21 @@
 		components: { Navigation },
 
 		computed: {
+			pageTitle () {
+				const paths = this.$route.path.split("/").filter(path => path);
+				let titles = [];
+
+				let mem = [...paths, ""];
+				while (mem = mem.slice(0, -1)) {
+					const routing = this.$router.match(mem.join("/"));
+					if (routing.name !== null) titles.push(routing.meta.title);
+
+					if (!mem.length || routing.meta.override) break;
+				}
+				
+				return titles.join("｜");
+			},
+
 			breakpoint () {
 				for (const tag of Array.from(document.getElementsByTagName("style"))) {
 					const matched = tag.innerText.match(/\-breakpoint: (\d+)px;/);
