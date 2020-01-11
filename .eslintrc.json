@@ -1,8 +1,7 @@
 {
 	"root": true,
 	"extends": [
-		"eslint:recommended",
-		"plugin:vue/essential"
+		"plugin:vue/recommended"
 	],
 
 	"env": {
@@ -15,13 +14,10 @@
 
 	"rules": {
 		"semi": ["error", "always", { "omitLastInOneLineBlock": true }],
-		"semi-style": ["error", "last"],
-		"no-unused-vars": "warn",
-		"no-duplicate-imports": "error",
-		"object-shorthand": ["error", "always", { "avoidExplicitReturnArrows": true }],
-		"prefer-rest-params": "warn",
-		"prefer-spread": "warn",
-		"prefer-template": "warn",
-		"prefer-numeric-literals": "warn"
+
+		"vue/no-spaces-around-equal-signs-in-attribute": "off",
+		"vue/html-indent": ["error", "tab"],
+		"vue/attribute-hyphenation": "off",
+		"vue/max-attributes-per-line": "off"
 	}
 }

@@ -1,10 +1,14 @@
+$subheading-colors: $secondary-color, color("purple", "base");
+
+
+
 .heading {
   @extend h5;
 
   display: flex;
   align-items: flex-end;
 
-  line-height: 2;
+  line-height: 1.5;
   border-bottom: 1px solid $primary-color;
 
   &::before {
@@ -18,8 +22,6 @@
     border-color: transparent $primary-color $primary-color transparent;
   }
 }
-
-$subheading-colors: $secondary-color, color("purple", "base");
 
 .subheading {
   @extend h4;

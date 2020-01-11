@@ -17,23 +17,23 @@
 				<Div Class = "user-view">
 					<Span Class = "badge new" Data-Badge-Caption = "">Check Portfolio</Span>
 
-					<Div Class = "background"></Div>
+					<Div Class = "background" />
 					<Img Class = "user-state--photo circle" Src = "/Portfolio/assets/account/Google+/005.png" />
 					<Span Class = "name user-state--name">どっかのげんちゃん。</Span>
 					<Span Class = "email user-state--email">In a lot of places!</Span>
 				</Div>
 			</A>
 
-			<Li Class = "divider"></Li>
+			<Li Class = "divider" />
 
 			<Li><router-link to = "/"><I Class = "material-icons">home</I>Home</router-link></Li>
 			<Li><router-link to = "/products/"><I Class = "material-icons">extension</I>Product</router-link></Li>
 			<Li><router-link to = "/mods/"><I Class = "material-icons">code</I>Mod</router-link></Li>
 			<Li><router-link to = "/blog/"><I Class = "material-icons">book</I>Blog</router-link></Li>
-			<Li><router-link to = "/artworks/"><I Style = "background: url('/artworks/favicon.ico') center / contain no-repeat"></I>Drawing</router-link></Li>
+			<Li><router-link to = "/artworks/"><I Style = "background: url('/artworks/favicon.ico') center / contain no-repeat" />Drawing</router-link></Li>
 
-			<Li Class = "spacer"></Li>
-			<Li Class = "divider"></Li>
+			<Li Class = "spacer" />
+			<Li Class = "divider" />
 
 			<Div Class = "sidenav-footer">
 				<A Class = "link waves-effect" Href = "https://plus.google.com/106666684430101995501" Target = "_blank"><I Class = "material-icons-extended">google_plus</I></A>
