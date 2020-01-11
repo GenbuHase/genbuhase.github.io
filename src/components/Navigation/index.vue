@@ -1,8 +1,8 @@
 <template>
-	<Navigation>
+	<Aside>
 		<Header />
 		<SideNav />
-	</Navigation>
+	</Aside>
 </template>
 
 <script>
@@ -10,6 +10,8 @@
 	import SideNav from "./SideNav";
 
 	export default {
+		name: "Navigation",
+
 		components: { Header, SideNav }
 	};
 </script>

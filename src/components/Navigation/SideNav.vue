@@ -1,6 +1,6 @@
 <template>
-	<UL ID = "side-drawer" Class = "sidenav sidenav-fixed">
-		<A Class = "user-state-panel" Href = "/Portfolio/">
+	<UL ID = "navigation_sideNav" Class = "sidenav sidenav-fixed">
+		<A Class = "user-state-panel" Href = "/Portfolio">
 			<Div Class = "user-view">
 				<Span Class = "badge new" Data-Badge-Caption = "">Check Portfolio</Span>
 
@@ -13,17 +13,19 @@
 
 		<Li Class = "divider" />
 
-		<Li><router-link to = "/"><I Class = "material-icons">home</I>Home</router-link></Li>
-		<Li><router-link to = "/products/"><I Class = "material-icons">extension</I>Product</router-link></Li>
-		<Li><router-link to = "/mods/"><I Class = "material-icons">code</I>Mod</router-link></Li>
-		<Li><router-link to = "/blog/"><I Class = "material-icons">book</I>Blog</router-link></Li>
-		<Li><router-link to = "/artworks/"><I Style = "background: url('/artworks/favicon.ico') center / contain no-repeat" />Drawing</router-link></Li>
+		<NavTab icon = "home" to = "/">Home</NavTab>
+		<NavTab icon = "extension" to = "/products">Products</NavTab>
+		<NavTab icon = "code" to = "/mods">Mods</NavTab>
+		<NavTab icon = "book" to = "/blog">Blog</NavTab>
+		<NavTab iconSrc = "/artworks/favicon.ico" to = "/artworks">Artworks</NavTab>
 
 		<Li Class = "spacer" />
 		<Li Class = "divider" />
 
 		<Div Class = "sidenav-footer">
-			<A Class = "link waves-effect" Href = "https://plus.google.com/106666684430101995501" Target = "_blank"><I Class = "material-icons-extended">google_plus</I></A>
+			<A Class = "link waves-effect" Href = "https://plus.google.com/106666684430101995501" Target = "_blank">
+				<Icon font = "material-icons-extended" name = "google_plus" />
+			</A>
 
 			<A Class = "link waves-effect" Href = "https://github.com/GenbuHase" Target = "_blank">
 				<svg style = "width: 24px; height: 24px" viewbox = "0 0 24 24">
@@ -31,7 +33,18 @@
 				</svg>
 			</A>
 
-			<A Class = "link waves-effect" Href = "https://hangouts.google.com/?action=chat&pi=106666684430101995501" Target = "_blank"><I Class = "material-icons-extended">hangout</I></A>
+			<A Class = "link waves-effect" Href = "https://hangouts.google.com/?action=chat&pi=106666684430101995501" Target = "_blank">
+				<Icon font = "material-icons-extended" name = "hangout" />
+			</A>
 		</Div>
 	</UL>
 </template>
+
+<script>
+	import Icon from "../Icon";
+	import NavTab from "./NavTab";
+
+	export default {
+		components: { Icon, NavTab }
+	};
+</script>
