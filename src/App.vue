@@ -27,10 +27,10 @@
 			<Li Class = "divider"></Li>
 
 			<Li><router-link to = "/"><I Class = "material-icons">home</I>Home</router-link></Li>
-			<Li><router-link to = "/Product/"><I Class = "material-icons">extension</I>Product</router-link></Li>
-			<Li><router-link to = "/Mod/"><I Class = "material-icons">code</I>Mod</router-link></Li>
-			<Li><router-link to = "/Blog/"><I Class = "material-icons">book</I>Blog</router-link></Li>
-			<Li><router-link to = "/Drawing/"><I Style = "background: url('/Drawing/favicon.ico') center / contain no-repeat"></I>Drawing</router-link></Li>
+			<Li><router-link to = "/products/"><I Class = "material-icons">extension</I>Product</router-link></Li>
+			<Li><router-link to = "/mods/"><I Class = "material-icons">code</I>Mod</router-link></Li>
+			<Li><router-link to = "/blog/"><I Class = "material-icons">book</I>Blog</router-link></Li>
+			<Li><router-link to = "/artworks/"><I Style = "background: url('/artworks/favicon.ico') center / contain no-repeat"></I>Drawing</router-link></Li>
 
 			<Li Class = "spacer"></Li>
 			<Li Class = "divider"></Li>
@@ -57,7 +57,11 @@
 </style>
 
 <script>
+	/* global M */
+	
 	export default {
-		
+		mounted () {
+			M.AutoInit();
+		}
 	};
 </script>
