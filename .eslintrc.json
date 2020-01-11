@@ -17,6 +17,7 @@
 
 		"vue/no-spaces-around-equal-signs-in-attribute": "off",
 		"vue/html-indent": ["error", "tab"],
+		"vue/singleline-html-element-content-newline": "off",
 		"vue/attribute-hyphenation": "off",
 		"vue/max-attributes-per-line": "off"
 	}
