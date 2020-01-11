@@ -6,7 +6,7 @@
 					<I Class = "material-icons">menu</I>
 				</A>
 
-				<Span Class = "brand-logo">どっかのプログラなーいのサイト。</Span>
+				<Span Class = "brand-logo" v-text="$root.pageTitle" />
 			</Div>
 		</Nav>
 	</Header>

@@ -1,10 +1,10 @@
 <template>
 	<Div ID = "App">
-		<Title>{{ pageTitle || "どっかのプログラなーいのサイト。" }}</Title>
+		<Title>{{ $root.pageTitle || "どっかのプログラなーいのサイト。" }}</Title>
 
 		<Navigation />
 
-		<transition name = "pageRouting" mode = "out-in" @enter = "onRoutingEnter">
+		<transition name = "pageRouting" mode = "out-in" @enter = "onRouting" @leave = "onRouting">
 			<router-view />
 		</transition>
 	</Div>
@@ -14,7 +14,7 @@
 	@import "./public/libs/Materialize-v1.0.0/sass/materialize";
 </style>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.pageRouting {
 		&-enter-active, &-leave-active {
 			transition: opacity 0.25s;
@@ -41,40 +41,13 @@
 	export default {
 		components: { Navigation },
 
-		computed: {
-			pageTitle () {
-				const paths = this.$route.path.split("/").filter(path => path);
-				let titles = [];
-
-				let mem = [...paths, ""];
-				while (mem = mem.slice(0, -1)) {
-					const routing = this.$router.match(mem.join("/"));
-					if (routing.name !== null) titles.push(routing.meta.title);
-
-					if (!mem.length || routing.meta.override) break;
-				}
-				
-				return titles.join("｜");
-			},
-
-			breakpoint () {
-				for (const tag of Array.from(document.getElementsByTagName("style"))) {
-					const matched = tag.innerText.match(/\-breakpoint: (\d+)px;/);
-					
-					if (matched) return parseInt(matched[1], 10);
-				}
-
-				return 0;
-			}
-		},
-
 		mounted () {
 			M.AutoInit();
 		},
 
 		methods: {
-			onRoutingEnter () {
-				if (this.breakpoint < window.innerWidth) return;
+			onRouting () {
+				if (this.$root.breakpoint < window.innerWidth) return;
 
 				const sideNav = this.$el.querySelector("#navigation_sideNav");
 				(sideNav && sideNav.M_Sidenav && sideNav.M_Sidenav.isOpen) && (sideNav.M_Sidenav.close());
