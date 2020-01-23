@@ -1,7 +1,7 @@
 <template>
-	<Div Class = "card col s12" v-bind = "$props">
+	<Div Class = "product card col s12">
 		<Div Class = "card-image">
-			<img :src = "preview">
+			<img :src = "`/products/${preview}`">
 			<Span Class = "card-title truncate" v-text = "name" />
 		</Div>
 
@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
-	.card {
+	.card.product {
 		padding: 0;
 
 		.card-title {

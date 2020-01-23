@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import ProductList from "../views/products/products.json";
+import ProductsRouter from "./Products";
 
 Vue.use(VueRouter);
 
@@ -13,33 +13,31 @@ Vue.use(VueRouter);
  * @prop {boolean} [override=false]
  */
 
-export default new VueRouter({
+const router = new VueRouter({
 	mode: "history",
 
 	base: process.env.BASE_URL,
 	routes: [
 		{
-			path: "",
+			path: "/",
 			component: () => import("../views/Home.vue"),
-
+	
 			meta: { title: "どっかのプログラなーいのサイト。", override: true }
 		},
+		
+		...ProductsRouter,
 
 		{
-			path: "/products",
-			component: () => import("../views/products/index.vue"),
+			path: "*",
+			component: {
+				template: `ERROR`
+			},
 
-			meta: { title: "Products" }
+			meta: { title: "404 Not Found" }
 		},
-
-		// /products/:product
-		...ProductList.map(product => {
-			return {
-				path: `/products/${product.path}`,
-				component: () => import("../views/products/$product.vue"),
-
-				meta: { title: product.name }
-			};
-		})
 	]
 });
+
+
+
+export default router;
