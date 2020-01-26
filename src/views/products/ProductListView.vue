@@ -4,8 +4,8 @@
 			<Div Class = "row">
 				<Product v-for = "(product, index) in products" :key = "index"
 					:name = "product.name"
-					:to = "product.path"
-					:preview = "`${product.preview}`"
+					:to = "product.root"
+					:preview = "product.preview"
 				/>
 			</Div>
 		</Div>
@@ -21,8 +21,8 @@
 
 		props: {
 			products: {
-				type: Object,
-				default: () => { {} }
+				type: Array,
+				default: () => []
 			}
 		}
 	};

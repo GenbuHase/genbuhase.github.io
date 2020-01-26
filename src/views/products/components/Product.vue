@@ -1,7 +1,7 @@
 <template>
 	<Div Class = "product card col s12">
 		<Div Class = "card-image">
-			<img :src = "`/products/${preview}`">
+			<img :src = "preview">
 			<Span Class = "card-title truncate" v-text = "name" />
 		</Div>
 

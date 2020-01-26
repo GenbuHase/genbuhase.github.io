@@ -16,7 +16,7 @@ export default [
 			// /products/:product
 			...ProductList.map(product => {
 				return {
-					path: `(${product.path})`,
+					path: `(${product.root})`,
 					component: () => import("../views/products/ProductDetailView.vue"),
 
 					meta: { title: product.name }

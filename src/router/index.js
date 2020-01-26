@@ -35,7 +35,7 @@ const router = new VueRouter({
 
 			meta: { title: "404 Not Found" }
 		},
-	]
+	],
 });
 
 

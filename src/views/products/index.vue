@@ -3,13 +3,21 @@
 </template>
 
 <script>
-	import products from "./products.json";
+	import DATA_PRODUCTS from "./products.json";
 
 	export default {
 		name: "ProductsView",
 
 		computed: {
-			products () { return products }
+			products () {
+				const sanitized = DATA_PRODUCTS.map(product => {
+					return Object.assign({}, product, {
+						preview: `/products/${product.root}/${product.preview}`
+					});
+				});
+
+				return sanitized;
+			}
 		}
 	};
 </script>

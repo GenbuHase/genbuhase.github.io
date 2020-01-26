@@ -41,7 +41,7 @@
 	export default {
 		components: { Navigation },
 
-		mounted () {
+		updated () {
 			M.AutoInit();
 		},
 

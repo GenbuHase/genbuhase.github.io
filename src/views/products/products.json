@@ -1,8 +1,9 @@
 [
 	{
-		"name": "Article Editor", "path": "ArticleEditor",
+		"name": "Article Editor",
+		"description": "ブログ形式サイトのための記事編集ツール",
 
-		"preview": "ArticleEditor/assets/Screenshot001.png",
-		"description": "ブログ形式サイトのための記事編集ツール"
+		"root": "ArticleEditor",
+		"preview": "assets/Screenshot001.png"
 	}
 ]
