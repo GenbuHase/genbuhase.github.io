@@ -6,7 +6,7 @@
 	import DATA_PRODUCTS from "./products.json";
 
 	export default {
-		name: "ProductsView",
+		name: "ProductView",
 
 		computed: {
 			products () {
