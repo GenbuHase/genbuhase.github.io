@@ -9,7 +9,17 @@
 	</Main>
 </template>
 
+<style lang="scss">
+	@import "./../../../public/libs/Prism/prism.css";
+
+	pre[class*="language-"] {
+		&::before, &::after { content: none }
+	}
+</style>
+
 <script>
+	import("@/../public/libs/Prism/prism.js");
+
 	export default {
 		name: "ProductDetailView",
 
@@ -29,6 +39,13 @@
 
 		updated () {
 			M.AutoInit();
+
+
+			Prism.plugins.NormalizeWhitespace.setDefaults({
+				"remove-indent": true
+			});
+
+			Prism.highlightAll();
 		},
 
 		methods: {

@@ -57,11 +57,13 @@
 			<Div>
 				以下のコマンドを実行してください。
 
-				<Pre Class = "prettyprint lang-bsh">
-$ git clone https://github.com/GenbuHase/ArticleEditor.git
-$ cd ArticleEditor
-$ npm install
-</Pre>
+				<pre Class = "command-line">
+					<code Class = "language-shell-session">
+						git clone https://github.com/GenbuHase/ArticleEditor.git
+						cd ArticleEditor
+						npm install
+					</code>
+				</pre>
 			</Div>
 		</Article>
 
@@ -71,25 +73,27 @@ $ npm install
 			<Div>
 				<Code>system/config.js</Code>はコンフィグファイルとなっております。
 
-				<Pre Class = "prettyprint lang-js">
-{
-	PORT: 起動ポート(Number),
+				<pre Class = "line-numbers">
+					<code Class = "language-js">
+						{
+							PORT: 起動ポート(Number),
 
-	PATH: {
-		ARTICLE: 記事データ格納ディレクトリ(String),
-		PUBLISH: 生成記事格納ディレクトリ(String),
-		MEDIA: 記事別メディア格納ディレクトリ(String),
-		COMMONMEDIA: ブログ内メディア格納ディレクトリ(String),
-		TEMPLATE: テンプレートHTML格納ディレクトリ(String)
-	},
+							PATH: {
+								ARTICLE: 記事データ格納ディレクトリ(String),
+								PUBLISH: 生成記事格納ディレクトリ(String),
+								MEDIA: 記事別メディア格納ディレクトリ(String),
+								COMMONMEDIA: ブログ内メディア格納ディレクトリ(String),
+								TEMPLATE: テンプレートHTML格納ディレクトリ(String)
+							},
 
-	onCreate: 新規作成時に呼ばれるコールバック関数(Function),
-	onDelete: 記事削除時に呼ばれるコールバック関数(Function),
-	onSave: 記事保存時に呼ばれるコールバック関数(Function),
-	onPublish: 記事生成時に呼ばれるコールバック関数(Function),
-	onUpload: メディアアップロード時に呼ばれるコールバック関数(Function)
-}
-</Pre>
+							onCreate: 新規作成時に呼ばれるコールバック関数(Function),
+							onDelete: 記事削除時に呼ばれるコールバック関数(Function),
+							onSave: 記事保存時に呼ばれるコールバック関数(Function),
+							onPublish: 記事生成時に呼ばれるコールバック関数(Function),
+							onUpload: メディアアップロード時に呼ばれるコールバック関数(Function)
+						}
+					</code>
+				</pre>
 			</Div>
 		</Article>
 
