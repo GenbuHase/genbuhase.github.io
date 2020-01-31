@@ -5,7 +5,7 @@
 			<img Class = "responsive-img materialboxed" :src = "product.preview" :Data-Caption = "product.description">
 		</Section>
 
-		<component :is = "getDetail" />
+		<component :is = "getDetailView" :product = "product" />
 	</Main>
 </template>
 
@@ -27,8 +27,12 @@
 			}
 		},
 
+		updated () {
+			M.AutoInit();
+		},
+
 		methods: {
-			async getDetail () {
+			async getDetailView () {
 				return await import(`./${this.product.root}/index.vue`);
 			}
 		}

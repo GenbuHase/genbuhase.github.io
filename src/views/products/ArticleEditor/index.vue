@@ -105,7 +105,7 @@ $ npm install
 			<H2 Class = "subheading subheading-2">スクリーンショット｜Screenshots</H2>
 
 			<P>
-				<Img Class = "responsive-img materialboxed" Src = "./assets/Screenshot001.png" />
+				<img Class = "responsive-img materialboxed" src = "/products/ArticleEditor/assets/Screenshot001.png">
 			</P>
 		</Article>
 
@@ -129,6 +129,11 @@ $ npm install
 
 <script>
 	export default {
-
+		props: {
+			product: {
+				type: Object,
+				default: () => ({})
+			}
+		}
 	};
 </script>

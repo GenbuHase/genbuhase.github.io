@@ -3,7 +3,7 @@
 		<Nav>
 			<Div Class = "nav-wrapper">
 				<A Class = "sidenav-trigger" Data-Target = "navigation_sideNav" Href = "#">
-					<I Class = "material-icons">menu</I>
+					<Icon font = "material-icons" name = "menu" />
 				</A>
 
 				<Span Class = "brand-logo" v-text="$root.pageTitle" />
@@ -11,3 +11,11 @@
 		</Nav>
 	</Header>
 </template>
+
+<script>
+	import Icon from "../Icon";
+
+	export default {
+		components: { Icon }
+	};
+</script>

@@ -11,8 +11,10 @@
 		computed: {
 			products () {
 				const sanitized = DATA_PRODUCTS.map(product => {
+					const ROUTE_PREFIX = `/products/${product.root}`;
+
 					return Object.assign({}, product, {
-						preview: `/products/${product.root}/${product.preview}`
+						preview: `${ROUTE_PREFIX}/${product.preview}`
 					});
 				});
 
