@@ -2,10 +2,8 @@
 	<I :Class = "classes" :style = "style">{{ name }}</I>
 </template>
 
-<style lang="scss" scoped>
-	:root I {
-		background: center / contain no-repeat;
-	}
+<style lang = "scss" scoped>
+	I { background: center / contain no-repeat }
 </style>
 
 <script>

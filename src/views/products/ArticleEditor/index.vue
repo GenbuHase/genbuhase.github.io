@@ -1,7 +1,7 @@
 <template>
 	<Section>
 		<Article>
-			<H2 Class = "subheading subheading-2">概要｜Overview</H2>
+			<SubHeading type = "2">概要｜Overview</SubHeading>
 
 			<P>
 				このツールを使うと、簡単にブログ形式サイトの記事を執筆することが出来ます。
@@ -9,7 +9,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">主な機能｜Features</H2>
+			<SubHeading type = "2">主な機能｜Features</SubHeading>
 
 			<UL Class = "browser-default">
 				<Li>テンプレートHTMLを利用した記事生成</Li>
@@ -19,7 +19,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">動作環境・開発環境｜Requirement</H2>
+			<SubHeading type = "2">	動作・開発環境｜Requirement</SubHeading>
 
 			<UL Class = "browser-default">
 				<Li><A Href = "https://nodejs.org/" Target = "_blank">Node.js</A></Li>
@@ -27,7 +27,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">使用方法｜How to Use</H2>
+			<SubHeading type = "2">使用方法｜How to Use</SubHeading>
 
 			<Div>
 				初回実行時、必要なディレクトリが自動で生成されます。
@@ -52,7 +52,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">インストール方法｜Installation</H2>
+			<SubHeading type = "2">インストール方法｜Installation</SubHeading>
 
 			<Div>
 				以下のコマンドを実行してください。
@@ -68,7 +68,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">設定 | Config</H2>
+			<SubHeading type = "2">設定｜Config</SubHeading>
 
 			<Div>
 				<Code>system/config.js</Code>はコンフィグファイルとなっております。
@@ -98,7 +98,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">ダウンロード｜Download</H2>
+			<SubHeading type = "2">ダウンロード｜Download</SubHeading>
 
 			<P>
 				<A Href = "https://github.com/GenbuHase/ArticleEditor/releases" Target = "_blank">こちら</A>より、リリース版のダウンロードが行えます。
@@ -106,7 +106,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">スクリーンショット｜Screenshots</H2>
+			<SubHeading type = "2">スクリーンショット｜Screenshots</SubHeading>
 
 			<P>
 				<img Class = "responsive-img materialboxed" src = "/products/ArticleEditor/assets/Screenshot001.png">
@@ -114,7 +114,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">作者｜Author</H2>
+			<SubHeading type = "2">作者｜Author</SubHeading>
 
 			<UL Class = "browser-default">
 				<Li><A Href = "https://github.com/GenbuHase" Target = "_blank">Genbu Hase</A></Li>
@@ -122,7 +122,7 @@
 		</Article>
 
 		<Article>
-			<H2 Class = "subheading subheading-2">ライセンス｜License</H2>
+			<SubHeading type = "2">ライセンス｜License</SubHeading>
 
 			<P>
 				<A Href = "https://github.com/GenbuHase/ArticleEditor/blob/master/LICENSE" Target = "_blank">MIT License</A>
@@ -132,12 +132,9 @@
 </template>
 
 <script>
+	import SubHeading from "@/components/SubHeading";
+
 	export default {
-		props: {
-			product: {
-				type: Object,
-				default: () => ({})
-			}
-		}
+		components: { SubHeading }
 	};
 </script>

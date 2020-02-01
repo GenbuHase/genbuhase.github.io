@@ -22,14 +22,14 @@ new Vue({
 
 				if (!mem.length || routing.meta.override) break;
 			}
-			
+
 			return titles.join("｜");
 		},
 
 		breakpoint () {
 			for (const tag of Array.from(document.getElementsByTagName("style"))) {
 				const matched = tag.innerText.match(/\-breakpoint: (\d+)px;/);
-				
+
 				if (matched) return parseInt(matched[1], 10);
 			}
 

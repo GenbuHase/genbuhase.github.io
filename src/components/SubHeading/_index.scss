@@ -1,0 +1,31 @@
+$subheading-colors: $secondary-color, color("purple", "base");
+
+
+
+.subheading {
+	@extend h4 !optional;
+
+	line-height: 1.75;
+	font-size: 1.25rem;
+	font-weight: 500;
+
+	@each $color in $subheading-colors {
+		$index: index($list: $subheading-colors, $value: $color);
+
+		&-#{$index} {
+			display: flex;
+			border-bottom: thin solid $color;
+
+			&::before {
+				content: "";
+
+				display: inline-block;
+				width: 0.5em;
+				min-width: 0.5em;
+				margin-right: 0.5em;
+
+				background: $color;
+			}
+		}
+	}
+}

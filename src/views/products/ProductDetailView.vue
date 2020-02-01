@@ -1,7 +1,7 @@
 <template>
 	<Main>
 		<Section>
-			<H1 Class = "heading" v-text = "product.name" />
+			<Heading v-text = "product.name" />
 			<img Class = "responsive-img materialboxed" :src = "product.preview" :Data-Caption = "product.description">
 		</Section>
 
@@ -9,7 +9,7 @@
 	</Main>
 </template>
 
-<style lang="scss">
+<style lang = "scss">
 	@import "./../../../public/libs/Prism/prism.css";
 
 	pre[class*="language-"] {
@@ -19,9 +19,12 @@
 
 <script>
 	import("@/../public/libs/Prism/prism.js");
+	import Heading from "@/components/Heading/";
+
 
 	export default {
 		name: "ProductDetailView",
+		components: { Heading },
 
 		props: {
 			products: {

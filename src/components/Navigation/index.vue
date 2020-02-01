@@ -26,11 +26,11 @@
 
 			<Li Class = "divider" />
 
-			<NavTab icon = "home" to = "/">Home</NavTab>
-			<NavTab icon = "extension" to = "/products">Products</NavTab>
-			<NavTab icon = "code" to = "/mods">Mods</NavTab>
-			<NavTab icon = "book" to = "/blog">Blog</NavTab>
-			<NavTab iconSrc = "/artworks/favicon.ico" to = "/artworks">Artworks</NavTab>
+			<Li v-for = "(tab, index) in navTabs" :key = "index">
+				<router-link :to = "tab.to">
+					<Icon :font = "tab.iconFont" :name = "tab.icon" :src = "tab.iconSrc" />{{ tab.text }}
+				</router-link>
+			</Li>
 
 			<Li Class = "spacer" />
 			<Li Class = "divider" />
@@ -55,12 +55,25 @@
 </template>
 
 <script>
-	import Icon from "../Icon";
-	import NavTab from "./NavTab";
+	import Icon from "@/components/Icon";
+
+
+
+	const NAVTABS = [
+		{ icon: "home", to: "/", text: "Home" },
+		{ icon: "extension", to: "/products", text: "Products" },
+		{ icon: "code", to: "/mods", text: "Mods" },
+		{ icon: "book", to: "/blog", text: "Blog" },
+		{ iconSrc: "/artworks/favicon.ico", to: "/artworks", text: "Artworks" }
+	];
+
 
 	export default {
 		name: "Navigation",
+		components: { Icon },
 
-		components: { Icon, NavTab }
+		computed: {
+			navTabs () { return NAVTABS }
+		}
 	};
 </script>

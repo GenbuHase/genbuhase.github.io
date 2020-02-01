@@ -1,0 +1,56 @@
+.navbar-fixed > nav {
+	width: calc(100% - #{$sidenav-width});
+
+	@media #{$navbar-breakpoint} { width: 100% }
+}
+
+.nav-wrapper {
+	display: flex;
+	flex-direction: row;
+
+	.brand-logo {
+		position: relative;
+		flex: 1;
+		margin: auto 1.5em auto 2.5em;
+
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
+		@media #{$navbar-breakpoint} {
+			left: auto;
+
+			margin-left: 0;
+			transform: none;
+		}
+	}
+}
+
+.sidenav {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-bottom: 0;
+
+	a.user-state-panel { color: $off-black }
+
+	.spacer { flex: 1 auto }
+
+	&-footer {
+		@extend .container !optional;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 10px 0;
+
+		.link {
+			@extend .btn-flat !optional;
+
+			i, svg { vertical-align: middle }
+
+			svg path { fill: $button-flat-color }
+		}
+	}
+}

@@ -10,11 +10,7 @@
 	</Div>
 </template>
 
-<style lang="scss">
-	@import "./public/libs/Materialize-v1.0.0/sass/materialize";
-</style>
-
-<style lang="scss">
+<style lang = "scss">
 	.pageRouting {
 		&-enter-active, &-leave-active {
 			transition: opacity 0.25s;
@@ -26,18 +22,29 @@
 	}
 </style>
 
-<style lang="scss" scoped>
-	@import "./public/libs/Materialize-v1.0.0/sass/components/color-variables";
-	@import "./public/libs/Materialize-v1.0.0/sass/components/variables";
-	@import "./public/libs/Materialize-v1.0.0/sass/components/extends/extends-variables";
-	
+<style lang = "scss">
+	@import "@/../public/libs/Materialize-v1.0.0/sass/materialize";
+
+	@import "@/components/Navigation/";
+	@import "@/components/Heading/";
+	@import "@/components/SubHeading/";
+
 	:root { -breakpoint: $navbar-breakpoint-width }
+
+
+	article {
+		font-size: 0.875rem;
+		letter-spacing: 0.04em;
+		line-height: 1.5rem;
+	}
 </style>
 
 <script>
 	/* global M */
-	import Navigation from "./components/Navigation/";
-	
+	import Navigation from "@/components/Navigation/";
+	import Heading from "@/components/Heading/";
+	import SubHeading from "@/components/SubHeading/";
+
 	export default {
 		components: { Navigation },
 
