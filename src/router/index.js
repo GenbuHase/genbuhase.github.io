@@ -20,11 +20,11 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: "/",
-			component: () => import("../views/Home.vue"),
-	
+			component: () => import("@/pages/Home.vue"),
+
 			meta: { title: "どっかのプログラなーいのサイト。", override: true }
 		},
-		
+
 		...ProductsRouter,
 
 		{

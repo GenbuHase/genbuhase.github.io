@@ -1,14 +1,14 @@
 <template>
-	<Section>
-		<Article>
+	<Article>
+		<Section>
 			<SubHeading type = "2">概要｜Overview</SubHeading>
 
 			<P>
 				このツールを使うと、簡単にブログ形式サイトの記事を執筆することが出来ます。
 			</P>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">主な機能｜Features</SubHeading>
 
 			<UL Class = "browser-default">
@@ -16,17 +16,17 @@
 				<Li>記事のID管理</Li>
 				<Li>軽快な動作</Li>
 			</UL>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">	動作・開発環境｜Requirement</SubHeading>
 
 			<UL Class = "browser-default">
 				<Li><A Href = "https://nodejs.org/" Target = "_blank">Node.js</A></Li>
 			</UL>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">使用方法｜How to Use</SubHeading>
 
 			<Div>
@@ -49,9 +49,9 @@
 					<Li>ページの指示に従って執筆しましょう！</Li>
 				</OL>
 			</Div>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">インストール方法｜Installation</SubHeading>
 
 			<Div>
@@ -65,9 +65,9 @@
 					</code>
 				</pre>
 			</Div>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">設定｜Config</SubHeading>
 
 			<Div>
@@ -95,40 +95,41 @@
 					</code>
 				</pre>
 			</Div>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">ダウンロード｜Download</SubHeading>
 
 			<P>
 				<A Href = "https://github.com/GenbuHase/ArticleEditor/releases" Target = "_blank">こちら</A>より、リリース版のダウンロードが行えます。
 			</P>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">スクリーンショット｜Screenshots</SubHeading>
 
 			<P>
+				<!-- TODO: Screenshotの一括表示 -->
 				<img Class = "responsive-img materialboxed" src = "/products/ArticleEditor/assets/Screenshot001.png">
 			</P>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">作者｜Author</SubHeading>
 
 			<UL Class = "browser-default">
 				<Li><A Href = "https://github.com/GenbuHase" Target = "_blank">Genbu Hase</A></Li>
 			</UL>
-		</Article>
+		</Section>
 
-		<Article>
+		<Section>
 			<SubHeading type = "2">ライセンス｜License</SubHeading>
 
 			<P>
 				<A Href = "https://github.com/GenbuHase/ArticleEditor/blob/master/LICENSE" Target = "_blank">MIT License</A>
 			</P>
-		</Article>
-	</Section>
+		</Section>
+	</Article>
 </template>
 
 <script>

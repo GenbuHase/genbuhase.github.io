@@ -1,16 +1,14 @@
 <template>
 	<Main>
-		<Section>
-			<Heading v-text = "product.name" />
-			<img Class = "responsive-img materialboxed" :src = "product.preview" :Data-Caption = "product.description">
-		</Section>
+		<Heading v-text = "product.name" />
+		<img Class = "responsive-img materialboxed" :src = "product.preview" :Data-Caption = "product.description">
 
 		<component :is = "getDetailView" :product = "product" />
 	</Main>
 </template>
 
 <style lang = "scss">
-	@import "./../../../public/libs/Prism/prism.css";
+	@import "../../../public/libs/Prism/prism.css";
 
 	pre[class*="language-"] {
 		&::before, &::after { content: none }

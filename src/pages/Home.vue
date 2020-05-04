@@ -1,6 +1,6 @@
 <template>
 	<Main>
-		<H1 Class = "heading">トップページ</H1>
+		<Heading>トップページ</Heading>
 
 		<Article>
 			当サイトに足をお運び頂き、誠にありがとうございます。<Br />
@@ -20,7 +20,10 @@
 </template>
 
 <script>
+	import Heading from "@/components/Heading/";
+
 	export default {
-		name: "HomeView"
+		name: "HomePage",
+		components: { Heading }
 	};
 </script>

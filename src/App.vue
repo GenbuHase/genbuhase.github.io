@@ -42,8 +42,6 @@
 <script>
 	/* global M */
 	import Navigation from "@/components/Navigation/";
-	import Heading from "@/components/Heading/";
-	import SubHeading from "@/components/SubHeading/";
 
 	export default {
 		components: { Navigation },

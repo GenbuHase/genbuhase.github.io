@@ -1,14 +1,14 @@
-import ProductList from "../views/products/products.json";
+import ProductList from "@/pages/products/products.json";
 
 export default [
 	{
 		path: "/products",
-		component: () => import("../views/products/index.vue"),
+		component: () => import("@/pages/products/index.vue"),
 
 		children: [
 			{
 				path: "",
-				component: () => import("../views/products/ProductListView.vue"),
+				component: () => import("@/pages/products/ProductListView.vue"),
 
 				meta: { title: "Products" }
 			},
@@ -17,7 +17,7 @@ export default [
 			...ProductList.map(product => {
 				return {
 					path: `(${product.root})`,
-					component: () => import("../views/products/ProductDetailView.vue"),
+					component: () => import("@/pages/products/ProductDetailView.vue"),
 
 					meta: { title: product.name }
 				};
