@@ -3,14 +3,14 @@
 </template>
 
 <script>
-	import DATA_PRODUCTS from "./products.json";
+	import PRODUCTS from "./items.json";
 
 	export default {
 		name: "ProductPage",
 
 		computed: {
 			products () {
-				const sanitized = DATA_PRODUCTS.map(product => {
+				const sanitized = PRODUCTS.map(product => {
 					const ROUTE_PREFIX = `/products/${product.root}`;
 
 					return Object.assign({}, product, {

@@ -4,7 +4,7 @@
 
 		<Navigation />
 
-		<transition name = "pageRouting" mode = "out-in" @enter = "onRouting" @leave = "onRouting">
+		<transition name = "pageRouting" mode = "out-in" @enter = "onEnter" @leave = "onLeave">
 			<router-view />
 		</transition>
 	</Div>
@@ -46,11 +46,16 @@
 	export default {
 		components: { Navigation },
 
-		updated () {
-			M.AutoInit();
-		},
-
 		methods: {
+			onEnter () {
+				M.AutoInit();
+				this.onRouting();
+			},
+
+			onLeave () {
+				this.onRouting();
+			},
+
 			onRouting () {
 				if (this.$root.breakpoint < window.innerWidth) return;
 

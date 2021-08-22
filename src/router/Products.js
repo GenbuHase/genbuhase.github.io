@@ -1,4 +1,4 @@
-import ProductList from "@/pages/products/products.json";
+import PRODUCTS from "@/pages/products/items.json";
 
 export default [
 	{
@@ -14,7 +14,7 @@ export default [
 			},
 
 			// /products/:product
-			...ProductList.map(product => {
+			...PRODUCTS.map(product => {
 				return {
 					path: `(${product.root})`,
 					component: () => import("@/pages/products/ProductDetailView.vue"),

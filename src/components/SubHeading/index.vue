@@ -6,7 +6,7 @@
 	export default {
 		props: {
 			type: {
-				type: Number,
+				type: [ String, Number ],
 				default: () => 1
 			}
 		}
