@@ -1,15 +1,15 @@
 <template>
-	<Main>
-		<Div Class = "products container">
-			<Div Class = "row">
+	<main>
+		<div class = "products container">
+			<div class = "row">
 				<Product v-for = "(product, index) in products" :key = "index"
 					:name = "product.name"
 					:to = "product.root"
 					:preview = "product.preview"
 				/>
-			</Div>
-		</Div>
-	</Main>
+			</div>
+		</div>
+	</main>
 </template>
 
 <script>

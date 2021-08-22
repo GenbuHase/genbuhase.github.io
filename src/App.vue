@@ -1,13 +1,13 @@
 <template>
-	<Div ID = "App">
-		<Title>{{ $root.pageTitle || "どっかのプログラなーいのサイト。" }}</Title>
+	<div id = "App">
+		<title>{{ $root.pageTitle || "どっかのプログラなーいのサイト。" }}</title>
 
 		<Navigation />
 
 		<transition name = "pageRouting" mode = "out-in" @enter = "onEnter" @leave = "onLeave">
 			<router-view />
 		</transition>
-	</Div>
+	</div>
 </template>
 
 <style lang = "scss">

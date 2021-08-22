@@ -1,14 +1,14 @@
 <template>
-	<Div Class = "card col s12">
-		<Div Class = "card-image">
+	<div class = "card col s12">
+		<div class = "card-image">
 			<img :src = "preview">
-			<Span Class = "card-title truncate" v-text = "name" />
-		</Div>
+			<span class = "card-title truncate" v-text = "name" />
+		</div>
 
-		<Div Class = "card-action">
+		<div class = "card-action">
 			<router-link :to = "to" append>Get Started</router-link>
-		</Div>
-	</Div>
+		</div>
+	</div>
 </template>
 
 <style lang="scss" scoped>

@@ -1,9 +1,9 @@
 <template>
-	<I :Class = "classes" :style = "style">{{ name }}</I>
+	<i :class = "classes" :style = "style">{{ name }}</i>
 </template>
 
 <style lang = "scss" scoped>
-	I { background: center / contain no-repeat }
+	i { background: center / contain no-repeat }
 </style>
 
 <script>

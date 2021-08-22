@@ -1,5 +1,5 @@
 <template>
-	<H1 Class = "heading"><slot /></H1>
+	<h1 class = "heading"><slot /></h1>
 </template>
 
 <script>

@@ -1,80 +1,80 @@
 <template>
-	<Article>
-		<Section>
+	<article>
+		<section>
 			<SubHeading type = "2">概要｜Overview</SubHeading>
 
-			<P>
+			<p>
 				このツールを使うと、簡単にブログ形式サイトの記事を執筆することが出来ます。
-			</P>
-		</Section>
+			</p>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">主な機能｜Features</SubHeading>
 
-			<UL Class = "browser-default">
-				<Li>テンプレートHTMLを利用した記事生成</Li>
-				<Li>記事のID管理</Li>
-				<Li>軽快な動作</Li>
-			</UL>
-		</Section>
+			<ul class = "browser-default">
+				<li>テンプレートHTMLを利用した記事生成</li>
+				<li>記事のID管理</li>
+				<li>軽快な動作</li>
+			</ul>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">	動作・開発環境｜Requirement</SubHeading>
 
-			<UL Class = "browser-default">
-				<Li><A Href = "https://nodejs.org/" Target = "_blank">Node.js</A></Li>
-			</UL>
-		</Section>
+			<ul class = "browser-default">
+				<li><a href = "https://nodejs.org/" target = "_blank">Node.js</a></li>
+			</ul>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">使用方法｜How to Use</SubHeading>
 
-			<Div>
+			<div>
 				初回実行時、必要なディレクトリが自動で生成されます。
 
-				<OL>
-					<Li>
-						<Code>template/index.html</Code>(以下テンプレートHTML)を編集します。<Br />
+				<ol>
+					<li>
+						<code>template/index.html</code>(以下テンプレートHTML)を編集します。<br>
 						テンプレートHTML内では、以下の特殊変数が利用できます。
 
-						<UL Class = "browser-default">
-							<Li><Code>${title}</Code> ... 記事タイトル</Li>
-							<Li><Code>${createdAt}</Code> ... 記事作成日</Li>
-							<Li><Code>${content}</Code> ... 記事内容</Li>
-						</UL>
-					</Li>
+						<ul class = "browser-default">
+							<li><code>${title}</code> ... 記事タイトル</li>
+							<li><code>${createdAt}</code> ... 記事作成日</li>
+							<li><code>${content}</code> ... 記事内容</li>
+						</ul>
+					</li>
 
-					<Li>Article Editorを起動するために<Code>npm start</Code>を実行します。</Li>
-					<Li>起動後、<A Href = "http://localhost:8005" Target = "_blank">http://localhost:8005</A>にアクセスします。</Li>
-					<Li>ページの指示に従って執筆しましょう！</Li>
-				</OL>
-			</Div>
-		</Section>
+					<li>Article Editorを起動するために<code>npm start</code>を実行します。</li>
+					<li>起動後、<a href = "http://localhost:8005" target = "_blank">http://localhost:8005</a>にアクセスします。</li>
+					<li>ページの指示に従って執筆しましょう！</li>
+				</ol>
+			</div>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">インストール方法｜Installation</SubHeading>
 
-			<Div>
+			<div>
 				以下のコマンドを実行してください。
 
-				<pre Class = "command-line">
-					<code Class = "language-shell-session">
+				<pre class = "command-line">
+					<code class = "language-shell-session">
 						git clone https://github.com/GenbuHase/ArticleEditor.git
 						cd ArticleEditor
 						npm install
 					</code>
 				</pre>
-			</Div>
-		</Section>
+			</div>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">設定｜Config</SubHeading>
 
-			<Div>
-				<Code>system/config.js</Code>はコンフィグファイルとなっております。
+			<div>
+				<code>system/config.js</code>はコンフィグファイルとなっております。
 
-				<pre Class = "line-numbers">
-					<code Class = "language-js">
+				<pre class = "line-numbers">
+					<code class = "language-js">
 						{
 							PORT: 起動ポート(Number),
 
@@ -94,42 +94,42 @@
 						}
 					</code>
 				</pre>
-			</Div>
-		</Section>
+			</div>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">ダウンロード｜Download</SubHeading>
 
-			<P>
-				<A Href = "https://github.com/GenbuHase/ArticleEditor/releases" Target = "_blank">こちら</A>より、リリース版のダウンロードが行えます。
-			</P>
-		</Section>
+			<p>
+				<a href = "https://github.com/GenbuHase/ArticleEditor/releases" target = "_blank">こちら</a>より、リリース版のダウンロードが行えます。
+			</p>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">スクリーンショット｜Screenshots</SubHeading>
 
-			<P>
+			<p>
 				<!-- TODO: Screenshotの一括表示 -->
-				<img Class = "responsive-img materialboxed" src = "/products/ArticleEditor/assets/Screenshot001.png">
-			</P>
-		</Section>
+				<img class = "responsive-img materialboxed" src = "/products/ArticleEditor/assets/Screenshot001.png">
+			</p>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">作者｜Author</SubHeading>
 
-			<UL Class = "browser-default">
-				<Li><A Href = "https://github.com/GenbuHase" Target = "_blank">Genbu Hase</A></Li>
-			</UL>
-		</Section>
+			<ul class = "browser-default">
+				<li><a href = "https://github.com/GenbuHase" target = "_blank">Genbu Hase</a></li>
+			</ul>
+		</section>
 
-		<Section>
+		<section>
 			<SubHeading type = "2">ライセンス｜License</SubHeading>
 
-			<P>
-				<A Href = "https://github.com/GenbuHase/ArticleEditor/blob/master/LICENSE" Target = "_blank">MIT License</A>
-			</P>
-		</Section>
-	</Article>
+			<p>
+				<a href = "https://github.com/GenbuHase/ArticleEditor/blob/master/LICENSE" target = "_blank">MIT License</a>
+			</p>
+		</section>
+	</article>
 </template>
 
 <script>

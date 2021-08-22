@@ -1,10 +1,10 @@
 <template>
-	<Main>
+	<main>
 		<Heading v-text = "product.name" />
-		<img Class = "responsive-img materialboxed" :src = "product.preview" :Data-Caption = "product.description">
+		<img class = "responsive-img materialboxed" :src = "product.preview" :data-caption = "product.description">
 
 		<component :is = "getDetailView" :product = "product" />
-	</Main>
+	</main>
 </template>
 
 <style lang = "scss">
