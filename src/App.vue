@@ -25,9 +25,10 @@
 <style lang = "scss">
 	@import "@/../public/libs/Materialize-v1.0.0/sass/materialize";
 
-	@import "@/components/Navigation/";
 	@import "@/components/Heading/";
 	@import "@/components/SubHeading/";
+	@import "@/components/Typography/";
+	@import "@/components/Navigation/";
 
 	:root { -breakpoint: $navbar-breakpoint-width }
 

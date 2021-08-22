@@ -1,0 +1,7 @@
+.paragraph {
+	@for $i from 0 through 100 {
+		&-break {
+			&--#{$i} { margin-bottom: #{1.5 * $i}em }
+		}
+	}
+}
