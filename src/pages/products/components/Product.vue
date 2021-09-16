@@ -1,8 +1,8 @@
 <template>
-	<div class = "card col s12">
+	<div class = "product card col s12">
 		<div class = "card-image">
 			<img :src = "preview">
-			<span class = "card-title truncate" v-text = "name" />
+			<span class = "product-title card-title truncate" v-text = "name" />
 		</div>
 
 		<div class = "card-action">
@@ -12,10 +12,10 @@
 </template>
 
 <style lang="scss" scoped>
-	.card {
+	.product {
 		padding: 0;
 
-		&-title {
+		#{&}-title {
 			width: 100%;
 			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
 		}

@@ -30,8 +30,8 @@
 	@import "@/components/Typography/";
 	@import "@/components/Navigation/";
 
-	:root { -breakpoint: $navbar-breakpoint-width }
 
+	:root { -breakpoint: $navbar-breakpoint-width }
 
 	article {
 		font-size: 0.875rem;
