@@ -7,11 +7,9 @@ footer {
 
 main {
   margin-left: $sidenav-width;
-  padding: 1em;
+  padding: 1.5em;
 
   @media #{$navbar-breakpoint} { margin-left: 0 }
 
-  img {
-    max-width: 100%;
-  }
+  img { max-width: 100% }
 }
