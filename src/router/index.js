@@ -28,6 +28,13 @@ const router = new VueRouter({
 		...ProductsRouter,
 
 		{
+			path: "/artworks",
+			component: () => import("@/pages/artworks/index.vue"),
+
+			meta: { title: "Artworks" }
+		},
+
+		{
 			path: "*",
 			component: {
 				template: `ERROR`

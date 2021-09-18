@@ -30,6 +30,8 @@
 	@import "@/components/Typography/";
 	@import "@/components/Navigation/";
 
+	@import "@/pages/artworks/";
+
 
 	:root { -breakpoint: $navbar-breakpoint-width }
 

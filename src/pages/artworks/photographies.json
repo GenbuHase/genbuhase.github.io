@@ -1,0 +1,37 @@
+[
+	{
+		"title": "季節外れの紅葉さん",
+		"description": "東京都文京区にある、六義園で撮影した一枚。紅葉の合間から差す夕日がとても綺麗。",
+
+		"filepath": "20191204_152231_552.jpg",
+		"thumbnailpath": "thumbnails/20191204_152231_552.jpg",
+		"datetime": "2019/12/04 15:22:31",
+		"location": "六義園",
+		"people": [],
+		"tags": ["六義園", "Rikugien Gardens", "渡月橋", "Togetsu-Kyo Bridge"]
+	},
+
+	{
+		"title": "チンダル現象",
+		"description": "東京都練馬区にある、光が丘公園で撮影した一枚。センター試験2日目という忙しい朝にもかかわらず、写真を撮る余裕を見せている。",
+
+		"filepath": "20200119_071918_269.jpg",
+		"thumbnailpath": "thumbnails/20200119_071918_269.jpg",
+		"datetime": "2020/01/19 07:19:18",
+		"location": "光が丘公園",
+		"people": [],
+		"tags": ["光が丘公園", "Hikarigaoka Park", "チンダル現象", "Tyndall Phenomenon", "太陽光", "Sunlight"]
+	},
+
+	{
+		"title": "緊急事態宣言",
+		"description": "東京都板橋区にある、東武東上線下赤塚駅構内で撮影した一枚。緊急事態宣言の発令をもう数え切れないほど経験してきた。",
+
+		"filepath": "20210716_170951_500.jpg",
+		"thumbnailpath": "thumbnails/20210716_170951_500.jpg",
+		"datetime": "2021/07/16 17:09:51",
+		"location": "東武東上線 下赤塚駅",
+		"people": [],
+		"tags": ["下赤塚駅", "Shimo-akatsuka Station", "鉄道", "Train", "東武東上線", "Tobu Tojo Line", "東上線", "Tojo Line"]
+	}
+]
