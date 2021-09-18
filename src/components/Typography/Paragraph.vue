@@ -14,7 +14,7 @@
 		computed: {
 			classes () {
 				const classes = ["paragraph"];
-				if (["string", "number"].includes(typeof this.break)) classes.push(`paragraph-break--${this.break}`);
+				if (["string", "number"].includes(typeof this.break)) classes.push(`paragraph--break-${this.break}`);
 
 				return classes;
 			}

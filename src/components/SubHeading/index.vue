@@ -1,5 +1,5 @@
 <template>
-	<h2 :class = "`subheading subheading-${type}`"><slot /></h2>
+	<h2 :class = "`subheading subheading--${type}`"><slot /></h2>
 </template>
 
 <script>

@@ -12,7 +12,7 @@ $subheading-colors: $secondary-color, color("purple", "base");
 	@each $color in $subheading-colors {
 		$index: index($list: $subheading-colors, $value: $color);
 
-		&-#{$index} {
+		&--#{$index} {
 			display: flex;
 			border-bottom: thin solid $color;
 

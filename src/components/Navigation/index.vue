@@ -1,9 +1,9 @@
 <template>
 	<aside>
-		<header class = "navbar-fixed">
+		<header class = "navigation navbar-fixed">
 			<nav>
 				<div class = "nav-wrapper">
-					<a class = "sidenav-trigger" data-target = "navigation_sideNav" href = "#">
+					<a class = "sidenav-trigger" data-target = "navigation__sideNav" href = "#">
 						<Icon font = "material-icons" name = "menu" />
 					</a>
 
@@ -12,7 +12,7 @@
 			</nav>
 		</header>
 
-		<ul id = "navigation_sideNav" class = "sidenav sidenav-fixed">
+		<ul id = "navigation__sideNav" class = "sidenav sidenav-fixed">
 			<a class = "user-state-panel" href = "/Portfolio">
 				<div class = "user-view">
 					<span class = "badge new" data-badge-caption = "">Check Portfolio</span>

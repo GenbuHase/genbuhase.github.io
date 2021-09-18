@@ -1,6 +1,6 @@
 {
 	"name": "genbuhase-github-io",
-	"version": "2.0.25",
+	"version": "2.0.26",
 	"description": "A homepage of GenbuHase",
 	"scripts": {
 		"serve": "vue-cli-service serve",
