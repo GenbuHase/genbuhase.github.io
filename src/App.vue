@@ -33,7 +33,7 @@
 
 	:root { -breakpoint: $navbar-breakpoint-width }
 
-	article {
+	main {
 		font-size: 0.875rem;
 		letter-spacing: 0.04em;
 		line-height: 1.5rem;

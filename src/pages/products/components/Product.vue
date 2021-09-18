@@ -11,11 +11,11 @@
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang = "scss" scoped>
 	.product {
 		padding: 0;
 
-		#{&}__title {
+		&__title {
 			width: 100%;
 			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.46));
 		}
