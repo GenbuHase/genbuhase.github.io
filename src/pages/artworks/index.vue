@@ -5,7 +5,7 @@
 			<Artwork v-for = "(photography, index) in photographies" :key = "index"
 				:title = "photography.title"
 				:description = "photography.description"
-				:src = "photography.filepath"
+				:src = "photography.thumbnailpath"
 			/>
 		</div>
 
@@ -32,7 +32,8 @@
 				for (const photography of unformattedPhotographies) {
 					sanitized.push(
 						Object.assign({}, photography, {
-							filepath: `${PATH_PREFIX}/${photography.filepath}`
+							filepath: `${PATH_PREFIX}/${photography.filepath}`,
+							thumbnailpath: `${PATH_PREFIX}/${photography.thumbnailpath}`
 						})
 					);
 				}
